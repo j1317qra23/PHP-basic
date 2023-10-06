@@ -21,6 +21,16 @@ if($flag==true){
     echo $a . "不是質數";
 
 }
-
-
+echo "<hr>";
 ?>
+<?php
+$a=['甲','乙','丙','丁','戊',];
+
+for ($i=0; $i < count($a); $i++) { 
+  echo $a[$i];
+}
+echo "<br>";
+
+foreach($a as $b) {
+  echo $b;
+}
