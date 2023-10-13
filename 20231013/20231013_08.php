@@ -35,5 +35,19 @@ for($i=4;$i>=0;$i--){
 
 <h2>菱形</h2>
 <?php
+for($i=0;$i<9;$i++){
+    if($i<=4){
+        $tmp=$i;
+    }else{
+        $tmp--;
+    }
 
+    for($j=0;$j<(4-$tmp);$j++){
+        echo "&nbsp;";
+    }
+    for($k=0;$k<($tmp*2+1);$k++){
+        echo "*";
+    }
+    echo "<br>";
+}
 ?>
