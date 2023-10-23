@@ -26,18 +26,16 @@
 
 // echo "西元{$inputYear}年對應的天干地支年別是：{$tianGanYear}{$diZhiYear}年";
 
-$year=1024;
-$inputyear=1084;
+$year=2000;
 
 $sky=['甲','乙','丙','丁','戊','己','庚','辛','壬','癸'];
 $land=['子','丑','寅','卯','辰','巳','午','未','申','酉','戌','亥'];
 
-$diff=$inputyear-$year;
-
-echo "西元" .$year."是";
-$sky=$diff % 10;
-$land=$diff % 12;
+echo "西元".$year."是";
+echo $sky[($year-1024)%10];
+echo $land[($year-1024)%12];
 echo "年";
+
 
 
 
