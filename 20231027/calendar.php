@@ -42,7 +42,6 @@
 
         }
 
-
         td {
             width: 300px;
             height: 10vh;
@@ -56,15 +55,13 @@
 
         tr {
             transition: font-size 0.3s ease;
-           
         }
 
-        tr :hover {
+        tr:hover {
             color: lightcyan;
             background-color: lightblue;
             transform: scale(1.1);
-            box-shadow: 5px 5px 10px white(0, 0, 0, 0.3);
-
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
             font-size: 22px;
         }
 
@@ -94,19 +91,15 @@
 
         .right-button:hover {
             color: red;
-
             transform: scale(1.1);
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-
             font-size: 35px;
         }
 
         .left-button:hover {
             color: red;
-
             transform: scale(1.1);
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-
             font-size: 35px;
         }
 
@@ -120,18 +113,56 @@
         div {
             display: flex;
             justify-content: space-between;
-            ;
             align-items: center;
             flex-wrap: wrap;
-
         }
-    </style>
-
-
     </style>
 </head>
 
 <body>
+<div id="current-time"></div>
+
+<?php
+if (isset($_GET['month']) && isset($_GET['year'])) {
+    $month = $_GET['month'];
+    $year = $_GET['year'];
+} else {
+    $month = date('m');
+    $year = date("Y");
+}
+
+echo "<h3>";
+echo date("{$year}年{$month}月");
+echo "</h3>";
+?>
+
+<script>
+function updateCurrentTime() {
+    const currentTimeElement = document.getElementById('current-time');
+    const updateInterval = 1000; // 每1秒更新一次
+
+    function updateTime() {
+        const now = new Date();
+        const formattedTime = now.toLocaleString('en-US', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+        });
+
+        currentTimeElement.textContent = formattedTime;
+    }
+
+    updateTime(); // 初始更新
+
+    // 每秒安排更新
+    setInterval(updateTime, updateInterval);
+}
+
+window.addEventListener('load', updateCurrentTime);
+</script>
     <?php
 
     if (isset($_GET['month']) && isset($_GET['year'])) {
@@ -142,9 +173,7 @@
         $year = date("Y");
     }
 
-    echo "<h3>";
-    echo date("{$year}年{$month}月");
-    echo "</h3>";
+
 
 
 
@@ -240,10 +269,7 @@
                 <a class="left-button" href="?year=<?= $prevYear; ?>&month=<?= $prev; ?>">&larr;</a>
                 <a href="?year=<?= $currentYear; ?>&month=<?= $currentMonth;; ?>&days=<?= $currentdays; ?>">Back to today</a>
                 <a class="right-button" href="?year=<?= $nextYear; ?>&month=<?= $next; ?>">&rarr;</a>
-                <?php
-                date_default_timezone_set('asia/taipei');
-                echo date("Y-m-d H:i:s");
-                ?>
+            
             </div>
             <table>
                 <tr>
