@@ -132,6 +132,35 @@
 </head>
 
 <body>
+<script>
+function updateCurrentTime() {
+    const currentTimeElement = document.getElementById('current-time');
+    const updateInterval = 1000; // 每1秒更新一次
+
+    function updateTime() {
+        const now = new Date();
+        const formattedTime = now.toLocaleString('en-US', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+        });
+
+        currentTimeElement.textContent = formattedTime;
+    }
+
+    updateTime(); // 初始更新
+
+    // 每秒安排更新
+    setInterval(updateTime, updateInterval);
+}
+
+window.addEventListener('load', updateCurrentTime);
+</script>
+
+<div id="current-time"></div>
     <?php
 
     if (isset($_GET['month']) && isset($_GET['year'])) {
@@ -145,7 +174,7 @@
     echo "<h3>";
     echo date("{$year}年{$month}月");
     echo "</h3>";
-
+    
 
 
     // Define an array of background images for each month (1-12)
@@ -240,10 +269,7 @@
                 <a class="left-button" href="?year=<?= $prevYear; ?>&month=<?= $prev; ?>">&larr;</a>
                 <a href="?year=<?= $currentYear; ?>&month=<?= $currentMonth;; ?>&days=<?= $currentdays; ?>">Back to today</a>
                 <a class="right-button" href="?year=<?= $nextYear; ?>&month=<?= $next; ?>">&rarr;</a>
-                <?php
-                date_default_timezone_set('asia/taipei');
-                echo date("Y-m-d H:i:s");
-                ?>
+               
             </div>
             <table>
                 <tr>
