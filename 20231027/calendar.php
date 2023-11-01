@@ -20,7 +20,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            backdrop-filter: blur(2px);
+            /* backdrop-filter: blur(2px); */
         }
 
         .calendar-container {
@@ -179,17 +179,17 @@ window.addEventListener('load', updateCurrentTime);
 
     // Define an array of background images for each month (1-12)
     $backgroundImages = [
-        '001.png', // January
-        '002.png', // February
-        '003.png', // March
-        '004.png', // April
+        '001.jpg', // January
+        '002.jpg', // February
+        '003.jpg', // March
+        '004.jpg', // April
         '005.png', // May
-        '006.png', // June
-        '007.png', // July
-        '008.png', // August
-        '009.png', // September
-        '010.png', // October
-        '011.png', // November
+        '006.jpg', // June
+        '007.jpg', // July
+        '008.jpg', // August
+        '009.jpg', // September
+        '010.jpg', // October
+        '011.jpg', // November
         '012.png' // December
     ];
 
