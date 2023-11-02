@@ -286,6 +286,9 @@ window.addEventListener('load', updateCurrentTime);
                 <a class="right-button" href="?year=<?= $nextYear; ?>&month=<?= $next; ?>">&rarr;</a>
                
             </div>
+            <div id="hover-image">
+    <img src="./tumbler-8831_256.gif" alt="Hover Image">
+</div>
             <table>
                 <tr>
                     <td>日</td>
