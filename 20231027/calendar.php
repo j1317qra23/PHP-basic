@@ -51,7 +51,7 @@
             text-align: center;
             font-size: 25px;
             font-family: 'Sofia', sans-serif;
-            -webkit-text-stroke: 1px black;
+            /* -webkit-text-stroke: 1px black; */
         }
 
         tr {
@@ -114,7 +114,7 @@
             font-size: 25px;
             font-family: 'Sofia', sans-serif;
             color: light blue;
-            font-weight: bold;
+           
         }
 
         div {
@@ -221,7 +221,7 @@ window.addEventListener('load', updateCurrentTime);
         "{$year}-10-01" => '國際浣熊日',
         "{$year}-10-05" => '石虎日',
         "{$year}-10-24" => '世界袋鼠日',
-        "{$year}-11-26" => '無尾熊日',
+        "{$year}-11-29" => '好肉球日',
         "{$year}-12-04" => '國際獵豹日',
         "{$year}-12-14" => '猴子日',
     ];
@@ -267,7 +267,7 @@ window.addEventListener('load', updateCurrentTime);
 
 
                 <a class="left-button" href="?year=<?= $prevYear; ?>&month=<?= $prev; ?>">&larr;</a>
-                <a href="?year=<?= $currentYear; ?>&month=<?= $currentMonth;; ?>&days=<?= $currentdays; ?>">Back to today</a>
+                <a href="?year=<?= $currentYear; ?>&month=<?= $currentMonth;; ?>&days=<?= $currentdays; ?>">Today</a>
                 <a class="right-button" href="?year=<?= $nextYear; ?>&month=<?= $next; ?>">&rarr;</a>
                
             </div>
