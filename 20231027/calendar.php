@@ -125,6 +125,20 @@
             flex-wrap: wrap;
 
         }
+        #hover-image {
+    position: absolute;
+    width: 100px; /* 调整图像的宽度 */
+    height: 200px; /* 调整图像的高度 */
+    bottom: 20px; /* 设置初始位置 */
+    left: 80%; /* 设置初始位置居中 */
+    transform: translateX(-50%); /* 水平居中 */
+    transition: transform 0.3s ease, bottom 0.3s ease; /* 添加平滑过渡效果 */
+    cursor: pointer; /* 将光标设置为手型 */
+}
+
+#hover-image:hover {
+    transform: translateX(-50%) translateY(-20px); /* 鼠标悬停时，图像飞起来 */
+}
     </style>
 
 
@@ -312,6 +326,9 @@ window.addEventListener('load', updateCurrentTime);
                 }
                 echo "</table>";
                 ?>
+                <div id="hover-image">
+    <img src="./01.png" alt="Hover Image">
+</div>
         </div>
     </div>
 </body>
