@@ -11,6 +11,7 @@ stars('正三角形',7);
 stars('菱形',7);
 
 stars('矩形',7);
+stars('矩形對角線',7);
 // equilateral_triangle(5);
 // //equilateral_triangle(9);
 // //equilateral_triangle(13);
@@ -30,6 +31,9 @@ function stars ($shape,$size){switch($shape){
             break;
             case '矩形':
                 retangle($size);
+                break;
+                case '矩形對角線':
+                    retangle_cross($size);
                 break;
 }
 
@@ -82,6 +86,22 @@ function retangle($size){
                 echo "&nbsp;";
             }
     
+        }
+        echo "<br>";
+    }
+    
+}
+function retangle_cross($size){
+    for($i=0;$i<$size;$i++){
+
+        for($j=0;$j<$size;$j++){
+            if($i==0 || $i==($size-1)){
+                echo "*";
+            }else if($j==0 || $j==($size-1) || $j==$i || $i+$j==($size-1)){
+                echo "*";
+            }else{
+                echo "&nbsp;";
+            }
         }
         echo "<br>";
     }
