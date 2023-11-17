@@ -41,3 +41,15 @@ echo "<hr>";
 ?>
 
 
+<h1>自訂函數預設值</h1>
+<?php
+// $c=3 預設值，但是後面可以填別的數字
+function sum3($a,$b,$c=3){
+    $sum=($a+$b)*$c;
+    echo "$a 、 $b ,倍數 $c <br>";
+  return $sum;
+}
+
+echo "總和是".sum3(10,15);
+echo "<hr>";
+echo "總和是".sum3(10,15,100);
