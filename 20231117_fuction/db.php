@@ -1,0 +1,22 @@
+<?php
+
+$rows=all('students');
+dd($rows);
+function all($table=null){
+    $dsn="mysql:host=localhost;charset=utf8;dbname=school";
+    $pdo=new PDO($dsn,'root','');
+    if(isset($table) && !empty($table)){
+     $sql="select * from `$table`";
+     $rows=$pdo->query($sql)->fetchall();
+     return $rows;
+    }else{
+        echo "錯誤:沒有指定的資料表名稱";
+     }
+}
+
+
+function dd($array){
+    echo "<pre>";
+    print_r($array);
+    echo "</pre>";
+}
