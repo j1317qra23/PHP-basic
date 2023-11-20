@@ -25,6 +25,7 @@ dd($up);
 // $rows = all('students', ['dept' => '3']);
 // dd($rows);
 
+// all
 function all($table=null,$where='',$other=''){
     $dsn="mysql:host=localhost;charset=utf8;dbname=school";
     $pdo=new PDO($dsn,'root','');
@@ -56,7 +57,7 @@ function all($table=null,$where='',$other=''){
     }
 }
 
-
+// find
 function find($table,$id){
     $dsn="mysql:host=localhost;charset=utf8;dbname=school";
     $pdo=new PDO($dsn,'root','');
@@ -77,6 +78,7 @@ function find($table,$id){
     return $row;
 }
 
+// update
 function update($table,$id,$cols){
     $dsn="mysql:host=localhost;charset=utf8;dbname=school";
     $pdo=new PDO($dsn,'root','');
@@ -106,6 +108,31 @@ function update($table,$id,$cols){
     echo $sql;
     return $pdo->exec($sql);
 }
+
+// find
+function del($table,$id){
+    $dsn="mysql:host=localhost;charset=utf8;dbname=school";
+    $pdo=new PDO($dsn,'root','');
+    $sql="select * from `$table` ";
+
+    if(is_array($id)){
+        foreach($id as $col => $value){
+            $tmp[]="`$col`='$value'";
+        }
+        $sql .=" where ".join(" && ",$tmp);
+    }else if(is_numeric($id)){
+        $sql .= " where `id`='$id'";
+    }else{
+        echo "錯誤:參數的資料型態比須是數字或陣列";
+    }
+    echo 'find=>'.$sql;
+    $row=$pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
+    return $row;
+}
+
+
+
+
 
  function dd($array){
      echo "<pre>";
