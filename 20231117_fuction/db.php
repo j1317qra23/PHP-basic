@@ -13,13 +13,17 @@ function all($table = null, $where = '', $other = '') {
     $pdo = new PDO($dsn, 'root', ''); // 建立 PDO 連接
     
     $sql = "select * from `$table` "; // 基本的 SQL 查詢，選擇指定表中的所有列
-    
+
     // 檢查是否提供了表名且不為空
     if (isset($table) && !empty($table)) {
 
         // 檢查條件以過濾查詢是否為數組
         if (is_array($where)) {
             // 根據 $where 數組中的鍵值對構建 WHERE 子句
+             /**
+             * ['dept'=>'2','graduate_at'=>12] =>  where `dept`='2' && `graduate_at`='12'
+             * $sql="select * from `$table` where `dept`='2' && `graduate_at`='12'"
+             */
             if (!empty($where)) {
                 $tmp = [];
                 foreach ($where as $col => $value) {
