@@ -1,11 +1,13 @@
 <?php
 
+insert('dept',['code' => '110','name'=>'圖書館系']);
+
 
 // update   給定資料表的條件後，會去更新相應的資料
 // $up=update("students",'3',['dept'=>'16','name'=>'張明珠']);
 // dd($up);
-$up=update("students",['dept'=>'90','status_code'=>'001'],['dept'=>'99','name'=>'張明珠']);
-dd($up);
+// $up=update("students",['dept'=>'90','status_code'=>'001'],['dept'=>'99','name'=>'張明珠']);
+// dd($up);
 
 
 // find   會回傳資料表指定id的資料
@@ -109,25 +111,18 @@ function update($table,$id,$cols){
     return $pdo->exec($sql);
 }
 
-// find
-function del($table,$id){
+// insert
+function insert($table,$values){
     $dsn="mysql:host=localhost;charset=utf8;dbname=school";
     $pdo=new PDO($dsn,'root','');
-    $sql="select * from `$table` ";
 
-    if(is_array($id)){
-        foreach($id as $col => $value){
-            $tmp[]="`$col`='$value'";
-        }
-        $sql .=" where ".join(" && ",$tmp);
-    }else if(is_numeric($id)){
-        $sql .= " where `id`='$id'";
-    }else{
-        echo "錯誤:參數的資料型態比須是數字或陣列";
-    }
-    echo 'find=>'.$sql;
-    $row=$pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
-    return $row;
+    $sql="insert into `$table` ";
+    $cols="(`".join("`,`",array_keys($values))."`)";
+    $vals="('".join("','",$values)."')";
+
+   $sql=$sql . $cols ." values " . $vals;
+//    echo  $sql;
+   return $pdo->exec($sql);
 }
 
 
