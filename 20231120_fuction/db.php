@@ -1,7 +1,9 @@
 <?php
 
 // global
-// $pdo = new PDO("mysql:host=localhost;charset=utf8;dbname=school", 'root', '');
+date_default_timezone_set("Asia/Taipei");
+$dsn = "mysql:host=localhost;charset=utf8;dbname=school";
+$pdo = new PDO($dsn, 'root', '');
 
 // del()-給定條件後，會去刪除指定的資料
 // del('students',['dept'=>5,'status_code'=>'001']);
@@ -35,12 +37,12 @@
 // dd($rows);
 
 // function
-function pdo($db){
-    $dsn="mysql:host=localhost;charset=utf8;dbname=$db";
-    $pdo=new PDO($dsn,'root','');
+// function pdo($db){
+//     $dsn="mysql:host=localhost;charset=utf8;dbname=$db";
+//     $pdo=new PDO($dsn,'root','');
 
-    return $pdo;
-}
+//     return $pdo;
+// }
 
 
 
@@ -50,6 +52,7 @@ function all($table=null,$where='',$other=''){
     // include -- include "pdo.php"; 
     // function --  $pdo=pdo('school');
     // global  -- global $pdo;
+    global $pdo;
     $sql="select * from `$table` ";
     
     if(isset($table) && !empty($table)){
@@ -80,8 +83,7 @@ function all($table=null,$where='',$other=''){
 
 // find
 function find($table,$id){
-    $dsn="mysql:host=localhost;charset=utf8;dbname=school";
-    $pdo=new PDO($dsn,'root','');
+    global $pdo;
     $sql="select * from `$table` ";
 
     if(is_array($id)){
@@ -101,8 +103,7 @@ function find($table,$id){
 
 // update
 function update($table,$id,$cols){
-    $dsn="mysql:host=localhost;charset=utf8;dbname=school";
-    $pdo=new PDO($dsn,'root','');
+    global $pdo;
 
     $sql="update `$table` set ";
 
@@ -132,8 +133,7 @@ function update($table,$id,$cols){
 
 // insert
 function insert($table,$values){
-    $dsn="mysql:host=localhost;charset=utf8;dbname=school";
-    $pdo=new PDO($dsn,'root','');
+    global $pdo;
 
     $sql="insert into `$table` ";
     $cols="(`".join("`,`",array_keys($values))."`)";
