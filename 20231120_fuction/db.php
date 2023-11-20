@@ -1,7 +1,14 @@
 <?php
 
-insert('dept',['code' => '110','name'=>'圖書館系']);
+// global
+// $pdo = new PDO("mysql:host=localhost;charset=utf8;dbname=school", 'root', '');
 
+// del()-給定條件後，會去刪除指定的資料
+// del('students',['dept'=>5,'status_code'=>'001']);
+
+
+// insert()-給定資料內容後，會去新增資料到資料表
+// insert('dept',['code'=>'112','name'=>'織品系']);
 
 // update   給定資料表的條件後，會去更新相應的資料
 // $up=update("students",'3',['dept'=>'16','name'=>'張明珠']);
@@ -24,13 +31,25 @@ insert('dept',['code' => '110','name'=>'圖書館系']);
 // $row=find('students',440);
 // dd($row);
 
-// $rows = all('students', ['dept' => '3']);
+// $rows = all('students', ['dept' => '4']);
 // dd($rows);
+
+// function
+function pdo($db){
+    $dsn="mysql:host=localhost;charset=utf8;dbname=$db";
+    $pdo=new PDO($dsn,'root','');
+
+    return $pdo;
+}
+
+
+
 
 // all
 function all($table=null,$where='',$other=''){
-    $dsn="mysql:host=localhost;charset=utf8;dbname=school";
-    $pdo=new PDO($dsn,'root','');
+    // include -- include "pdo.php"; 
+    // function --  $pdo=pdo('school');
+    // global  -- global $pdo;
     $sql="select * from `$table` ";
     
     if(isset($table) && !empty($table)){
@@ -51,7 +70,7 @@ function all($table=null,$where='',$other=''){
         }
 
             $sql .=$other;
-        echo 'all=>'.$sql;
+        // echo 'all=>'.$sql;
         $rows=$pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
         return $rows;
     }else{
@@ -75,7 +94,7 @@ function find($table,$id){
     }else{
         echo "錯誤:參數的資料型態比須是數字或陣列";
     }
-    echo 'find=>'.$sql;
+    // echo 'find=>'.$sql;
     $row=$pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
     return $row;
 }
@@ -107,7 +126,7 @@ function update($table,$id,$cols){
     }else{
         echo "錯誤:參數的資料型態比須是數字或陣列";
     }
-    echo $sql;
+    // echo $sql;
     return $pdo->exec($sql);
 }
 
@@ -125,7 +144,24 @@ function insert($table,$values){
    return $pdo->exec($sql);
 }
 
+// del
+function del($table,$id){
+   
+    $sql="delete from `$table` ";
 
+    if(is_array($id)){
+        foreach($id as $col => $value){
+            $tmp[]="`$col`='$value'";
+        }
+        $sql .=" where ".join(" && ",$tmp);
+    }else if(is_numeric($id)){
+        $sql .= " where `id`='$id'";
+    }else{
+        echo "錯誤:參數的資料型態比須是數字或陣列";
+    }
+    // echo $sql;
+    return $pdo->exec($sql);
+}
 
 
 
