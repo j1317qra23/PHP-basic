@@ -15,10 +15,42 @@ include_once "db.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>檔案管理功能</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 <style>
-    .thumbs{
+    *{
+    font-family: "微軟正黑體",Arial, Helvetica, sans-serif;
+    font-size:16px;
+    padding:0;
+    margin:0;
+    list-style-type: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.types{
+    width:400px;
+    margin:20px auto;
+    padding:10px;
+    height:100px;
+    border:1px solid #999;
+    border-radius:50px;
+    box-shadow: 2px 2px 5px #ccc;
+    text-align: center;
+    line-height:80px;
+    font-size:30px;
+
+}
+.types:hover{
+    border:2px solid blue;
+    background:lightcyan;
+}
+.header{
+    margin:10px auto;
+    padding:10px;
+    text-align: center;
+    font-size:32px;
+}
+.thumbs{
     width:150px;
     height:120px;
 }
@@ -46,6 +78,7 @@ $files=all('files');
             <td>大小</td>
             <td>描述</td>
             <td>上傳時間</td>
+            <td>操作</td>
         </tr>
     <?php
     foreach($files as $file){
@@ -81,6 +114,10 @@ $files=all('files');
             <td><?=$file['size'];?></td>
             <td><?=$file['desc'];?></td>
             <td><?=$file['create_at'];?></td>
+            <td>
+                <button class="btn btn-info">編輯</button>
+                <button class="btn btn-danger"><a href='./api/del_file.php?id=<?=$file['id'];?>'>刪除</a></button>
+            </td>
         </tr>
     <?php
     }
