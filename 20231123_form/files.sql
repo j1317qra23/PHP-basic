@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2023-11-23 02:06:05
+-- 產生時間： 2023-11-23 02:05:29
 -- 伺服器版本： 10.4.28-MariaDB
 -- PHP 版本： 8.2.4
 
@@ -33,7 +33,7 @@ CREATE TABLE `files` (
   `type` varchar(32) NOT NULL,
   `size` int(10) NOT NULL,
   `desc` text NOT NULL,
-  `creat_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `create_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
