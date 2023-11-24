@@ -14,7 +14,7 @@ class Dog extends Animal implements bark {
 }
 class Cat extends Animal implements bark {
     function b(){
-        return "喵";
+        return "喵          ";
     }
 }
 
