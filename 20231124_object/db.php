@@ -65,15 +65,11 @@ class DB{
         if(isset($array['id'])){
             $this->update($array['id'],$array);
         }else{
-            $this->insert ($array);
+            $this->insert($array);
         }
     }
 
-
-
-
-
-    function update($id, $cols)
+    protected function update($id, $cols)
     {
         $sql = "update `$this->table` set ";
     
@@ -101,7 +97,7 @@ class DB{
         return $this->pdo->exec($sql);
     }
     
-    function insert($values)
+    protected function insert($values)
     {
 
         $sql = "insert into `$this->table` ";
@@ -145,7 +141,8 @@ function dd($array)
 }
 
 
-$dept = new DB('dept');
-$rows = $dept->update(['code' => '90'], ['code' => '89', 'name' => '織品系']);
+$student=new DB('students');
+$rows=$student->all();
 dd($rows);
+
 ?>
