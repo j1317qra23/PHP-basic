@@ -40,7 +40,9 @@
                 <input type="reset" value="重置" class="btn btn-warning mx-2">
             </div>
         </form>
+       
     </div>
+    <?php include "./include/footer.php";?>
    </div> 
 </body>
 </html>
