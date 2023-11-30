@@ -1,3 +1,4 @@
+<?php include_once "db.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,15 +14,15 @@
     	<a style="position:absolute; right:3px; top:4px; cursor:pointer; z-index:9999;" onclick="cl('#cover')">X</a>
         <div id="cvr" style="position:absolute; width:99%; height:100%; margin:auto; z-index:9898;"></div>
     </div>
-</div>
-   <header class="container">
-    <img src="" alt="">
-   </header>
-   <main class="container">
-    <h3 class="text-center">網站標題管理</h3>
-    <hr>
- <form action="" method="post">
-   <table class="table table-bordered text-center">
+</div>    
+<header class="container">
+<img src="" alt="">
+</header>
+<main class="container">
+<h3 class="text-center">網站標題管理</h3>
+<hr>
+<form action="edit_title.php" method="post">
+<table class='table table-bordered text-center'>
     <tr>
         <td>網站標題</td>
         <td>替代文字</td>
@@ -29,27 +30,34 @@
         <td>刪除</td>
         <td></td>
     </tr>
+    <?php
+    $rows=$Title->all();
+    foreach($rows as $row){
+    ?>
     <tr>
-        <td><img src="" alt="" srcset="" style="width:300px;height:30px"></td>
-        <td><input type="text" name="" id="" style="width:90%"></td>
-        <td><input type="radio" name="" id=""></td>
-        <td><input type="checkbox" name="" id=""></td>
-        <td><input class="btn btn-primary" type="button" value="更新圖片"></td>
+        <td><img src="./img/<?=$row['img'];?>" style="width:300px;height:30px"></td>
+        <td><input type="text" name="text[]" id="" value="<?=$row['text'];?>" style="width:90%"></td>
+        <td><input type="radio" name="sh" id="" value="<?=$row['id'];?>" <?=($row['sh']==1)?'checked':'';?>></td>
+        <td><input type="checkbox" name="del[]" id="" value="<?=$row['id'];?>"></td>
+        <td><input class='btn btn-primary' type="button" value="更新圖片"></td>
+        <input type="hidden" name="id[]" value="<?=$row['id'];?>">
     </tr>
-   </table>
-   <div class="d-flex justify-content-between">
-    <div><input class="btn btn-primary" type="button" onclick="op('#cover','#cvr','title.php')"  value="新增網站標題圖片"></div>
+    <?php
+    }
+    ?>
+</table>
+<div class="d-flex justify-content-between">
+    <div><input type="button" onclick="op('#cover','#cvr','title.php')" value="新增網站標題圖片"></div>
     <div>
-    <input  class="btn btn-primary"type="submit" value="修改確定">
-    <input  class="btn btn-primary"type="submit" value="重置">
+        <input type="submit" value="修改確定">
+        <input type="reset" value="重置">
     </div>
     <div></div>
-   </div>
-   </form>
-   </main>
-   <script src="../js/jquery-3.4.1.min.js"></script>
-   <script src="../js/bootstrap.js"></script>
-   <script src="../js/js.js"></script>
+</div>
+</form>
+</main>
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/js.js"></script>
+<script src="../js/bootstrap.js"></script>
 </body>
-
 </html>
