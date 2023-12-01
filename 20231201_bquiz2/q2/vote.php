@@ -11,13 +11,13 @@
 <header class="p-5">
     <h1 class="text-center">問卷投票</h1>
 </header>    
-<body>
+
 <main class='container'>
 <?php 
 $subject=$Que->find($_GET['id']);
 ?>
 <h2 class="text-center"><?=$subject['text'];?></h2>
-<form action="add_vote.php" method="post">
+<form action="./api/vote.php" method="post">
 <ul class="list-group col-6 mx-auto">
     <?php 
     $opts=$Que->all(['subject_id'=>$_GET['id']]);
