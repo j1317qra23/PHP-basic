@@ -54,7 +54,9 @@
         <td><?=$idx+1;?></td>
         <td><?=$que['text'];?></td>
         <td>
-            <button class="btn btn-info">顯示</button>
+        <a href="./api/show.php?id=<?=$que['id'];?>" class="btn <?=($que['sh']==1)?'btn-info':'btn-secondary';?>">
+                <?=($que['sh']==1)?'顯示':'隱藏';?>
+            </a>
             <button class="btn btn-success">編輯</button>
             <a href="./api/del.php?id=<?=$que['id'];?>">
                 <button class="btn btn-danger">刪除</button>
