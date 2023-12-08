@@ -12,6 +12,10 @@ if(isset($_FILES['img']['tmp_name'])){
     $_POST['img'] = $_FILES['img']['name'];
 }
 
+$_POST['sh']=($table=='title')?0:1;
+
+
+
 // 移除 $_POST 陣列中的 'table' 鍵值對
 unset($_POST['table']);
 
