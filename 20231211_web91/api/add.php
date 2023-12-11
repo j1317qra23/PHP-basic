@@ -5,6 +5,11 @@ include_once "db.php";
 // 從 POST 請求中獲取表名稱並轉換為大寫
 $DB = ${ucfirst($_POST['table'])};
 $table = $_POST['table'];
+switch($table){
+    case "admin":
+        unset($_POST['pw2']);
+    break;
+}
 
 // 如果有上傳檔案，將檔案移動到指定目錄下
 if(isset($_FILES['img']['tmp_name'])){
@@ -12,7 +17,9 @@ if(isset($_FILES['img']['tmp_name'])){
     $_POST['img'] = $_FILES['img']['name'];
 }
 
-$_POST['sh']=($table=='title')?0:1;
+if($table != 'admin'){
+    $_POST['sh']=($table=='title')?0:1;
+}
 
 
 
