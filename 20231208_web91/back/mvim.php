@@ -15,7 +15,7 @@
                 ?>
                     <tr>
                         <td width="70%">
-                            <img src="./img/<?= $row['img']; ?>" style="width:300px;height:30px">
+                            <img src="./img/<?= $row['img']; ?>" style="width:150px;height:120px">
                         </td>
                         </td>
                         <td width="10%">
