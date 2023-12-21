@@ -5,43 +5,44 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>xxx系統</title>
+  <!-- <link href="./css/css.css" rel="stylesheet" type="text/css"> -->
+  <meta charset="utf-8">
 
-  <head>
-    <meta charset="utf-8">
-    <title>BizPage Bootstrap Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-    <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
-    <!-- Bootstrap CSS File -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Libraries CSS Files -->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-    <!-- Main Stylesheet File -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="./css/css.css" rel="stylesheet" type="text/css">
-    <script src="./js/jquery-1.9.1.min.js"></script>
-    <script src="./js/js.js"></script>
-    <!-- =======================================================
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="./css/css.css" rel="stylesheet" type="text/css">
+  <script src="./js/jquery-1.9.1.min.js"></script>
+  <script src="./js/js.js"></script>
+  <!-- =======================================================
     Theme Name: BizPage
     Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
     Author: BootstrapMade.com
     License: https://bootstrapmade.com/license/
   ======================================================= -->
-  </head>
+
+</head>
 
 <body>
 
@@ -49,6 +50,12 @@
     Header
   ============================-->
   <header id="header">
+    <?php
+    $title = $Title->find(['sh' => 1]);
+    ?>
+    <a title="<?= $title['text']; ?>" href="index.php">
+      <div class="ti" style="background:url(&#39;./img/<?= $title['img']; ?>&#39;); background-size:cover;"></div><!--標題-->
+    </a>
     <div class="container-fluid">
 
       <div id="logo" class="pull-left">
@@ -65,16 +72,40 @@
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#team">Team</a></li>
           <li class="menu-has-children"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav><!-- #nav-menu-container -->
+            <span class="t botli">主選單區</span>
+            <?php
+            $mainmu = $Menu->all(['sh' => 1, 'menu_id' => 0]);
+            foreach ($mainmu as $main) {
+            ?>
+              <div class='mainmu'>
+                <a href="<?= $main['href']; ?>" style="color:#000; font-size:13px; text-decoration:none;"><?= $main['text']; ?></a>
+                <?php
+
+                if ($Menu->count(['menu_id' => $main['id']]) > 0) {
+                  echo "<div class='mw'>";
+                  $subs = $Menu->all(['menu_id' => $main['id']]);
+                  foreach ($subs as $sub) {
+                    echo "<a href='{$sub['href']}'>";
+                    echo "<div class='mainmu2'>";
+                    echo $sub['text'];
+                    echo "</div>";
+                    echo "</a>";
+                  }
+                  echo "</div>";
+                }
+                ?>
+
+              </div>
+
+              </a>
+            <?php
+            }
+            ?>
+    </div>
+    </li>
+    <li><a href="#contact">Contact</a></li>
+    </ul>
+    </nav><!-- #nav-menu-container -->
     </div>
   </header><!-- #header -->
 
@@ -310,7 +341,7 @@
         <div class="row counters">
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">274</span>
+            <span data-toggle="counter-up"><?=$Total->find(1)['total'];?></span>
             <p>Clients</p>
           </div>
 
