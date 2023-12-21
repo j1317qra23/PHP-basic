@@ -1,6 +1,7 @@
 <?php include_once './api/db.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>BizPage Bootstrap Template</title>
@@ -59,11 +60,12 @@
           <li><a href="#team">Team</a></li>
           <li class="menu-has-children"><a href="">
 
-          
-          </a>
-         
+
+            </a>
+
           </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="./front/login.php">Login</a>
+        </li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -75,63 +77,15 @@
   <section id="intro">
     <div class="intro-container">
       <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
-
         <ol class="carousel-indicators"></ol>
-
         <div class="carousel-inner" role="listbox">
-
-          <div class="carousel-item active" style="background-image: url('img/intro-carousel/1.jpg');">
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2>We are professional</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item" style="background-image: url('img/intro-carousel/2.jpg');">
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2>At vero eos et accusamus</h2>
-                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p>
-                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item" style="background-image: url('img/intro-carousel/3.jpg');">
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2>Temporibus autem quibusdam</h2>
-                <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p>
-                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item" style="background-image: url('img/intro-carousel/4.jpg');">
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2>Nam libero tempore</h2>
-                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum.</p>
-                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item" style="background-image: url('img/intro-carousel/5.jpg');">
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2>Magnam aliquam quaerat</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
-              </div>
-            </div>
-          </div>
-
+          <?php
+          $title = $Title->find(['sh' => 1]);
+          ?>
+          <a title="<?= $title['text']; ?>" href="index.php">
+            <div class="carousel-item active" style="background:url(&#39;./img/<?= $title['img']; ?>&#39;); background-size:cover;"></div><!--標題-->
+          </a>
         </div>
-
         <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
@@ -154,28 +108,33 @@
     <section id="featured-services">
       <div class="container">
         <div class="row">
+    <div style="width: 89%; height: 480px; position: relative;" class="dbor">
+  <span class="t botli">校園映象區</span>
+  <div style="position: absolute; top: 50%; left: -25px; transform: translateY(-50%);">
+    
+  </div>
 
-          <div class="col-lg-4 box">
-            <i class="ion-ios-bookmarks-outline"></i>
-            <h4 class="title"><a href="">Lorem Ipsum Delino</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-          </div>
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 0 35px; overflow-x: auto; height: 150px;">
+    <?php
+    $imgs = $Image->all(['sh' => 1]);
 
-          <div class="col-lg-4 box box-bg">
-            <i class="ion-ios-stopwatch-outline"></i>
-            <h4 class="title"><a href="">Dolor Sitema</a></h4>
-            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-          </div>
-
-          <div class="col-lg-4 box">
-            <i class="ion-ios-heart-outline"></i>
-            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-          </div>
-
-        </div>
+    foreach ($imgs as $idx => $img) {
+    ?>
+      <div id="ssaa<?= $idx; ?>" class='im cent'>
+        <img src="./img/<?= $img['img']; ?>" style="width:150px;height:103px;border:3px solid orange;margin:3px">
       </div>
-    </section><!-- #featured-services -->
+    <?php
+    }
+    ?>
+  </div>
+
+  
+
+ 
+</div>
+</div>
+  </section>
+    <!-- #featured-services -->
 
     <!--==========================
       About Us Section
@@ -211,7 +170,7 @@
               </div>
               <h2 class="title"><a href="#">Our Plan</a></h2>
               <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
               </p>
             </div>
           </div>
@@ -284,11 +243,11 @@
     </section>
     <!-- #services -->
 
-  
+
     <!--==========================
       Facts Section
     ============================-->
-    <section id="facts"  class="wow fadeIn">
+    <section id="facts" class="wow fadeIn">
       <div class="container">
 
         <header class="section-header">
@@ -298,27 +257,27 @@
 
         <div class="row counters">
 
-  				<div class="col-lg-3 col-6 text-center">
+          <div class="col-lg-3 col-6 text-center">
             <span data-toggle="counter-up"><?= $Total->find(1)['total']; ?></span>
             <p>Clients</p>
-  				</div>
+          </div>
 
           <div class="col-lg-3 col-6 text-center">
             <span data-toggle="counter-up"><?= $Total->find(1)['total']; ?></span>
             <p>Projects</p>
-  				</div>
+          </div>
 
           <div class="col-lg-3 col-6 text-center">
             <span data-toggle="counter-up"><?= $Total->find(1)['total']; ?></span>
             <p>Hours Of Support</p>
-  				</div>
+          </div>
 
           <div class="col-lg-3 col-6 text-center">
             <span data-toggle="counter-up"><?= $Total->find(1)['total']; ?></span>
             <p>Hard Workers</p>
-  				</div>
+          </div>
 
-  			</div>
+        </div>
 
         <div class="facts-img">
           <img src="img/facts-img.png" alt="" class="img-fluid">
@@ -330,7 +289,7 @@
     <!--==========================
       Portfolio Section
     ============================-->
-    <section id="portfolio"  class="section-bg" >
+    <section id="portfolio" class="section-bg">
       <div class="container">
 
         <header class="section-header">
@@ -541,7 +500,7 @@
             <h4>Our Newsletter</h4>
             <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit"  value="Subscribe">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
           </div>
 
@@ -588,4 +547,5 @@
   <script src="js/main.js"></script>
 
 </body>
+
 </html>
