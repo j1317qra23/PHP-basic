@@ -28,6 +28,12 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
   <!-- =======================================================
     Theme Name: BizPage
@@ -106,57 +112,83 @@
       Featured Services Section
     ============================-->
     <section id="featured-services">
-      <div class="container">
-        <div class="row">
-        <div style="width: 120%; height: 480px; position: relative;" class="dbor">
-  <span class="t botli">校園映象區</span>
-  <div style="position: absolute; top: 50%; left: -25px; transform: translateY(-50%);" onclick="pp(1)">
-    <img src="./icon/up.jpg" alt="">
-  </div>
+  <div class="container">
+    <div class="row">
+      <div style="width: 100%; height: 480px; position: relative;" class="dbor">
+        <span class="t botli">校園映象區</span>
+        <div style="position: absolute; top: 50%; left: -100px; transform: translateY(-50%);" onclick="pp(-1)">
+        <i class="fa-solid fa-square-caret-left"></i>
+        </div>
 
-  <div style="display: flex; align-items: center; justify-content: space-between; overflow-x: auto; height: 400px;">
-    <?php
-    $imgs = $Image->all(['sh' => 1]);
+        <div style="display: flex; align-items: center; overflow: hidden; height: 400px;">
+          <?php
+          $imgs = $Image->all(['sh' => 1]);
 
-    foreach ($imgs as $idx => $img) {
-    ?>
-      <div id="ssaa<?= $idx; ?>" class='im cent'>
-        <img src="./img/<?= $img['img']; ?>" style="width:300px;height:300px;border:3px solid orange;margin:3px">
+          foreach ($imgs as $idx => $img) {
+          ?>
+            <div id="ssaa<?= $idx; ?>" class='im cent' style="flex: 0 0 300px; display: none; margin-right: 110px;">
+              <img src="./img/<?= $img['img']; ?>" style="width: 100%; height: 300px; border: 3px solid orange; margin: 3px;">
+            </div>
+          <?php
+          }
+          ?>
+        </div>
+
+        <div style="position: absolute; top: 50%; right: -100px; transform: translateY(-50%);" onclick="pp(1)">
+        <i class="fa-solid fa-square-caret-right"></i>
+        </div>
+
+        <script>
+          var totalImages = <?= count($imgs); ?>;
+          var imagesPerPage = 3; // Number of images displayed at once
+          var currentPage = 0;
+
+          function showPage(page) {
+            $(".im").hide();
+            for (var i = page * imagesPerPage; i < (page + 1) * imagesPerPage; i++) {
+              $("#ssaa" + i).show();
+            }
+          }
+
+          function pp(direction) {
+            if (direction === 1) {
+              currentPage++;
+              if (currentPage >= Math.ceil(totalImages / imagesPerPage)) {
+                currentPage = 0;
+              }
+            } else if (direction === -1) {
+              currentPage--;
+              if (currentPage < 0) {
+                currentPage = Math.ceil(totalImages / imagesPerPage) - 1;
+              }
+            }
+            showPage(currentPage);
+          }
+
+          // Auto slide every 3 seconds
+          var slideInterval = setInterval(function () {
+            pp(1); // Next slide
+          }, 3000);
+
+          // Stop auto sliding on hover
+          $(".dbor").hover(
+            function () {
+              clearInterval(slideInterval);
+            },
+            function () {
+              slideInterval = setInterval(function () {
+                pp(1); // Next slide
+              }, 3000);
+            }
+          );
+
+          showPage(currentPage); // Show initial images
+        </script>
+
       </div>
-    <?php
-    }
-    ?>
+    </div>
   </div>
-
-  <div style="position: absolute; top: 50%; right: -25px; transform: translateY(-50%);" onclick="pp(2)">
-    <img src="./icon/dn.jpg" alt="">
-  </div>
-
-  <script>
-    var nowpage = 1,
-      num = <?= $Image->count(['sh' => 1]); ?>;
-
-    function pp(x) {
-      var s, t;
-      if (x == 1 && nowpage - 1 >= 0) {
-        nowpage--;
-      }
-      if (x == 2 && (nowpage + 1) <= num * 1 - 3) {
-        nowpage++;
-      }
-
-      $(".im").hide()
-      for (s = 0; s <= 2; s++) {
-        t = s * 1 + nowpage * 1;
-        $("#ssaa" + t).show()
-      }
-    }
-
-    pp(2)
-  </script>
-
-</div>
-  </section>
+</section>
     <!-- #featured-services -->
     <!--==========================
       Portfolio Section
