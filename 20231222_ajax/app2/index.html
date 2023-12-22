@@ -16,12 +16,10 @@
   <h1 class="header">學生資料管理系統</h1>
   <div class="container d-flex">
     <div class="sex mx-2 my-3">
-      <button class="btn btn-primary" onclick="query('sex',1)">男生</button>
-      <button class="btn btn-warning" onclick="query('sex',2)">女生</button>
+      <button class="btn btn-primary mx-2 my-2" onclick="query('sex',1)">男生</button>
+      <button class="btn btn-warning mx-2 my-2" onclick="query('sex',2)">女生</button>
     </div>
-    <div class="clases mx-2 my-3">
-      <button class="btn btn-info" onclick="query('class',101)">一年一班</button>
-      <button class="btn btn-info" onclick="query('class',102)">二年一班</button>
+    <div class="classes mx-2 my-3">
     </div>
   </div>
   <div class="users d-flex flex-wrap mx-auto my-3" style="width:64%"></div>
@@ -36,7 +34,7 @@
 * 5.是否需要更新畫面內容？更新畫面的方法？
 ************************************/
 queryAll();
-
+queryClasses();
 //新增資料的函式
 function create(){
 
@@ -45,8 +43,23 @@ function create(){
 //查詢資料的函式
 function query(type,value){
   $.get(`./api/query.php?do=${type}`,{value},(res)=>{
+    console.log(res)
     render(res)
   })
+}
+function queryClasses(){
+  $.get("./api/query.php?do=classes",(classes)=>{
+    //console.log(classes)
+    let class_btns;
+    classes.forEach((c,idx)=>{
+      class_btns=`<button class='btn btn-info m-2' onclick="query('class',${c.code})">
+                  ${c.name}
+                  </button>`
+  
+    $(".classes").append(class_btns)
+  })
+
+})  
 }
 function queryAll(){
 $.get("./api/query.php?do=all",(users)=>{
