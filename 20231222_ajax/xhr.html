@@ -14,8 +14,8 @@
     <h4 class="title"></h4>
     <div class="updated" ></div>
     <ul class="list-group"></ul>
-    <script src="./plugin/js/jquery.js"></script>
-    <script src="./plugin/js/bootstrap.js"></script>   
+<script src="./plugin/js/jquery.js"></script>
+<script src="./plugin/js/bootstrap.js"></script>    
 </body>
 </html>
 <script>
@@ -28,14 +28,13 @@
     ********************************************************/
 
     //宣告一個XMLHttpRequest物件
-
     let xhr=new XMLHttpRequest
+
     //建立請求的各項設定及實質內容
     //async - 非同步
     //sync - 同步
     xhr.open('GET','https://kktix.com/events.json');
     xhr.responseType = 'json';
-
     //建立得到回應時的各項設定及行為
     xhr.onload=function(){  
         let type=xhr.getResponseHeader("Content-Type");
@@ -55,5 +54,5 @@
 }
 
     //送出請求
-     xhr.send()
+    xhr.send()
     </script>
