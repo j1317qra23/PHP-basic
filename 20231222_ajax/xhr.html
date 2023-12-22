@@ -27,13 +27,20 @@
 
     //宣告一個XMLHttpRequest物件
 
-
+    let xhr=new XMLHttpRequest
     //建立請求的各項設定及實質內容
-
+    xhr.open('GET','https://kktix.com/events.json')
 
     //建立得到回應時的各項設定及行為
-
+    xhr.onload=function(){  
+    let type=xhr.getResponseHeader("Content-Type");
+    let status=xhr.status
+    let response=xhr.responseText
+    // 轉換物件為文字
+    let res=JSON.parse(response) 
+    console.log(res)
+}
 
     //送出請求
-
+     xhr.send()
     </script>
