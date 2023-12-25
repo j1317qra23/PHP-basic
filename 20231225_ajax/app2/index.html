@@ -11,7 +11,16 @@
   <link rel="stylesheet" href="style.css">
   <!---匯入要使用的函式庫--->
   <script src="jquery.js"></script>
-
+  <style>
+    #relation {
+    border: 1px solid #ccc;
+    width: 93.5%;
+    position: relative;
+    left: 74px;
+    top: -1px;
+    display:none;
+}
+  </style>
 </head>
 
 <body>
@@ -24,11 +33,14 @@
       <button class="btn btn-primary mx-2 my-2" onclick="query('sex',1)">男生</button>
       <button class="btn btn-warning mx-2 my-2" onclick="query('sex',2)">女生</button>
     </div>
-
     <div class="classes mx-2 my-3  col-9">
     </div>
   </div>
-
+  <div class="input-group mb-3 container">
+    <span class="input-group-text" id="basic-addon1">search</span>
+    <input id="search-input" type="text" class="form-control">
+    <div id="relation"></div>
+  </div>
   <div class="users d-flex flex-wrap mx-auto my-3" style="width:64%"></div>
 
   <div id="modals">
@@ -40,6 +52,17 @@
 
 </html>
 <script>
+
+  let input
+$("#search-input").on('input',()=>{
+  input=$("#search-input").val()
+  $.get("./api/search.php",{input},(result)=>{
+    $("#relation").html(result)
+    $("#relation").show()
+  })
+})
+
+
   let stuModal
   function popForm(type, id = null) {
     switch(type){
