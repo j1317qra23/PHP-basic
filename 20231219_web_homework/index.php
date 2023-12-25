@@ -28,12 +28,9 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- =======================================================
     Theme Name: BizPage
@@ -50,7 +47,7 @@
   ============================-->
   <header id="header">
     <div class="container-fluid">
-
+    <?php include "./front/marquee.php"; ?>
       <div id="logo" class="pull-left">
         <h1><a href="#intro" class="scrollto">BizPage</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
@@ -60,10 +57,11 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="#intro">Home</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
+          <li><a href="#facts">Facts</a></li>
+          <li><a href="#footer">Footer</a></li>
           <li class="menu-has-children"><a href="">
 
 
@@ -71,7 +69,7 @@
 
           </li>
           <li><a href="./front/login.php">Login</a>
-        </li>
+          </li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -112,83 +110,83 @@
       Featured Services Section
     ============================-->
     <section id="featured-services">
-  <div class="container">
-    <div class="row">
-      <div style="width: 100%; height: 480px; position: relative;" class="dbor">
-        <span class="t botli">校園映象區</span>
-        <div style="position: absolute; top: 50%; left: -100px; transform: translateY(-50%);" onclick="pp(-1)">
-        <i class="fa-solid fa-square-caret-left"></i>
-        </div>
-
-        <div style="display: flex; align-items: center; overflow: hidden; height: 400px;">
-          <?php
-          $imgs = $Image->all(['sh' => 1]);
-
-          foreach ($imgs as $idx => $img) {
-          ?>
-            <div id="ssaa<?= $idx; ?>" class='im cent' style="flex: 0 0 300px; display: none; margin-right: 110px;">
-              <img src="./img/<?= $img['img']; ?>" style="width: 100%; height: 300px; border: 3px solid orange; margin: 3px;">
+      <div class="container">
+        <div class="row">
+          <div style="width: 100%; height: 480px; position: relative;" class="dbor">
+            <span class="t botli">校園映象區</span>
+            <div style="position: absolute; top: 50%; left: -100px; transform: translateY(-50%);" onclick="pp(-1)">
+              <i class="fa-solid fa-square-caret-left"></i>
             </div>
-          <?php
-          }
-          ?>
-        </div>
 
-        <div style="position: absolute; top: 50%; right: -100px; transform: translateY(-50%);" onclick="pp(1)">
-        <i class="fa-solid fa-square-caret-right"></i>
-        </div>
+            <div style="display: flex; align-items: center; overflow: hidden; height: 400px;">
+              <?php
+              $imgs = $Image->all(['sh' => 1]);
 
-        <script>
-          var totalImages = <?= count($imgs); ?>;
-          var imagesPerPage = 3; // Number of images displayed at once
-          var currentPage = 0;
-
-          function showPage(page) {
-            $(".im").hide();
-            for (var i = page * imagesPerPage; i < (page + 1) * imagesPerPage; i++) {
-              $("#ssaa" + i).show();
-            }
-          }
-
-          function pp(direction) {
-            if (direction === 1) {
-              currentPage++;
-              if (currentPage >= Math.ceil(totalImages / imagesPerPage)) {
-                currentPage = 0;
+              foreach ($imgs as $idx => $img) {
+              ?>
+                <div id="ssaa<?= $idx; ?>" class='im cent' style="flex: 0 0 300px; display: none; margin-right: 110px;">
+                  <img src="./img/<?= $img['img']; ?>" style="width: 100%; height: 300px; border: 3px solid orange; margin: 3px;">
+                </div>
+              <?php
               }
-            } else if (direction === -1) {
-              currentPage--;
-              if (currentPage < 0) {
-                currentPage = Math.ceil(totalImages / imagesPerPage) - 1;
+              ?>
+            </div>
+
+            <div style="position: absolute; top: 50%; right: -100px; transform: translateY(-50%);" onclick="pp(1)">
+              <i class="fa-solid fa-square-caret-right"></i>
+            </div>
+
+            <script>
+              var totalImages = <?= count($imgs); ?>;
+              var imagesPerPage = 3; // Number of images displayed at once
+              var currentPage = 0;
+
+              function showPage(page) {
+                $(".im").hide();
+                for (var i = page * imagesPerPage; i < (page + 1) * imagesPerPage; i++) {
+                  $("#ssaa" + i).show();
+                }
               }
-            }
-            showPage(currentPage);
-          }
 
-          // Auto slide every 3 seconds
-          var slideInterval = setInterval(function () {
-            pp(1); // Next slide
-          }, 3000);
+              function pp(direction) {
+                if (direction === 1) {
+                  currentPage++;
+                  if (currentPage >= Math.ceil(totalImages / imagesPerPage)) {
+                    currentPage = 0;
+                  }
+                } else if (direction === -1) {
+                  currentPage--;
+                  if (currentPage < 0) {
+                    currentPage = Math.ceil(totalImages / imagesPerPage) - 1;
+                  }
+                }
+                showPage(currentPage);
+              }
 
-          // Stop auto sliding on hover
-          $(".dbor").hover(
-            function () {
-              clearInterval(slideInterval);
-            },
-            function () {
-              slideInterval = setInterval(function () {
+              // Auto slide every 3 seconds
+              var slideInterval = setInterval(function() {
                 pp(1); // Next slide
               }, 3000);
-            }
-          );
 
-          showPage(currentPage); // Show initial images
-        </script>
+              // Stop auto sliding on hover
+              $(".dbor").hover(
+                function() {
+                  clearInterval(slideInterval);
+                },
+                function() {
+                  slideInterval = setInterval(function() {
+                    pp(1); // Next slide
+                  }, 3000);
+                }
+              );
 
+              showPage(currentPage); // Show initial images
+            </script>
+
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
     <!-- #featured-services -->
     <!--==========================
       Portfolio Section
@@ -416,46 +414,76 @@
     ============================-->
     <section id="services">
       <div class="container">
-
         <header class="section-header wow fadeInUp">
-          <h3>Services</h3>
+          <h3>更多最新消息顯示區</h3>
           <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus, ad pro quaestio laboramus. Ei ubique vivendum pro. At ius nisl accusam lorenta zanos paradigno tridexa panatarel.</p>
         </header>
+        
+        <div style="height:32px; display:block;"></div>
+        <hr>
+        <?php
+        $total = $DB->count(['sh' => 1]);
+        $div = 5;
+        $pages = ceil($total / $div);
+        $now = $_GET['p'] ?? 1;
+        $start = ($now - 1) * $div;
+        $news = $News->all(['sh' => 1], " limit $start,$div");
+        ?>
+        <ol start='<?= $start + 1; ?>'>
+          <?php
 
-        <div class="row">
+          foreach ($news as $n) {
+            echo "<li class='sswww'>";
+            echo mb_substr($n['text'], 0, 20);
+            echo "<div class='all' style='display:none'>";
+            echo $n['text'];
+            echo "</div>";
+            echo "...</li>";
+          }
 
-          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
-            <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
-            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-          </div>
-          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
-            <div class="icon"><i class="ion-ios-bookmarks-outline"></i></div>
-            <h4 class="title"><a href="">Dolor Sitema</a></h4>
-            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-          </div>
-          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
-            <div class="icon"><i class="ion-ios-paper-outline"></i></div>
-            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-          </div>
-          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
-            <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
-            <h4 class="title"><a href="">Magni Dolores</a></h4>
-            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-          </div>
-          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
-            <div class="icon"><i class="ion-ios-barcode-outline"></i></div>
-            <h4 class="title"><a href="">Nemo Enim</a></h4>
-            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-          </div>
-          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
-            <div class="icon"><i class="ion-ios-people-outline"></i></div>
-            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-          </div>
+          ?>
+        </ol>
+        <div class="cent">
 
+          <?php
+          if ($now > 1) {
+            $prev = $now - 1;
+            echo "<a href='?do=$do&p=$prev'> < </a>";
+          }
+
+          for ($i = 1; $i <= $pages; $i++) {
+            $fontsize = ($now == $i) ? '24px' : '16px';
+            echo "<a href='?do=$do&p=$i' style='font-size:$fontsize'> $i </a>";
+          }
+
+          if ($now < $pages) {
+            $next = $now + 1;
+            echo "<a href='?do=$do&p=$next'> > </a>";
+          }
+          ?>
         </div>
+
+      </div>
+      <div id="alt" style="position: absolute; width: 350px; min-height: 100px; word-break:break-all; text-align:justify;  background-color: rgb(255, 255, 204); top: 50px; left: 400px; z-index: 99; display: none; padding: 5px; border: 3px double rgb(255, 153, 0); background-position: initial initial; background-repeat: initial initial;">
+      </div>
+      <script>
+        $(".sswww").hover(
+          function() {
+
+            $("#alt").html('<pre>' + $(this).children(".all").html() + '</pre>').css({
+              "top": $(this).offset().top - 50
+            })
+            $("#alt").show()
+          }
+        )
+        $(".sswww").mouseout(
+          function() {
+            $("#alt").hide()
+          }
+        )
+      </script>
+
+      </div>
 
       </div>
     </section>
@@ -504,7 +532,7 @@
       </div>
     </section><!-- #facts -->
 
-    
+
 
   </main>
 

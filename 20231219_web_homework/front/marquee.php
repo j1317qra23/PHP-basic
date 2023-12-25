@@ -1,4 +1,4 @@
-<marquee scrolldelay="120" direction="left" style="position:absolute; width:100%; height:40px;">
+<marquee scrolldelay="150" direction="left" style="width:100%; top:75%;height:40px; font-size: 35px">
     <?php
         $ads=$Ad->all(['sh'=>1]);
         foreach($ads as $ad){
