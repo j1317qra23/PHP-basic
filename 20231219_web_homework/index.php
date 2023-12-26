@@ -109,7 +109,7 @@
     <!--==========================
       Featured Services Section
     ============================-->
-    <section id="featured-services">
+    <section  id="featured-services" >
       <div class="container">
         <div class="row">
           <div style="width: 100%; height: 480px; position: relative;" class="dbor">
@@ -185,7 +185,7 @@
 
           </div>
         </div>
-      </div>
+ 
     </section>
     <!-- #featured-services -->
     <!--==========================
@@ -214,8 +214,8 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
             <div class="portfolio-wrap">
               <figure>
-                <img src="img/portfolio/app1.jpg" class="img-fluid" alt="">
-                <a href="img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                <img src="img/001.jpg" class="img-fluid" alt="">
+                <a href="img/002.JPG" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
                 <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
               </figure>
 
