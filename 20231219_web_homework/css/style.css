@@ -559,7 +559,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Featured Services Section
 --------------------------------*/
 #featured-services {
-  background: #000;
+  
+  background-image: url(../img/002.JPG);
 }
 
 #featured-services .box {
