@@ -38,6 +38,9 @@
     Author: BootstrapMade.com
     License: https://bootstrapmade.com/license/
   ======================================================= -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body>
@@ -358,56 +361,69 @@
     <section id="about">
       <div class="container">
 
-        <header class="section-header">
-          <h3>About Us</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </header>
-
-        <div class="row about-cols">
-
-          <div class="col-md-4 wow fadeInUp">
-            <div class="about-col">
-              <div class="img">
-                <img src="img/about-mission.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
-              </div>
-              <h2 class="title"><a href="#">Our Mission</a></h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
+      <div id="app" v-cloak>
+    <!-- status buttons-->
+    <div class="game-status">
+      <div class="toggle" @click="isToggle = !isToggle"></div>
+      <transition name="slide-fade">
+        <div class="status-container" v-if="isToggle">
+          <div class="times">CHANCE <span>{{time_remaining}}</span></div>
+          <div class="buttons">
+            <button class="btn btn-primary" :class="{'active':current_year===2017}"
+              @click="setCurrentYear(2017)">2017</button>
+            <button class="btn btn-primary" :class="{'active':current_year===2018}"
+              @click="setCurrentYear(2018)">2018</button>
+            <button class="btn btn-secondary" @click="restart">Restart</button>
           </div>
-
-          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="about-col">
-              <div class="img">
-                <img src="img/about-plan.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-ios-list-outline"></i></div>
-              </div>
-              <h2 class="title"><a href="#">Our Plan</a></h2>
-              <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="about-col">
-              <div class="img">
-                <img src="img/about-vision.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-ios-eye-outline"></i></div>
-              </div>
-              <h2 class="title"><a href="#">Our Vision</a></h2>
-              <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
-              </p>
-            </div>
-          </div>
-
         </div>
+      </transition>
+    </div>
 
+    <div class="lucky-wheel">
+      <div class="pointer-container">
+        <!-- pointer -->
+        <div class="pointer" ref="pointer" id="pointer" :style="{'transform':rotate_deg,'transition': prize_transition}"
+          @click="rotateHandler(num)">
+        </div>
       </div>
-    </section><!-- #about -->
+      <!-- lucky wheel -->
+      <div :class="containerClass">
+        <div v-for="(item,index) in prizes" :key="item.name" ref="item" :class="itemClass">
+          <div :class="contentClass">
+            <i class="material-icons">
+              {{item.icon}}
+            </i>
+            <span>{{item.name}}
+              <span :class="countClass">{{item.count}}</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- display results -->
+      <transition name="slide-fade">
+        <div class="prize" v-if="isShow==isClicked">
+          <div class="prize-container">
+            <div class="prize-title">WELL</br> DONE!</div>
+            <div class="prize-title">YOU GET A FREE...</br>
+              <span class="prize-item">{{prize_name}}</span>
+            </div>
+            <div class="prize-background">
+              <template v-for="(prizeIcon,index) in 9">
+                <i class="material-icons">
+                  {{prize_icon}}
+                </i>
+              </template>
+            </div>
+          </div>
+        </div>
+      </transition>
+    </div>
+  </div>
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.8/vue.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js'></script>
+  <script src="./all.js"></script>
 
     <!--==========================
       Services Section
