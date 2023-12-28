@@ -432,7 +432,7 @@
       <div class="container">
         <header class="section-header wow fadeInUp">
           <h3>更多最新消息顯示區</h3>
-          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus, ad pro quaestio laboramus. Ei ubique vivendum pro. At ius nisl accusam lorenta zanos paradigno tridexa panatarel.</p>
+          <p>新年新氣象！2023限時超值優惠狂歡開跑！品味驚喜滋味，每天午後2-5點，第二杯飲品半價優惠！更有VIP會員獨享禮遇，累積消費贈好禮，立即加入！不只是飲品，更是生活品味。無論冷熱，獨特鮮美口味總在這裡。快來店內，享受美味與省荷的完美組合！優惠期間有限，等你來品嚐不同滋味！</p>
         </header>
         <?php
         if ($News->count(['sh' => 1]) > 5) {
@@ -548,8 +548,8 @@
       <div class="container">
 
         <header class="section-header">
-          <h3>Facts</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <h3>來客人數</h3>
+          <p>飲料店歡迎並感謝每一位光顧者的到來。自從開業以來，我們始終致力於提供最優質、新鮮和美味的飲品，以及一流的服務體驗。在過去的時光裡，我們深感榮幸能夠見證越來越多的顧客蒞臨本店，分享我們的熱情和美味飲品。每一位顧客都是我們店家重要的一份子，您們的支持和信任是我們不斷前進的動力。我們期待著未來與您共同創造更多美好時刻，並為您呈現更多令人驚喜的美味體驗。感謝您一直以來的支持，我們將繼續努力，為您帶來更多的驚喜和滿足</p>
         </header>
 
         <div class="row counters">
