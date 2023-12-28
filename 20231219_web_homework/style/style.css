@@ -284,31 +284,45 @@ button:focus {
 }
 
 .item-skew:nth-child(1) {
-  -webkit-transform: rotate(60deg) skewY(-30deg);
-          transform: rotate(60deg) skewY(-30deg);
+  -webkit-transform: rotate(40deg) skewY(-30deg);
+          transform: rotate(40deg) skewY(-30deg);
 }
 
 .item-skew:nth-child(2) {
+  -webkit-transform: rotate(80deg) skewY(-30deg);
+          transform: rotate(80deg) skewY(-30deg);
+}
+
+.item-skew:nth-child(3) {
   -webkit-transform: rotate(120deg) skewY(-30deg);
           transform: rotate(120deg) skewY(-30deg);
 }
 
-.item-skew:nth-child(3) {
-  -webkit-transform: rotate(180deg) skewY(-30deg);
-          transform: rotate(180deg) skewY(-30deg);
-}
-
 .item-skew:nth-child(4) {
-  -webkit-transform: rotate(240deg) skewY(-30deg);
-          transform: rotate(240deg) skewY(-30deg);
+  -webkit-transform: rotate(160deg) skewY(-30deg);
+          transform: rotate(160deg) skewY(-30deg);
 }
 
 .item-skew:nth-child(5) {
-  -webkit-transform: rotate(300deg) skewY(-30deg);
-          transform: rotate(300deg) skewY(-30deg);
+  -webkit-transform: rotate(200deg) skewY(-30deg);
+          transform: rotate(200deg) skewY(-30deg);
 }
 
 .item-skew:nth-child(6) {
+  -webkit-transform: rotate(240deg) skewY(-30deg);
+          transform: rotate(240deg) skewY(-30deg);
+}
+.item-skew:nth-child(7) {
+  -webkit-transform: rotate(280deg) skewY(-30deg);
+          transform: rotate(280deg) skewY(-30deg);
+}
+
+.item-skew:nth-child(8) {
+  -webkit-transform: rotate(320deg) skewY(-30deg);
+          transform: rotate(320deg) skewY(-30deg);
+}
+
+.item-skew:nth-child(9) {
   -webkit-transform: rotate(360deg) skewY(-30deg);
           transform: rotate(360deg) skewY(-30deg);
 }
@@ -416,7 +430,6 @@ button:focus {
 .item-content {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
   width: 100px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -425,12 +438,12 @@ button:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 2rem;
+  font-size: 20px;
   font-weight: bold;
   -webkit-transform-origin: center center;
           transform-origin: center center;
-  -webkit-transform: skewY(30deg) rotate(30deg) translate(-95px, 62px);
-          transform: skewY(30deg) rotate(30deg) translate(-95px, 62px);
+  -webkit-transform: skewY(40deg) rotate(40deg) translate(-95px, 62px);
+          transform: skewY(40deg) rotate(40deg) translate(-95px, 62px);
   position: absolute;
   right: 0;
   bottom: 0;
