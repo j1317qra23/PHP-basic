@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>BizPage Bootstrap Template</title>
+  <title>Tea shop</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -52,7 +52,7 @@
     <div class="container-fluid">
       <?php include "./front/marquee.php"; ?>
       <div id="logo" class="pull-left">
-        <h1><a href="#intro" class="scrollto">BizPage</a></h1>
+        <h1><a href="#intro" class="scrollto">Tea shop</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
       </div>
@@ -127,7 +127,7 @@
 
               foreach ($imgs as $idx => $img) {
               ?>
-                <div id="ssaa<?= $idx; ?>" class='im cent' style="flex: 0 0 400px; display: none; margin-right: 110px;">
+                <div id="ssaa<?= $idx; ?>" class='im cent' style="flex: 0 0 300px; display: none; margin-right: 110px;">
                   <img src="./img/<?= $img['img']; ?>" style="width: 100%; height: 400px; border: 3px solid orange; margin: 3px;">
                 </div>
               <?php
@@ -205,9 +205,9 @@
           <div class="col-lg-12">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-app">TOP3</li>
+              <li data-filter=".filter-card">TOP6</li>
+              <li data-filter=".filter-web">TOP9</li>
             </ul>
           </div>
         </div>
@@ -223,7 +223,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">TOP 1</a></h4>
+                <h4><a href="#">50嵐</a></h4>
                 <p>50嵐</p>
               </div>
             </div>
@@ -238,7 +238,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">TOP 7</a></h4>
+                <h4><a href="#">大苑子</a></h4>
                 <p>大苑子</p>
               </div>
             </div>
@@ -253,7 +253,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">TOP 2</a></h4>
+                <h4><a href="#">清心</a></h4>
                 <p>清心</p>
               </div>
             </div>
@@ -268,7 +268,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">TOP 4</a></h4>
+                <h4><a href="#">可不可</a></h4>
                 <p>可不可</p>
               </div>
             </div>
@@ -283,7 +283,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">TOP 8</a></h4>
+                <h4><a href="#">五桐號</a></h4>
                 <p>五桐號</p>
               </div>
             </div>
@@ -298,7 +298,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">TOP 3</a></h4>
+                <h4><a href="#">迷客夏</a></h4>
                 <p>迷客夏</p>
               </div>
             </div>
@@ -313,7 +313,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">TOP 5</a></h4>
+                <h4><a href="#">天仁茗茶</a></h4>
                 <p>天仁茗茶</p>
               </div>
             </div>
@@ -328,7 +328,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">TOP 6</a></h4>
+                <h4><a href="#">麻古</a></h4>
                 <p>麻古</p>
               </div>
             </div>
@@ -343,7 +343,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">TOP 9</a></h4>
+                <h4><a href="#">珍煮丹</a></h4>
                 <p>珍煮丹</p>
               </div>
             </div>

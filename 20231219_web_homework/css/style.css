@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #intro .carousel-item::before {
   content: '';
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.2);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -559,8 +559,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Featured Services Section
 --------------------------------*/
 #featured-services {
-  
-  background-image: url(../img/002.JPG);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 #featured-services .box {
