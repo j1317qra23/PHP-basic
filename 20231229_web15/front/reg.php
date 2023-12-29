@@ -20,7 +20,8 @@
         </tr>
         <tr>
             <td>
-                <input type="submit" value="註冊"><input type="reset" value="清除">
+                <input type="submit" value="註冊">
+                <input type="reset" value="清除">
             </td>
             <td></td>
         </tr>
