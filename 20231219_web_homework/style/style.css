@@ -284,47 +284,47 @@ button:focus {
 }
 
 .item-skew:nth-child(1) {
-  -webkit-transform: rotate(40deg) skewY(-30deg);
-          transform: rotate(40deg) skewY(-30deg);
+  -webkit-transform: rotate(40deg) skewY(-42deg);
+          transform: rotate(40deg) skewY(-42deg);
 }
 
 .item-skew:nth-child(2) {
-  -webkit-transform: rotate(80deg) skewY(-30deg);
-          transform: rotate(80deg) skewY(-30deg);
+  -webkit-transform: rotate(80deg) skewY(-42deg);
+          transform: rotate(80deg) skewY(-42deg);
 }
 
 .item-skew:nth-child(3) {
-  -webkit-transform: rotate(120deg) skewY(-30deg);
-          transform: rotate(120deg) skewY(-30deg);
+  -webkit-transform: rotate(120deg) skewY(-42deg);
+          transform: rotate(120deg) skewY(-42deg);
 }
 
 .item-skew:nth-child(4) {
-  -webkit-transform: rotate(160deg) skewY(-30deg);
-          transform: rotate(160deg) skewY(-30deg);
+  -webkit-transform: rotate(160deg) skewY(-42deg);
+          transform: rotate(160deg) skewY(-42deg);
 }
 
 .item-skew:nth-child(5) {
-  -webkit-transform: rotate(200deg) skewY(-30deg);
-          transform: rotate(200deg) skewY(-30deg);
+  -webkit-transform: rotate(200deg) skewY(-42deg);
+          transform: rotate(200deg) skewY(-42deg);
 }
 
 .item-skew:nth-child(6) {
-  -webkit-transform: rotate(240deg) skewY(-30deg);
-          transform: rotate(240deg) skewY(-30deg);
+  -webkit-transform: rotate(240deg) skewY(-42deg);
+          transform: rotate(240deg) skewY(-42deg);
 }
 .item-skew:nth-child(7) {
-  -webkit-transform: rotate(280deg) skewY(-30deg);
-          transform: rotate(280deg) skewY(-30deg);
+  -webkit-transform: rotate(280deg) skewY(-42deg);
+          transform: rotate(280deg) skewY(-42deg);
 }
 
 .item-skew:nth-child(8) {
-  -webkit-transform: rotate(320deg) skewY(-30deg);
-          transform: rotate(320deg) skewY(-30deg);
+  -webkit-transform: rotate(320deg) skewY(-42deg);
+          transform: rotate(320deg) skewY(-42deg);
 }
 
 .item-skew:nth-child(9) {
-  -webkit-transform: rotate(360deg) skewY(-30deg);
-          transform: rotate(360deg) skewY(-30deg);
+  -webkit-transform: rotate(360deg) skewY(-42deg);
+          transform: rotate(360deg) skewY(-42deg);
 }
 
 .item-skew-large:nth-child(1) {
@@ -438,7 +438,7 @@ button:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   -webkit-transform-origin: center center;
           transform-origin: center center;

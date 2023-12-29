@@ -370,9 +370,9 @@
           <div class="times">CHANCE <span>{{time_remaining}}</span></div>
           <div class="buttons">
             <button class="btn btn-primary" :class="{'active':current_year===2017}"
-              @click="setCurrentYear(2017)">2017</button>
+              @click="setCurrentYear(2017)">飲料店</button>
             <button class="btn btn-primary" :class="{'active':current_year===2018}"
-              @click="setCurrentYear(2018)">2018</button>
+              @click="setCurrentYear(2018)">飲品</button>
             <button class="btn btn-secondary" @click="restart">Restart</button>
           </div>
         </div>

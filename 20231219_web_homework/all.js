@@ -69,11 +69,11 @@
         let vm = this
         vm.$refs.item[vm.index].classList.value = vm.itemClass
         if (vm.current_year === 2017) {
-          vm.time_remaining = 20
+          vm.time_remaining = 9
           vm.reset()
           vm.initPrize()
         } else if (vm.current_year === 2018) {
-          vm.time_remaining = 120
+          vm.time_remaining = 20
           vm.reset()
           vm.initPrize_2018()
         }
@@ -113,28 +113,84 @@
         for (let i = 1; i <= 120; i++) {
           let item = {}
           if (i === 1) {
-            item.name = 1
+            item.name = '四季春'
             item.count = 1
             vm.prizes_2018.push(item)
-          } else if (i > 1 && i <= 16) {
-            item.name = i
+          } else if (i === 2) {
+            item.name = '黃金烏龍'
+            item.count = 1
+            vm.prizes_2018.push(item)
+          } else if (i === 3) {
+            item.name = '紅茶拿鐵'
+            item.count = 1
+            vm.prizes_2018.push(item)
+          } else if (i === 4) {
+            item.name ='珍珠奶茶'
+            item.count = 1
+            vm.prizes_2018.push(item)
+          } else if (i === 5) {
+            item.name = '烏龍拿鐵'
+            item.count = 1
+            vm.prizes_2018.push(item)
+          } else if (i === 6) {
+            item.name = '冬瓜茶'
+            item.count = 1
+            vm.prizes_2018.push(item)
+          } else if (i === 7) {
+            item.name = '百香綠茶'
+            item.count = 1
+            vm.prizes_2018.push(item)
+          } else if (i === 8) {
+            item.name = '奶茶'
+            item.count = 1
+            vm.prizes_2018.push(item)
+          } else if (i === 9) {
+            item.name = '茉莉綠茶'
+            item.count = 1
+            vm.prizes_2018.push(item)
+          } else if (i === 10) {
+            item.name = '冬瓜檸檬'
+            item.count = 1
+            vm.prizes_2018.push(item)
+          } else if (i === 11) {
+            item.name = '奶茶'
+            item.count = 1
+            vm.prizes_2018.push(item)
+          } else if (i === 12) {
+            item.name = '梅子綠茶'
+            item.count = 1
+            vm.prizes_2018.push(item)
+          } else if (i === 13) {
+            item.name = '柚子綠茶'
+            item.count = 1
+            vm.prizes_2018.push(item)
+          } else if (i === 14) {
+            item.name = '多多綠茶'
+            item.count = 1
+            vm.prizes_2018.push(item)
+          } else if (i === 15) {
+            item.name = '布丁奶茶'
+            item.count = 1
+            vm.prizes_2018.push(item)
+          } else if (i === 16) {
+            item.name = '蜂蜜綠茶'
             item.count = 1
             vm.prizes_2018.push(item)
           } else if (i === 17) {
-            item.name = i
-            item.count = 5
+            item.name = '黑糖珍奶'
+            item.count = 1
             vm.prizes_2018.push(item)
           } else if (i === 18) {
-            item.name = i
-            item.count = 10
+            item.name =  '金宣茶'
+            item.count = 1
             vm.prizes_2018.push(item)
           } else if (i === 19) {
-            item.name = i
-            item.count = 20
+            item.name = '椰果奶茶'
+            item.count = 1
             vm.prizes_2018.push(item)
           } else if (i === 20) {
-            item.name = i
-            item.count = 69
+            item.name = '檸檬綠茶'
+            item.count = 1
             vm.prizes_2018.push(item)
           }
         }
