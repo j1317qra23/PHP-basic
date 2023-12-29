@@ -233,7 +233,7 @@ button:focus {
   z-index: 9999;
   position: absolute;
   color: #ff00ba;
-  font-size: 2rem;
+  font-size: 30px;
 }
 
 .pointer-container::after {

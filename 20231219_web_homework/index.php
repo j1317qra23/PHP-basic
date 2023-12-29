@@ -52,7 +52,7 @@
     <div class="container-fluid">
       <?php include "./front/marquee.php"; ?>
       <div id="logo" class="pull-left">
-        <h1><a href="#intro" class="scrollto">Tea shop</a></h1>
+        <h1><a href="#intro" class="scrollto">Aroma Sips Corner</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
       </div>
@@ -93,7 +93,7 @@
             <div class="carousel-item active" style="background:url(&#39;./img/<?= $title['img']; ?>&#39;); background-size:cover;"></div><!--標題-->
           </a>
         </div>
-        <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+        <!-- <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
@@ -101,7 +101,7 @@
         <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
           <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
-        </a>
+        </a> -->
 
       </div>
     </div>
@@ -360,7 +360,7 @@
     ============================-->
     <section id="about">
       <div class="container">
-
+       <p>飲料店轉盤</p>
       <div id="app" v-cloak>
     <!-- status buttons-->
     <div class="game-status">
@@ -405,7 +405,7 @@
         <div class="prize" v-if="isShow==isClicked">
           <div class="prize-container">
             <div class="prize-title">WELL</br> DONE!</div>
-            <div class="prize-title">YOU GET A FREE...</br>
+            <div class="prize-title">YOU GET A ...</br>
               <span class="prize-item">{{prize_name}}</span>
             </div>
             <div class="prize-background">
@@ -645,7 +645,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>BizPage</strong>. All Rights Reserved
+        &copy; Copyright <strong>Aroma Sips Corner</strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!--
