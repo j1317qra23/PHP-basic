@@ -1,3 +1,7 @@
+<?php include_once "./api/db.php"; 
+if(!isset($_SESSION['login'])){
+	to("index.php");
+	}?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -66,8 +70,8 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="add.php">Buttons</a>
-                        <a class="collapse-item" href="admin.php">Cards</a>
+                        <a class="collapse-item" href="./back/ad.php">Buttons</a>
+                        <a class="collapse-item" href="./back/admin.php">Cards</a>
                     </div>
                 </div>
             </li>
