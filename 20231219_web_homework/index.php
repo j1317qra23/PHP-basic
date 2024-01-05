@@ -431,7 +431,7 @@
     <section id="services">
       <div class="container">
         <header class="section-header wow fadeInUp">
-          <h3>最新消息顯</h3>
+          <h3>最新消息</h3>
           <p>新年新氣象！2023限時超值優惠狂歡開跑！品味驚喜滋味，每天午後2-5點，第二杯飲品半價優惠！更有VIP會員獨享禮遇，累積消費贈好禮，立即加入！不只是飲品，更是生活品味。無論冷熱，獨特鮮美口味總在這裡。快來店內，享受美味與省荷的完美組合！優惠期間有限，等你來品嚐不同滋味！</p>
         </header>
         <?php
