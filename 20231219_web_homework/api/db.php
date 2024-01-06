@@ -2,16 +2,16 @@
 date_default_timezone_set("Asia/Taipei");
 session_start();
 class DB{
-
+//  protected $dsn = "mysql:host=localhost;charset=utf8;dbname=s1120407";
     protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db07";
-    //protected $dsn = "mysql:host=localhost;charset=utf8;dbname=bquiz";
+    // protected $dsn = "mysql:host=localhost;charset=utf8;dbname=bquiz";
     protected $pdo;
     protected $table;
     
     public function __construct($table)
     {
         $this->table=$table;
-        //$this->pdo=new PDO($this->dsn,'s1120401','s1120401');
+        // $this->pdo=new PDO($this->dsn,'s1120407','s1120407');
         $this->pdo=new PDO($this->dsn,'root','');
     }
 
