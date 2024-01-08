@@ -405,10 +405,7 @@
         <div id="hover-image">
           <img src="./angry-2498_256.gif" alt="Hover Image">
         </div>
-        <div id="hover-image2">
-          <img src="./tumbler-8831_256.gif" alt="Hover Image">
-        </div>
-       
+      
     </div>
   </div>
   <script>
