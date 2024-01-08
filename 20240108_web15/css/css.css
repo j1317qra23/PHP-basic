@@ -2,298 +2,179 @@
 /* CSS Document */
 body
 {
-	background:#E8E8E8;
 	padding:0px;
 	margin:0px;
-	font-family:"微軟正黑體";
 }
-pre {
-  white-space: pre-wrap; /* css-3 */
-  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-  white-space: -pre-wrap; /* Opera 4-6 */
-  white-space: -o-pre-wrap; /* Opera 7 */
-  word-wrap: break-word; /* Internet Explorer 5.5+ */
-  font-family:"微軟正黑體";
-}
-img
+#cover
 {
-	border:none;
+	width:100%;
+	height:100%;
+	position:fixed;
+	z-index:5;
+	background:rgba(51,51,51,0.4);
+	top:0px;
+	left:0px;
+	overflow:auto;
 }
-a
+#coverr
 {
-	text-decoration:none;
-	color:#36C;
-	cursor:pointer;
-}
-a:hover
-{
-	text-decoration:underline;
-}
-#mm
-{
-	min-height:570px;
-}
-#all
-{
-	padding: 2px;
-	width: 1024px;
-	height: 768px;
-	background: #FFF;
-	margin: 10px auto 10px auto;
-	box-shadow: #999 0px 0px 1px .3px;
-	position: relative;
-}
-#title
-{
-	height:15px;
-	padding:1px;
-	font-size:10px;
-	color:#999;
-}
-#lef
-{
-	width:18.2%;
-	padding:2px;
-	background:url(../icon/02B04.png) repeat-y;
-	/*background-size:100% auto;*/
-	min-height:568px;
-	display:inline-block;
-	vertical-align:top;
-	position:relative;
-	top:-3px;
-}
-#mm
-{
-	padding-top:3px;
+	width:70%;
+	min-width:300px;
+	max-width:800px;
+	height:70%;
+	min-height:300px;
+	position:absolute;
+	z-index:5;
+	background:#ffffff;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	margin:auto;
+	overflow:auto;
 }
 #main
 {
-	display:inline-block;
-	width:78%;
-	height:565px;
-	padding:4px;
-	border:solid 1px #000000;
-	overflow:auto;
+	width:1024px;
+	height:768px;
+	margin:10px auto 10px auto;
+	border:#EE7728 1px solid;
 	position:relative;
-	left:1%;
 }
-#lef a
+.ti
 {
-	padding:20px 5px 20px 5px;
+	width:100%;
+	height:100px;
+	position:relative;
+	background-size:cover;
+	background-repeat:no-repeat;
 }
-#bottom
+.dbor
 {
-	text-align:right;
-	padding:24px;
+	border:#EE7728 double 3px;
+	margin:1px;
+	padding:2px 10px 2px 10px;
 }
-a.button
+.t
 {
-	text-decoration:none;
+	font-weight:800;
+	display:block;
+	text-align:center;
+	padding:10px 1px 10px 1px;
 }
-.button
+.botli
 {
-	color:#000;
-	text-decoration:none;
+	border-bottom:#333 1px solid;
 }
-.button:active
+.mainmu
 {
-	color:#F00;
+	position:relative;
+	border-radius:10px;
+	background:url(../icon/menu.fw.png) center no-repeat;
+	background-size:cover;
+	line-height:30px;
+	padding:2px 10px 2px 10px;
+	margin:7px 1px 7px 1px;
+	height:32px; /*調整主選單高度*/
+
 }
-input,button,.button,select,textarea
+.mainmu:hover
 {
-	font-family:"微軟正黑體";
+	background:url(../icon/menu2.fw.png) center no-repeat;
+	background-size:cover;
+	z-index:8; /*hover 時變更主選單層級及優先權*/
+}
+.mainmu2
+{
+	position:relative;
+	border-radius:10px;
+	background:url(../icon/menu3.fw.png)center no-repeat;
+	background-size:100% 100%;
+	line-height:30px;
+	padding:2px 10px 2px 10px;
+	margin:7px 1px 7px 1px;
+	z-index:9; /* 讓次選單在主選單上方*/
+}
+.mainmu2:hover
+{
+	background:url(../icon/menu4.fw.png) center no-repeat;
+	background-size:cover;
+}
+.mw{
+	position: relative;
+	left:100px; 
+	top:-20px;  /*調整次選單位置蓋住主選單*/
+	display: none; /*次選單預設不顯示*/
+	
+}
+#lf
+{
+	height:540px;
+	width:21%;
+	display:inline-block;
+}
+#menuput
+{
+	width:100%;
+	height:75%;
+	position:relative;
+	padding:5px;
+	display:block;
+	margin: 3px;
+}
+.di
+{
+	display:inline-block;
+}
+.ad
+{
+	margin:1px;
+	padding:2px 10px 2px 10px;
+}
+.cent
+{
+	text-align:center;
+}
+input,button
+{
 	border:#999 1px solid;
 	border-radius:3px;
-	background:#FFF;
+	background:#EFEFEF;
 	padding:5px;
 	margin:3px;
-	text-decoration:none;
-	cursor:pointer;
 }
-input:active,button:active,.button:active,select:active,textarea:active
+input:active,button:active
 {
-	background:#333;
-	color:#fff;
+	background:#E6E6E6;
 }
 input[type=text],input[type=password]
 {
 	width:150px;
 }
-input:focus,button:focus,.button:focus,select:focus,textarea:focus
+input:focus,button:focus
 {
 	box-shadow:#09C 0px 0px 3px .3px;
 }
-input[type=radio]
+.yel td
 {
-	border-radius:100px;
+	background:#F3DA49;
+	text-align:center;
 }
-.cent
-{
-	margin-left:auto;
-	margin-right:auto;
-	display:block;
-}
-.ct
+.trce td
 {
 	text-align:center;
 }
-.hal
-{
-	height:100%;
-}
-.blo
-{
-	display:block;
-}
-.bordt
-{
-	border-top:#666 1px solid;
-	border-left:#666 1px solid;
-	padding:0px;
-	display:inline-block;
-	border-radius:2px 2px 0px 0px;
-}
-.cent .sel
-{
-	background:#FFF;
-	z-index:9999;
-	border-bottom:none;
-}
-.bbb
-{
-	border-bottom:#666 1px solid;
-}
-.cent .sel:hover
-{
-	background:#FFF;
-}
-.bordt span
-{
-	padding:5px 10px 5px 10px; 
-	border-right:#666 1px solid;
-	border-left:none;
-	margin:0px;
-	float:left;
-	display:inline-block;
-	background:#CCC;
-	margin:0px;
-	cursor:pointer;
-}
-.bordt span:hover
-{
-	background:#D9D9D9;
-}
-.bordt span::selection
-{
-	cursor:default;
-}
-.bordt span:active
-{
-	background:#E7E7E7;
-}
-.view
-{
-	border:#666 1px solid;
-	width:100%;
-	min-height:300px;
-}
-.fei
-{
-	border:#333 1px solid;
-	padding:20px 15px 20px 15px;
-	display:inline-block;
-	min-width:400px;
-	position:relative;
-	margin-top:10px;
-}
-.fei .leng
-{
-	position:absolute;
-	padding:0px 3px 0px 3px;
-	top:-10px;
-	background:#FFF;
-	overflow-x: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	max-width: 90%;
-	cursor:default;
-}
-.tsb
-{
-	width:100%;
-	min-height:50px;
-}
-.l
-{
-	text-align:left;
-}
-.l td
-{
-	text-align:left;
-}
-.r
-{
-	text-align:right;
-}
-.r td
-{
-	text-align:right;
-}
-
-.clo
-{
-	background:#E0E0E0;
-	padding:10px 3px 10px 3px;
-}
-.clo td
-{
-	background:#E0E0E0;
-	padding:3px;
-	min-width:30px;
-	min-height:30px;
-}
-.tab
-{
-	width:80%;
-}
-.nbcent
-{
-	margin-left:auto;
-	margin-right:auto;
-}
-.bigg {
-overflow-x: hidden;
-text-overflow: ellipsis;
-white-space: nowrap;
-width: 200px;
-cursor:default;
-}
-.good
-{
-	width:25px;
-	height:25px;
-	background:url(../icon/02B03.jpg);
-	background-size:cover;
-	display:inline-block;
-	background-position:0px 2px;
-}
-#alerr h3
+.bl
 {
 	color:#0CF;
+	cursor:pointer;
+	text-decoration:none;
 }
-.t_int
-{
-	width:0px;
-	height:0px;
-	border-width:30px;
-	border-style:solid;
-	border-color:transparent transparent #fff transparent ;
-	position:absolute;
-	top:0px;
+
+a{
+	text-decoration: none;
 }
-.aut
-{
-	left:0px;
-	right:0px;
-	margin:auto;
+
+a:hover{
+	text-decoration: underline;
 }

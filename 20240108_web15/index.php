@@ -1,95 +1,136 @@
-﻿<?php include_once "./api/db.php"; ?>
+﻿<?php include_once './api/db.php';?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0039) -->
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0040)http://127.0.0.1/test/exercise/collage/? -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-	<title>健康促進網</title>
-	<link href="./css/css.css" rel="stylesheet" type="text/css">
-	<script src="./js/jquery-1.9.1.min.js"></script>
-	<script src="./js/js.js"></script>
-	<style>
-		.pop {
-			background: rgba(51, 51, 51, 0.8);
-			color: #FFF;
-			height: 300px;
-			width: 300px;
-			position: absolute;
-			display: none;
-			z-index: 9999;
-			overflow: auto;
-			padding:10px;
-		}
-	</style>
+<title>卓越科技大學校園資訊系統</title>
+<link href="./css/css.css" rel="stylesheet" type="text/css">
+<script src="./js/jquery-1.9.1.min.js"></script>
+<script src="./js/js.js"></script>
 </head>
 
 <body>
-
-	<div id="all">
-		<div id="title">
-			<?= date("m月d日 l"); ?> |
-			今日瀏覽: <?= $Total->find(['date' => date("Y-m-d")])['total']; ?> |
-			累積瀏覽: <?= $Total->sum('total'); ?>
-			<a href="index.php" style='float:right'>回首頁</a>
-		</div>
-		<div id="title2" title='健康促進網-回首頁'>
-			<img src="./icon/02B01.jpg" alt="">
-		</div>
-		<div id="mm">
-			<div class="hal" id="lef">
-				<a class="blo" href="?do=po">分類網誌</a>
-				<a class="blo" href="?do=news">最新文章</a>
-				<a class="blo" href="?do=pop">人氣文章</a>
-				<a class="blo" href="?do=know">講座訊息</a>
-				<a class="blo" href="?do=que">問卷調查</a>
-			</div>
-			<div class="hal" id="main">
-				<div>
-					<marquee style="width:80%; display:inline-block;">請民眾踴躍投稿電子報，讓電子報成為大家相互交流、分享的園地！詳見最新文章</marquee>
-
-					<span style="width:16%; display:inline-block;">
+<div id="cover" style="display:none; ">
+	<div id="coverr">
+    	<a style="position:absolute; right:3px; top:4px; cursor:pointer; z-index:9999;" onclick="cl(&#39;#cover&#39;)">X</a>
+        <div id="cvr" style="position:absolute; width:99%; height:100%; margin:auto; z-index:9898;"></div>
+    </div>
+</div>
+	<div id="main">
+		<?php 
+			$title=$Title->find(['sh'=>1]);
+		?>
+    	<a title="<?=$title['text'];?>" href="index.php">
+			<div class="ti" style="background:url(&#39;./img/<?=$title['img'];?>&#39;); background-size:cover;"></div><!--標題--></a>
+        	<div id="ms">
+             	<div id="lf" style="float:left;">
+            		<div id="menuput" class="dbor">
+                    <!--主選單放此-->
+						<span class="t botli">主選單區</span>
 						<?php
-						if (!isset($_SESSION['user'])) {
+						$mainmu=$Menu->all(['sh'=>1,'menu_id'=>0]);
+						foreach($mainmu as $main){
 						?>
-							<a href="?do=login">會員登入</a>
-						<?php
-						} else {
-						?>
-							歡迎,<?= $_SESSION['user']; ?>
-							<button onclick="location.href='./api/logout.php'">登出</button>
+						<div class='mainmu'>
+							<a  href="<?=$main['href'];?>" style="color:#000; font-size:13px; text-decoration:none;"><?=$main['text'];?></a>
 							<?php
-							if ($_SESSION['user'] == 'admin') {
-							?>
-								<button onclick="location.href='back.php'">管理</button>
-						<?php
+							
+							if($Menu->count(['menu_id'=>$main['id']])>0){
+								echo "<div class='mw'>";
+								$subs=$Menu->all(['menu_id'=>$main['id']]);
+								foreach($subs as $sub){
+									echo "<a href='{$sub['href']}'>";
+									echo "<div class='mainmu2'>";
+									echo $sub['text'];
+									echo "</div>";
+									echo "</a>";
+								}
+								echo "</div>";
 							}
-						}
-						?>
-					</span>
-					<div class="">
+							?>
+							
+						</div>
+							
+						</a>
 						<?php
-						$do = $_GET['do'] ?? 'main';
-						$file = "./front/{$do}.php";
-						if (file_exists($file)) {
-							include $file;
-						} else {
-							include "./front/main.php";
 						}
-
 						?>
 					</div>
-				</div>
-			</div>
-		</div>
-		<div id="bottom">
-			本網站建議使用：IE9.0以上版本，1024 x 768 pixels 以上觀賞瀏覽 ， Copyright © 2024健康促進網社群平台 All Right Reserved
-			<br>
-			服務信箱：health@test.labor.gov.tw<img src="./icon/02B02.jpg" width="45">
-		</div>
-	</div>
+                    <div class="dbor" style="margin:3px; width:95%; height:20%; line-height:100px;">
+                    	<span class="t">進站總人數 : <?=$Total->find(1)['total'];?></span>
+                    </div>
+        		</div>
 
-</body>
+				<?php 
 
-</html>
+					$do=$_GET['do']??'main';
+					$file="./front/{$do}.php";
+					if(file_exists($file)){
+						include $file;
+					}else{
+						include "./front/main.php";	
+					}
+
+					?>
+
+                    <div class="di di ad" style="height:540px; width:23%; padding:0px; margin-left:22px; float:left; ">
+                	<!--右邊-->   
+					<?php
+					if(isset($_SESSION['login'])){
+					?>
+                	<button style="width:100%; margin-left:auto; margin-right:auto; margin-top:2px; height:50px;" onclick="lo(&#39;back.php&#39;)">返回管理</button>
+                	<?php
+					}else{
+					?>
+					<button style="width:100%; margin-left:auto; margin-right:auto; margin-top:2px; height:50px;" onclick="lo(&#39;?do=login&#39;)">管理登入</button>
+                	<?php
+						}
+					?>
+					<div style="width:89%; height:480px;" class="dbor">
+                    	<span class="t botli">校園映象區</span>
+						<div class="cent" onclick="pp(1)"><img src="./icon/up.jpg" alt=""></div>
+					<?php
+					$imgs=$Image->all(['sh'=>1]);
+
+					foreach($imgs as $idx => $img){
+					?>
+						<div id="ssaa<?=$idx;?>" class='im cent' >
+							<img src="./img/<?=$img['img'];?>" style="width:150px;height:103px;border:3px solid orange;margin:3px">
+						</div>
+					<?php
+					}
+					?>
+					<div class="cent" onclick="pp(2)"><img src="./icon/dn.jpg" alt=""></div>
+						<script>
+                        	var nowpage=1,num=<?=$Image->count(['sh'=>1]);?>;
+
+							function pp(x)
+							{
+								var s,t;
+								if(x==1 && nowpage-1>=0)
+								{nowpage--;}
+								if(x==2&&(nowpage+1)<=num*1-3)
+								{nowpage++;}
+								
+								$(".im").hide()
+								for(s=0;s<=2;s++)
+								{
+									t=s*1+nowpage*1;
+									$("#ssaa"+t).show()
+
+	 							}
+							}
+
+
+							pp(2)
+                        </script>
+                    </div>
+                </div>
+                            </div>
+             	<div style="clear:both;"></div>
+            	<div style="width:1024px; left:0px; position:relative; background:#FC3; margin-top:4px; height:123px; display:block;">
+                	<span class="t" style="line-height:123px;"><?=$Bottom->find(1)['bottom'];?></span>
+                </div>
+    </div>
+
+</body></html>
