@@ -1,3 +1,26 @@
+<?php include_once '../api/db.php'; ?>
+<head>
+	<script src="./js/jquery-1.9.1.min.js"></script>
+	<script src="./js/js.js"></script>
+</head>
+<?php 
+					if(!isset($_SESSION['user'])){
+					?>
+						<a href="?do=login">會員登入</a>
+					<?php 
+					}else{
+					?>		
+						歡迎,<?=$_SESSION['user'];?> 
+						<button onclick="location.href='./api/logout.php'">登出</button>
+
+					<?php 
+						if($_SESSION['user']=='admin'){
+						?>
+						<button onclick="location.href='back.php'">管理</button>
+						<?php	
+						}
+					}
+					?>		
 <fieldset>
     <legend>會員註冊</legend>
     <span style="color:red">*請設定您要註冊的帳號及密碼(最長12個字元)</span>

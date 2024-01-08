@@ -82,7 +82,7 @@ if(isset($_GET['error'])){
             <p class="cent">帳號：<input name="acc" autofocus="" type="text"></p>
             <p class="cent">密碼：<input name="pw" type="password"></p>
             <p class="cent"><input value="送出" type="submit"><input type="reset" value="清除"></p>
-            <p class="cent"><a href="?do=forget">忘記密碼</a> | <a href="?do=reg">尚未註冊</a> </p>
+            <p class="cent"><a href="forget.php">忘記密碼</a> | <a href="reg.php">尚未註冊</a> </p>
         </form>
     </div>
     <script>
