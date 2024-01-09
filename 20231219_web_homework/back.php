@@ -106,7 +106,7 @@ if(!isset($_SESSION['login'])){
     <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">管理項目</h6>
-            <a class="collapse-item" href="?do=admin">帳號管理</a>
+            <a class="collapse-item" href="?do=user">帳號管理</a>
             <a class="collapse-item" href="?do=bottom">頁尾版權資料管理</a>
             <a class="collapse-item" href="?do=total">進佔總人數管理</a>
             <div class="collapse-divider"></div>
