@@ -151,6 +151,7 @@ $Image=new DB('image');
 $News=new DB('news');
 $Admin=new DB('admin');
 $Menu=new DB('menu');
+$User=new DB('user');
 
 //$tables=array_keys(get_defined_vars());
 /* dd($tables); */

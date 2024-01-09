@@ -1,22 +1,22 @@
 <?php include_once '../api/db.php'; ?>
 <head>
-	<script src="./js/jquery-1.9.1.min.js"></script>
-	<script src="./js/js.js"></script>
+	<script src="../js/jquery-1.9.1.min.js"></script>
+	<script src="../js/js.js"></script>
 </head>
 <?php 
-					if(!isset($_SESSION['user'])){
+					if(!isset($_SESSION['admin'])){
 					?>
-						<a href="?do=login">會員登入</a>
+						<a href="./login.php">會員登入</a>
 					<?php 
 					}else{
 					?>		
-						歡迎,<?=$_SESSION['user'];?> 
-						<button onclick="location.href='./api/logout.php'">登出</button>
+						歡迎,<?=$_SESSION['admin'];?> 
+						<button onclick="location.href='../api/logout.php'">登出</button>
 
 					<?php 
-						if($_SESSION['user']=='admin'){
+						if($_SESSION['admin']=='admin'){
 						?>
-						<button onclick="location.href='back.php'">管理</button>
+						<button onclick="location.href='./back.php'">管理</button>
 						<?php	
 						}
 					}
@@ -52,19 +52,19 @@
 </fieldset>
 <script>
 function reg(){
-    let user={acc:$("#acc").val(),
+    let admin={acc:$("#acc").val(),
               pw:$("#pw").val(),
               pw2:$("#pw2").val(),
               email:$("#email").val()
             }
-    if(user.acc!='' && user.pw!='' && user.pw2!='' && user.email!=''){
-        if(user.pw==user.pw2){
-            $.post("./api/chk_acc.php",{acc:user.acc},(res)=>{
+    if(admin.acc!='' && admin.pw!='' && admin.pw2!='' && admin.email!=''){
+        if(admin.pw==admin.pw2){
+            $.post("../api/chk_acc.php",{acc:admin.acc},(res)=>{
                 //console.log(res)
                 if(parseInt(res)==1){
                     alert("帳號重覆")
                 }else{
-                    $.post('./api/reg.php',user,(res)=>{
+                    $.post('../api/reg.php',admin,(res)=>{
                         alert('註冊完成，歡迎加入')
                     })
                 }
