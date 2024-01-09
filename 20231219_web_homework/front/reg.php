@@ -2,11 +2,71 @@
 <head>
 	<script src="../js/jquery-1.9.1.min.js"></script>
 	<script src="../js/js.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .di {
+            height: 540px;
+            border: #999 1px solid;
+            width: 50%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .t {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .botli {
+            border-bottom: 1px solid #999;
+            margin-bottom: 20px;
+        }
+
+        .cent {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <?php 
 					if(!isset($_SESSION['user'])){
 					?>
+                    <div class="cent">
 						<a href="./login.php">會員登入</a>
+                        </div>
 					<?php 
 					}else{
 					?>		
@@ -22,23 +82,24 @@
 					}
 					?>		
 <fieldset>
-    <legend>會員註冊</legend>
+    <div class="di">
+    <legend class="t botli">會員註冊</legend>
     <span style="color:red">*請設定您要註冊的帳號及密碼(最長12個字元)</span>
     <table>
         <tr>
-            <td class="clo">Step1:登入帳號</td>
+            <td class="cent">Step1:登入帳號</td>
             <td><input type="text" name="acc" id="acc"></td>
         </tr>
         <tr>
-            <td class="clo">Step2:登入密碼</td>
+            <td class="cent">Step2:登入密碼</td>
             <td><input type="password" name="pw" id="pw"></td>
         </tr>
         <tr>
-            <td class="clo">Step3:再次確認密碼</td>
+            <td class="cent">Step3:再次確認密碼</td>
             <td><input type="password" name="pw2" id="pw2"></td>
         </tr>
         <tr>
-            <td class="clo">Step4:信箱(忘記密碼時使用)</td>
+            <td class="cent">Step4:信箱(忘記密碼時使用)</td>
             <td><input type="text" name="email" id="email"></td>
         </tr>
         <tr>
@@ -50,6 +111,7 @@
         </tr>
     </table>
 </fieldset>
+</div>
 <script>
 function reg(){
     let user={acc:$("#acc").val(),
