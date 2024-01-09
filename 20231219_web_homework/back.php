@@ -404,8 +404,8 @@ if(!isset($_SESSION['login'])){
 			</script>
 		</div>
 		<div style="clear:both;"></div>
-		<div style="width:1024px; left:0px; position:relative; background:#FC3; margin-top:4px; height:50px; display:block;">
-        <pre class="t">進站總人數 :<?= $Total->find(1)['total']; ?>           <?= $Bottom->find(1)['bottom']; ?></pre>
+		<div style="width:1400px; left:10px; position:relative; background:#ccc; margin-top:4px; height:50px; display:block;">
+        <pre class="ct">進站總人數 :<?= $Total->find(1)['total']; ?>           <?= $Bottom->find(1)['bottom']; ?></pre>
       
 		</div>
 	</div>
