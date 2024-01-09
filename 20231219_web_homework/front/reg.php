@@ -4,17 +4,17 @@
 	<script src="../js/js.js"></script>
 </head>
 <?php 
-					if(!isset($_SESSION['admin'])){
+					if(!isset($_SESSION['user'])){
 					?>
 						<a href="./login.php">會員登入</a>
 					<?php 
 					}else{
 					?>		
-						歡迎,<?=$_SESSION['admin'];?> 
+						歡迎,<?=$_SESSION['user'];?> 
 						<button onclick="location.href='../api/logout.php'">登出</button>
 
 					<?php 
-						if($_SESSION['admin']=='admin'){
+						if($_SESSION['user']=='user'){
 						?>
 						<button onclick="location.href='./back.php'">管理</button>
 						<?php	
@@ -52,19 +52,19 @@
 </fieldset>
 <script>
 function reg(){
-    let admin={acc:$("#acc").val(),
+    let user={acc:$("#acc").val(),
               pw:$("#pw").val(),
               pw2:$("#pw2").val(),
               email:$("#email").val()
             }
-    if(admin.acc!='' && admin.pw!='' && admin.pw2!='' && admin.email!=''){
-        if(admin.pw==admin.pw2){
-            $.post("../api/chk_acc.php",{acc:admin.acc},(res)=>{
+    if(user.acc!='' && user.pw!='' && user.pw2!='' && user.email!=''){
+        if(user.pw==user.pw2){
+            $.post("../api/chk_acc.php",{acc:user.acc},(res)=>{
                 //console.log(res)
                 if(parseInt(res)==1){
                     alert("帳號重覆")
                 }else{
-                    $.post('../api/reg.php',admin,(res)=>{
+                    $.post('../api/reg.php',user,(res)=>{
                         alert('註冊完成，歡迎加入')
                     })
                 }

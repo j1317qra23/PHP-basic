@@ -4,7 +4,7 @@ include_once "db.php";
 $DB=${ucfirst($_POST['table'])};
 $table=$_POST['table'];
 switch($table){
-    case "admin":
+    case "user":
         unset($_POST['pw2']);
     break;
 }
@@ -13,7 +13,7 @@ if(isset($_FILES['img']['tmp_name'])){
     $_POST['img']=$_FILES['img']['name'];
 }
 
-    if($table != 'admin'){
+    if($table != 'user'){
         $_POST['sh']=($table=='title')?0:1;
     }
 

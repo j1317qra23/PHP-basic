@@ -36,11 +36,11 @@ if(!isset($_SESSION['login'])){
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fa-solid fa-martini-glass-citrus fa-beat fa-xl"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">後臺管理頁面</div>
+                <div class="sidebar-brand-text mx-3">前臺頁面</div>
             </a>
 
             <!-- Divider -->
