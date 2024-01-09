@@ -152,7 +152,7 @@ $News=new DB('news');
 $Admin=new DB('admin');
 $Menu=new DB('menu');
 $User=new DB('user');
-
+$Que=new DB('que');
 //$tables=array_keys(get_defined_vars());
 /* dd($tables); */
 if(isset($_GET['do'])){
