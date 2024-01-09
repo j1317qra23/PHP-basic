@@ -369,7 +369,7 @@ if(!isset($_SESSION['login'])){
 				<table width="100%">
 					<tbody>
 						<tr>
-							<td style="width:70%;font-weight:800; border:#333 1px solid; border-radius:3px;" class="cent"><a href="?do=admin" style="color:#000; text-decoration:none;">後台管理區</a></td>
+							<td style="width:70%;font-weight:800; border:#333 1px solid; border-radius:3px;margin-top:5px;margin-bottom:5px;" class="cent"><a href="?do=admin" style="color:#000; text-decoration:none;">後台管理區</a></td>
 							
 						</tr>
 					</tbody>
