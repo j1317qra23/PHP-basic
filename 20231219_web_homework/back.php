@@ -108,7 +108,7 @@ if(!isset($_SESSION['login'])){
             <h6 class="collapse-header">管理項目</h6>
             <a class="collapse-item" href="?do=user">帳號管理</a>
             <a class="collapse-item" href="?do=bottom">頁尾版權資料管理</a>
-            <a class="collapse-item" href="?do=total">進佔總人數管理</a>
+            <a class="collapse-item" href="?do=total">進站總人數管理</a>
             <div class="collapse-divider"></div>
          
         </div>
@@ -404,7 +404,7 @@ if(!isset($_SESSION['login'])){
 			</script>
 		</div>
 		<div style="clear:both;"></div>
-		<div style="width:1400px; left:10px; position:relative; background:#ccc; margin-top:4px; height:50px; display:block;">
+		<div style="width:1000px; left:10px; position:relative; background:#ccc; margin-top:4px; height:50px; display:block;">
         <pre class="ct">進站總人數 :<?= $Total->find(1)['total']; ?>           <?= $Bottom->find(1)['bottom']; ?></pre>
       
 		</div>
