@@ -219,7 +219,7 @@
               <figure>
                 <img src="./img/teashop/501.jpg" class="img-fluid" alt="">
                 <a href="./img/teashop/502.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="menu"><i class="ion ion-eye"></i></a>
-                <a href="./front/que.php" class="link-details" title="vote"><i class="ion ion-android-open"></i></a>
+                <a href="http://50lan.com/web/news.asp" class="link-details" title="Website"><i class="ion ion-android-open"></i></a>
               </figure>
 
               <div class="portfolio-info">
@@ -234,7 +234,7 @@
               <figure>
                 <img src="./img/teashop/dayungs1.jpg" class="img-fluid" alt="">
                 <a href="./img/teashop/dayungs2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="menu"><i class="ion ion-eye"></i></a>
-                <a href="./front/que.php" class="link-details" title="vote"><i class="ion ion-android-open"></i></a>
+                <a href="https://www.dayungs.com/" class="link-details" title="Website"><i class="ion ion-android-open"></i></a>
               </figure>
 
               <div class="portfolio-info">
@@ -249,7 +249,7 @@
               <figure>
                 <img src="./img/teashop/chingsin1.jpg" class="img-fluid" alt="">
                 <a href="./img/teashop/chingsin2.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="menu"><i class="ion ion-eye"></i></a>
-                <a href="./front/que.php" class="link-details" title="vote"><i class="ion ion-android-open"></i></a>
+                <a href="https://www.chingshin.tw/product.php" class="link-details" title="Website"><i class="ion ion-android-open"></i></a>
               </figure>
 
               <div class="portfolio-info">
@@ -264,7 +264,7 @@
               <figure>
                 <img src="./img/teashop/kebuke1.jpg" class="img-fluid" alt="">
                 <a href="./img/teashop/kebuke2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="menu"><i class="ion ion-eye"></i></a>
-                <a href="./front/que.php" class="link-details" title="vote"><i class="ion ion-android-open"></i></a>
+                <a href="https://www.kebuke.com/" class="link-details" title="Website"><i class="ion ion-android-open"></i></a>
               </figure>
 
               <div class="portfolio-info">
@@ -279,7 +279,7 @@
               <figure>
                 <img src="./img/teashop/wootea1.jpg" class="img-fluid" alt="">
                 <a href="./img/teashop/wootea2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="menu"><i class="ion ion-eye"></i></a>
-                <a href="./front/que.php" class="link-details" title="vote"><i class="ion ion-android-open"></i></a>
+                <a href="https://www.wootea.com/?gad_source=1&gclid=EAIaIQobChMIsMqPstXRgwMVCNoWBR3ZuA9BEAAYASAAEgKEqvD_BwE" class="link-details" title="Website"><i class="ion ion-android-open"></i></a>
               </figure>
 
               <div class="portfolio-info">
@@ -294,7 +294,7 @@
               <figure>
                 <img src="./img/teashop/milksha1.jpg" class="img-fluid" alt="">
                 <a href="./img/teashop/milksha2.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="menu"><i class="ion ion-eye"></i></a>
-                <a href="./front/que.php" class="link-details" title="vote"><i class="ion ion-android-open"></i></a>
+                <a href="https://www.milksha.com/" class="link-details" title="Website"><i class="ion ion-android-open"></i></a>
               </figure>
 
               <div class="portfolio-info">
@@ -309,7 +309,7 @@
               <figure>
                 <img src="./img/teashop/chafortea1.jpg" class="img-fluid" alt="">
                 <a href="./img/teashop/chafortea2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="menu"><i class="ion ion-eye"></i></a>
-                <a href="./front/que.php" class="link-details" title="vote"><i class="ion ion-android-open"></i></a>
+                <a href="https://www.tenren.com.tw/" class="link-details" title="Website"><i class="ion ion-android-open"></i></a>
               </figure>
 
               <div class="portfolio-info">
@@ -324,7 +324,7 @@
               <figure>
                 <img src="./img/teashop/macu1.jpg" class="img-fluid" alt="">
                 <a href="./img/teashop/macu2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="menu"><i class="ion ion-eye"></i></a>
-                <a href="./front/que.php" class="link-details" title="vote"><i class="ion ion-android-open"></i></a>
+                <a href="https://macutea.com.tw/drink.php?utm_source=google&utm_medium=cpc&utm_campaign=wn_sem&gad_source=1&gclid=EAIaIQobChMI5N-aj9bRgwMV29tMAh21DgYTEAAYASAAEgL3w_D_BwE" class="link-details" title="Website"><i class="ion ion-android-open"></i></a>
               </figure>
 
               <div class="portfolio-info">
@@ -339,7 +339,7 @@
               <figure>
                 <img src="./img/teashop/truedan1.jpg" class="img-fluid" alt="">
                 <a href="./img/teashop/truedan2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="menu"><i class="ion ion-eye"></i></a>
-                <a href="./front/que.php" class="link-details" title="vote"><i class="ion ion-android-open"></i></a>
+                <a href="https://www.truedan.com.tw/product.php" class="link-details" title="Website"><i class="ion ion-android-open"></i></a>
               </figure>
 
               <div class="portfolio-info">
