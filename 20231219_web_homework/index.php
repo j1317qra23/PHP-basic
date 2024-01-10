@@ -487,11 +487,11 @@
 
           foreach ($news as $n) {
             echo "<li class='sswww'>";
-            echo mb_substr($n['text'], 0, 20);
+            echo mb_substr($n['text'], 0,100);
             echo "<div class='all' style='display:none'>";
             echo $n['text'];
             echo "</div>";
-            echo "...</li>";
+            echo "</li>";
           }
 
           ?>
