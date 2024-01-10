@@ -19,7 +19,7 @@
       time_remaining: 20,
       num: 0,
       numbers: [],//紀錄還有獎品的編號
-      isToggle: false,//顯示隱藏按鈕
+      isToggle: true,//顯示隱藏按鈕
       isClicked: false,//轉動中禁止觸發  
       isShow: true,
     },

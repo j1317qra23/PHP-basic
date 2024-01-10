@@ -364,7 +364,7 @@
       <div id="app" v-cloak>
     <!-- status buttons-->
     <div class="game-status">
-      <div class="toggle" @click="isToggle = !isToggle"></div>
+      <div style="fontsize:10px" class="toggle" @click="isToggle = !isToggle"></div>
       <transition name="slide-fade">
         <div class="status-container" v-if="isToggle">
           <div class="times">CHANCE <span>{{time_remaining}}</span></div>
