@@ -142,4 +142,8 @@ function to($url){
 }
 
 
+$Poster=new DB('poster');
+
+
 ?>
+
