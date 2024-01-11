@@ -4,7 +4,6 @@ session_start();
 class DB{
 
     protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db20";
-    //protected $dsn = "mysql:host=localhost;charset=utf8;dbname=bquiz";
     protected $pdo;
     protected $table;
     
@@ -143,9 +142,4 @@ function to($url){
 }
 
 
-if(isset($_GET['do'])){
-    $DB=${ucfirst($_GET['do'])};
-}else{
-      $DB=$Title;
-}
 ?>
