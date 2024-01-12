@@ -18,14 +18,8 @@
       <?=$movie['intro'];?>
       </p>
     </font>
-    <table width="100%" border="0">
-      <tbody>
-        <tr>
-          <td align="center">
-            <input type="button" value="院線片清單" onclick="location.href='index.php'">
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="ct">
+        <button onclick="location.href='index.php'">院線片清單</button>
+    </div>
   </div>
 </div>
