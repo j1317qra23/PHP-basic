@@ -76,16 +76,35 @@
 ?>
 </div>
 <script>
-    $(".show-btn").on("click",function(){
+$(".show-btn").on("click",function(){
+    let id=$(this).data('id');
+    $.post("./api/show.php",{id},()=>{
+        location.reload()
+        //$(this).text(($(this).text()=='顯示')?"隱藏":"顯示");
+/*         switch($(this).text()){
+            case "隱藏":
+                $(this).text("顯示")
+            break;
+            case "顯示":
+                $(this).text("隱藏")
+            break;
+        } */
+    })
+})
+$(".sw-btn").on("click",function(){
+    let id=$(this).data('id');
+    let sw=$(this).data('sw');
+    let table='movie'
+    $.post("./api/sw.php",{id,sw,table},()=>{
+        location.reload()
+    })
+})
+$(".edit-btn").on("click",function(){
 
-    })
-    $(".sw-btn").on("click",function(){
-        
-    })
-    $(".edit-btn").on("click",function(){
-        
-    })
-    $(".del-btn").on("click",function(){
-        
-    })
+})
+$(".del-btn").on("click",function(){
+
+})
+
+
 </script>
