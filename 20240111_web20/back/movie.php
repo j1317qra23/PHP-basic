@@ -103,7 +103,11 @@ $(".edit-btn").on("click",function(){
 
 })
 $(".del-btn").on("click",function(){
-
+    let id=$(this).data('id');
+    $.post("./api/del.php",{id,table:'movie'},()=>{
+        location.reload()
+    })
+    
 })
 
 
