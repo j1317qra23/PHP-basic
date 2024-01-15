@@ -19,16 +19,24 @@
     </div>
 </div>
 <script>
+let url=new URL(window.location.href)
+
 getMovies();
 
 $("#movie").on("change",function(){
     getDates($("#movie").val())
 })
 
+$("#date").on("change",function(){
+    getSessions($("#movie").val(),$("#date").val())
+})
+
 function getMovies(){
     $.get("./api/get_movies.php",(movies)=>{
         $("#movie").html(movies);
-        // let id=$("#movie").val();
+        if(url.searchParams.has('id')){
+           $(`#movie option[value='${url.searchParams.get('id')}']`).prop('selected',true);
+        }
         getDates($("#movie").val())
     })
 }

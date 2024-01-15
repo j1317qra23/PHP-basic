@@ -150,7 +150,7 @@ $sess=[1=>'14:00~16:00',
 
 $Poster=new DB('poster');
 $Movie=new DB('movie');
-$Orders=new DB('orders');
+$Order=new DB('orders');
 
 ?>
 
