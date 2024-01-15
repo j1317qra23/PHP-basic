@@ -1,7 +1,10 @@
 <style>
 .lists{
-   /*  position: relative; */
+    position: relative;
     left:114px;
+    width:200px;
+    height:240px;
+    overflow: hidden;
 }
 .item *{
     box-sizing: border-box;
@@ -12,6 +15,7 @@
  margin:auto;
  box-sizing: border-box;
  display:none;
+ position: absolute;
 }
 .item div img{
     width:100%;
@@ -68,12 +72,12 @@
             $posters=$Poster->all(['sh'=>1]," order by rank");
             foreach($posters as $idx => $poster){
             ?>
-            <div class="item">
+            <div class="item" data-ani="<?=$poster['ani'];?>">
                 <div><img src="./img/<?=$poster['img'];?>" alt=""></div>
                 <div><?=$poster['name'];?></div>
             </div>
             <?php
-            }  
+            }
             ?>
         </div>
         
@@ -122,9 +126,9 @@ function slide(){
                 $(".item").eq(next).slideDown(1000);
             });
         break;
-
+       
     }
-
+    now=next;
 }
 
 
