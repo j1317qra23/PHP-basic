@@ -73,7 +73,7 @@
                 <div><?=$poster['name'];?></div>
             </div>
             <?php
-            }
+            }  
             ?>
         </div>
         
@@ -97,20 +97,38 @@
 </div>
 <script>
 $(".item").eq(0).show();
-
+let total=$(".btn").length
 let now=0;
 let timer=setInterval(()=>{slide()},3000)
 function slide(){
-    $(".item").hide();
-    now++;
-    if(now>8){
-        now=0;
+    let ani=$(".item").eq(now).data("ani");
+    let next=now+1;
+        if(next>=total){
+            next=0;
+        }
+    switch(ani){
+        case 1:
+            $(".item").eq(now).fadeOut(1000,function(){
+                $(".item").eq(next).fadeIn(1000);
+            });
+        break;
+        case 2:
+            $(".item").eq(now).hide(1000,function(){
+                $(".item").eq(next).show(1000);
+            });
+        break;
+        case 3:
+            $(".item").eq(now).slideUp(1000,function(){
+                $(".item").eq(next).slideDown(1000);
+            });
+        break;
+
     }
-    $(".item").eq(now).show();
+
 }
 
 
-let total=$(".btn").length
+
 let p=0;
 
 $(".left,.right").on("click",function(){
