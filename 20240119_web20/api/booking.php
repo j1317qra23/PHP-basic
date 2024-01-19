@@ -19,17 +19,17 @@ $session=$_GET['session'];
  .seat {
     width: 63px;
     height: 85px;
-    position:relative;
+    position: relative;
 }
 
 .seats {
     display: flex;
     flex-wrap: wrap;
-}   
+}
 .chk{
-   position: absolute;
-   right:2px;
-   bottom:2px;
+    position: absolute;
+    right:2px;
+    bottom:2px;
 }
 </style>
 
@@ -43,7 +43,6 @@ $session=$_GET['session'];
         echo (floor($i/5)+1) . "排";
         echo (($i%5)+1) . "號";
         echo "</div>";
-
         echo "<div class='ct'>";
         echo "<img src='./icon/03D02.png'>";
         echo "</div>";
@@ -60,12 +59,13 @@ $session=$_GET['session'];
 <div>您已經勾選<span id='tickets'>0</span>張票，最多可以購買四張票</div>
 <div>
     <button onclick="$('#select').show();$('#booking').hide()">上一步</button>
-    <button>訂購</button>
+    <button onclick="checkout()">訂購</button>
 </div>
 </div>
+
 <script>
 let seats=new Array();
-// let seats = [];
+// let sets=[];
 $(".chk").on("change",function(){
     if($(this).prop('checked')){
         if(seats.length+1<=4){
@@ -75,11 +75,18 @@ $(".chk").on("change",function(){
             alert("每個人只能勾選四張票")
         }
     }else{
-
         seats.splice(seats.indexOf($(this).val()),1)
     }
-    console.log(seats.length)
     $("#tickets").text(seats.length)
 
 })  
+function checkout(){
+    $.post("./api/checkout.php",{movie:'<?=$movie['name'];?>',
+                                 date:'<?=$date;?>',
+                                 session:'<?=$session;?>',
+                                 seats},
+                                 (no)=>{
+                                    location.href=`?do=result&no=${no}`;
+                                 })
+}
 </script>
