@@ -7,7 +7,7 @@
     </tr>
     <tr>
         <td class="tt">密碼</td>
-        <td class="pp"><input type="text" name="pw" id="pw"></td>
+        <td class="pp"><input type="password" name="pw" id="pw"></td>
     </tr>
     <tr>
         <td class="tt">驗證碼</td>
@@ -18,10 +18,10 @@
             $_SESSION['ans']=$a+$b;
             echo $a . " + " .$b . " =";
             ?>
-            <input type="text" name="chk" id="chk"></td>
+            <input type="text" name="ans" id="ans"></td>
     </tr>
 </table>
-<div class="ct"><button>確認</button></div>
+<div class="ct"><button onclick="login('admin')">確認</button></div>
 <script>
 function login(table){
     $.get('./api/chk_ans.php',{ans:$("#ans").val()},(chk)=>{

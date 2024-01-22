@@ -6,11 +6,9 @@ unset($_POST['table']);
 $db=new DB($table);
 $chk=$db->count($_POST);
 
-if($chk)
-{
+if($chk){
     echo $chk;
     $_SESSION[$table]=$_POST['acc'];
-}else
-{
+}else{
     echo $chk;
 }
