@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>┌精品電子商務網站」</title>
-<link href=".css/css.css" rel="stylesheet" type="text/css">
+<link href="./css/css.css" rel="stylesheet" type="text/css">
 <script src="./js/js.js"></script>
 </head>
 
@@ -32,5 +32,5 @@
         <div id="bottom" style="line-height:70px; color:#FFF; background:url(icon/bot.png);" class="ct">
         	頁尾版權 :        </div>
     </div>
-
+<script src="./js/jquery-3.4.1.min.js"></script>
 </body></html>
