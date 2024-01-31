@@ -3,11 +3,10 @@
 </div>
 <table class="all">
     <tr>
-        <th class="tt ct">帳號</td>
-        <th class="tt ct">密碼</td>
-        <th class="tt ct">管理</td>
+        <th class="tt ct">帳號</th>
+        <th class="tt ct">密碼</th>
+        <th class="tt ct">管理</th>
     </tr>
-    
     <?php
     $rows=$Admin->all();
     foreach($rows as $row){
@@ -31,5 +30,5 @@
     ?>
 </table>
 <div class="ct">
-<button onclick="location.href='index.php'">返回</button>
+    <button onclick="location.href='index.php'">返回</button>
 </div>
