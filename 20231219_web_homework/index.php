@@ -41,6 +41,13 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
   <link rel="stylesheet" href="./style/style.css">
+  <!-- database -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
 </head>
 
 <body>
@@ -61,6 +68,7 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="#intro">Home</a></li>
           <li><a href="#portfolio">Beverage Outlets</a></li>
+          <li><a href="#myTable">Green Cup Discounts</a></li>
           <li><a href="#about">Drink Roulette</a></li>
           <li><a href="#services">Updates News</a></li>
           <li><a href="#facts">Visitor Count</a></li>
@@ -354,13 +362,25 @@
       </div>
     </section>
     <!-- #portfolio -->
-
+    <div class="container">
+    <table id="myTable" class="table table-striped table-bordered">
+      <thead>
+      <h3 style="text-align:center">環保杯優惠店家</h3>
+        <tr>
+          <th>ShopBN</th>
+          <th>ShopName</th>
+          <th>ShopAd</th>
+          <th>ShopTel</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
     <!--==========================
       About Us Section
     ============================-->
     <section id="about">
       <div class="container">
-       <p>飲料店轉盤</p>
+      <h3 style="text-align:center">飲料店轉盤</h3>
       <div id="app" v-cloak>
     <!-- status buttons-->
     <div class="game-status">
@@ -662,12 +682,12 @@
         Best <a href="https://bootstrapmade.com/">Bootstrap Templates</a> by BootstrapMade
       </div>
     </div>
-  </footer><!-- #footer -->
+  </footer>
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
   <!-- JavaScript Libraries -->
-  <script src="lib01/jquery/jquery.min.js"></script>
+  <!-- <script src="lib01/jquery/jquery.min.js"></script> -->
   <script src="lib01/jquery/jquery-migrate.min.js"></script>
   <script src="lib01/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="lib01/easing/easing.min.js"></script>
@@ -686,6 +706,26 @@
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
 
+
+<script>
+    $(document).ready(function () {
+      let url = './box.json';
+
+      // Initialize DataTable on the table
+      $('#myTable').DataTable({
+        ajax: {
+          url: url,
+          dataSrc: ''
+        },
+        columns: [
+          { data: 'ShopBN(連鎖品牌：必填)' },
+          { data: 'ShopName(門市名稱：必填)' },
+          { data: 'ShopAd(門市地址：必填)' },
+          { data: 'ShopTel(門市電話：必填)' }
+        ]
+      });
+    });
+  </script>
 </body>
 
 </html>
