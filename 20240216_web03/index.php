@@ -53,6 +53,30 @@
         </div>
         <div id="left" class="ct">
             <div style="min-height:400px;">
+            <a>全部商品</a>
+            <?php
+            $bigs=$Type->all(['big_id'=>0]);
+            foreach($bigs as $big){
+            ?>
+            <div class="ww">
+                <a href=""><?=$big['name'];?></a>
+                <div class="s">
+                    <?php
+                    if($Type->count(["big_id"=>$big['id']])>0){
+                        $mids=$Type->all(["big_id"=>$big['id']]);
+                        foreach($mids as $mid){
+                    ?>
+                        <a href=""><?=$mid['name'];?></a>
+                    <?php
+                        }
+                    }
+                    ?>
+                </div>
+            </div>
+
+            <?php
+            }
+            ?>
             </div>
             <span>
                 <div>進站總人數</div>
@@ -75,7 +99,6 @@
         <div id="bottom" style="line-height:70px;background:url(icon/bot.png); color:#FFF;" class="ct">
            <?=$Bottom->find(1)['bottom'];?></div>
     </div>
-   
 </body>
 
 </html>
