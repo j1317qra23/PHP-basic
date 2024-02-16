@@ -1,4 +1,4 @@
-<h2 class="ct">新增商品</h2>
+<h2 class="ct">修改商品</h2>
 <?php
 $goods=$Goods->find($_GET['id']);
 ?>
@@ -46,9 +46,10 @@ $goods=$Goods->find($_GET['id']);
         </tr>
     </table>
     <div class="ct">
-        <input type="submit" value="新增">
+        <input type="hidden" name="id" value="<?=$goods['id'];?>">
+        <input type="submit" value="修改">
         <input type="reset" value="重置">
-        <input type="button" value="返回">
+        <input type="button" value="返回" onclick="location.href='?do=th'">
     </div>
 </form>
 
@@ -64,10 +65,13 @@ function getTypes(type,big_id){
         switch(type){
             case 'big':
                 $("#big").html(types)
+                $("#big").val(<?=$goods['big'];?>)
                 getTypes('mid',$("#big").val())
+
             break;
             case 'mid':
                 $("#mid").html(types)
+                $("#mid").val(<?=$goods['mid'];?>)
             break;
         }
     })
