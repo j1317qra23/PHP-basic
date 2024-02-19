@@ -109,7 +109,6 @@
         <!-- Navbar & Hero End -->
 
         <!-- Header Start -->
-       
         <!-- Header End -->
 
         <!-- Tour Booking Start -->
@@ -126,51 +125,66 @@
                         <a href="#" class="btn btn-light text-primary rounded-pill py-3 px-5 mt-2">看更多</a>
                     </div>
                     <div class="col-lg-6">
-                        <h1 class="text-white mb-3">第一次購買</h1>
-                        <a href="./reg.html" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4 text-warning mb-4" onclick="location.href='?do=reg'">請註冊</a>
-                        
+                        <h1 class="text-white mb-3">會員註冊</h1>
+                        <!-- <p class="text-white mb-4">請註冊 <span class="text-warning" onclick="location.href='?do=reg'"></span></p> -->
                         <form>
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control bg-white border-0" name="acc" id="acc" placeholder="Your Name">
+                                        <input type="text" class="form-control bg-white border-0" name="acc" id="acc" placeholder="">
                                         <label for="text">帳號</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                 
+                                    <div class="form-floating">
+                                        <button onclick="chkacc()" class="form-control bg-white border-0">檢測帳號</button>
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="password" class="form-control bg-white border-0" name="pw" id="pw" placeholder="Your Email">
+                                        <input type="text" class="form-control bg-white border-0" name="name" id="name" placeholder="">
+                                        <label for="text">姓名</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="password" class="form-control bg-white border-0" name="pw" id="pw" placeholder="">
                                         <label for="password">密碼</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                   
-                                </div>
-                                <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="password" class="form-control bg-white border-0" name="pw" id="pw" placeholder="Your Email">
-                                        <label for="password">驗證碼</label>
+                                        <input type="password" class="form-control bg-white border-0" name="tel" id="tel" placeholder="">
+                                        <label for="password">電話</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    
-                                </div>
-                                <div class="col-md-6">
-                                   
-                                </div>
-                                <div class="col-md-6">
-                                    
-                                </div>
-                                <div class="col-md-6">
                                     <div class="form-floating">
-                                        <button onclick="login('mem')" type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">註冊</button>
+                                        <input type="password" class="form-control bg-white border-0" name="addr" id="addr" placeholder="">
+                                        <label for="password">住址</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                  
+                                    <div class="form-floating">
+                                        <input type="password" class="form-control bg-white border-0" name="email" id="email" placeholder="">
+                                        <label for="password">電子信箱</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="date" class="form-control bg-white border-0" name="birthday" id="birthday" placeholder="">
+                                        <label for="date">出生年月</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <button onclick="reg()" type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">註冊</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <button  onclick="clean()" type="button" class="btn btn-primary rounded-pill position-left top-0 end-0 py-2 px-4 mt-2 me-2">重置</button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
@@ -195,6 +209,46 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+
+        <!-- function Javascript -->
+        <script>
+            function reg(){
+                let user={
+                    name:$("#name").val(),
+                    acc:$("#acc").val(),
+                    pw:$("#pw").val(),
+                    tel:$("#tel").val(),
+                    addr:$("#addr").val(),
+                    email:$("#email").val(),
+                    birthday:$("#birthday").val(),
+                }
+                $.get("./api/chk_acc.php",{acc:user.acc},(res)=>{
+                    if(parseInt(res)==1 || user.acc=='admin'){
+                        alert(`此帳號${user.acc}已被使用`)
+                    }else{
+                        $.post("./api/reg.php",user,()=>{
+                            location.href='?do=login'
+                        })
+            
+                    }
+                })
+            }    
+            function chkacc(){
+                let acc=$("#acc").val()
+                $.get("./api/chk_acc.php",{acc},(res)=>{
+                    if(parseInt(res)==1 || acc=='admin'){
+                        alert(`此帳號${acc}已被使用`)
+                    }else{
+                        alert(`此帳號${acc}可以使用`)
+            
+                    }
+                })
+                
+            }
+            function clean(){
+                $("#name,#acc,#pw,#tel,#addr,#email,#birthday").val('');
+            }
+            </script>
     </body>
 
-</html> -->
+</html> 
