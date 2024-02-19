@@ -3,8 +3,7 @@ date_default_timezone_set("Asia/Taipei");
 session_start();
 class DB{
 
-    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db07";
-    //protected $dsn = "mysql:host=localhost;charset=utf8;dbname=bquiz";
+    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db03";
     protected $pdo;
     protected $table;
     
@@ -138,13 +137,14 @@ function dd($array)
     print_r($array);
     echo "</pre>";
 }
-function to($url) {
+function to($url){
     header("location:$url");
 }
 
-$Title=new DB('titles');
-$Total=new DB('total');
+
 $Bottom=new DB('bottom');
-$Ad=new DB('ad');
-$Mvim=new DB('mvim');
+$Mem=new DB('mem');
+$Admin=new DB('admin');
+$Type=new DB('type');
+$Goods=new DB('goods');
 ?>

@@ -3,8 +3,7 @@ date_default_timezone_set("Asia/Taipei");
 session_start();
 class DB{
 
-    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db07";
-    //protected $dsn = "mysql:host=localhost;charset=utf8;dbname=bquiz";
+    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db00";
     protected $pdo;
     protected $table;
     
@@ -138,13 +137,27 @@ function dd($array)
     print_r($array);
     echo "</pre>";
 }
-function to($url) {
+function to($url){
     header("location:$url");
 }
 
-$Title=new DB('titles');
+
 $Total=new DB('total');
-$Bottom=new DB('bottom');
-$Ad=new DB('ad');
-$Mvim=new DB('mvim');
+$User=new DB('user');
+$News=new DB('news');
+$Que=new DB('que');
+$Log=new DB('log');
+
+if(!isset($_SESSION['visited'])){
+    if($Total->count(['date'=>date('Y-m-d')])>0){
+        $total=$Total->find(['date'=>date('Y-m-d')]);
+        $total['total']++;
+        $Total->save($total);
+    }else{
+        $Total->save(['total'=>1,'date'=>date('Y-m-d')]);
+    }
+    $_SESSION['visited']=1;
+}
+
+
 ?>
