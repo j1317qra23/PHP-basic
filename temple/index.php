@@ -1614,7 +1614,7 @@
                         </div>
                         <div style="margin-top: -35px;">
                             <h5 class="mb-0">宏德宮</h5>
-                            <p class="mb-0">媽祖宏德宮/p>
+                            <p class="mb-0">媽祖宏德宮</p>
                             <div class="d-flex justify-content-center">
                                 <i class="fas fa-star text-primary"></i>
                                 <i class="fas fa-star text-primary"></i>
