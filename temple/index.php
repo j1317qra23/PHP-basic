@@ -56,8 +56,8 @@
                 </div>
                 <div class="col-lg-4 text-center text-lg-end">
                     <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <a href="#"><small class="me-3 text-light"><i class="fa fa-user me-2"></i>註冊</small></a>
-                        <a href="#"><small class="me-3 text-light"><i class="fa fa-sign-in-alt me-2"></i>登入</small></a>
+                        <a href="./reg.php"><small class="me-3 text-light"><i class="fa fa-user me-2"></i>註冊</small></a>
+                        <a href="./login.php"><small class="me-3 text-light"><i class="fa fa-sign-in-alt me-2"></i>會員登入</small></a>
                         <div class="dropdown">
                             <a href="#" class="dropdown-toggle text-light" data-bs-toggle="dropdown"><small><i class="fa fa-home me-2"></i> 首頁</small></a>
                             <div class="dropdown-menu rounded">
@@ -86,26 +86,47 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">首頁</a>
-                        <a href="about.html" class="nav-item nav-link">關於我們</a>
-                        <a href="services.html" class="nav-item nav-link">服務</a>
-                        <a href="packages.html" class="nav-item nav-link">產品</a>
-                        <a href="blog.html" class="nav-item nav-link">相簿</a>
+                        <a href="#" class="nav-item nav-link active">首頁</a>
+                        <a href="#about" class="nav-item nav-link">關於我們</a>
+                        <a href="#serve" class="nav-item nav-link">服務</a>
+                        <a href="#product" class="nav-item nav-link">產品</a>
+                        <a href="#order" class="nav-item nav-link">網路點燈</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">相關連結</a>
                             <div class="dropdown-menu m-0">
-                                <a href="destination.html" class="dropdown-item">Destination</a>
-                                <a href="tour.html" class="dropdown-item">Explore Tour</a>
-                                <a href="booking.html" class="dropdown-item">Travel Booking</a>
-                                <a href="gallery.html" class="dropdown-item">Our Gallery</a>
-                                <a href="guides.html" class="dropdown-item">Travel Guides</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
+                                <a href="#news" class="dropdown-item">最新消息</a>
+                                <a href="#question" class="dropdown-item">常見問題</a>
+                                <a href="#cooperate" class="dropdown-item">合作公廟</a>
+                                <a href="#blog" class="dropdown-item">活動照片</a>
+                                <a href="#address" class="dropdown-item">聯絡地址</a>
+                                <a href="#subscribe" class="dropdown-item">訂閱我們的網站</a>
+                               
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">聯絡我們</a>
+                        <a href="#contact" class="nav-item nav-link">聯絡我們</a>
                     </div>
-                    <a href="" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">登入</a>
+                    <?php
+                if(isset($_SESSION['mem'])){
+                ?>
+                    <a href="./api/logout.php">登出</a> |
+                <?php
+                }else{
+                ?>
+                     <a href="./login.php" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">會員登入</a>
+                <?php
+                }
+                ?>
+                <?php
+                if(isset($_SESSION['admin'])){
+                ?>
+                    <a href="back.php">返回管理</a>
+                <?php 
+                }else{
+                ?>
+                     <a href="./admin.php" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">管理員登入</a>
+                <?php    
+                }
+                ?>
                 </div>
             </nav>
 
@@ -183,7 +204,7 @@
         <!-- Navbar & Hero End -->
 
         <!-- About Start -->
-        <div class="container-fluid about py-5">
+        <div id="about" class="container-fluid about py-5">
             <div class="container py-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-5">
@@ -224,7 +245,7 @@
         <!-- About End -->
 
         <!-- Services Start -->
-        <div class="container-fluid bg-light service py-5">
+        <div id="serve" class="container-fluid bg-light service py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
                     <h5 class="section-title px-3">服務</h5>
@@ -350,7 +371,7 @@
         <!-- Services End -->
 
         <!-- Destination Start -->
-        <div class="container-fluid destination py-5">
+        <div id="product" class="container-fluid destination py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
                     <h5 class="section-title px-3">產品</h5>
@@ -659,7 +680,7 @@
         <!-- Destination End -->
 
         <!-- Explore Tour Start -->
-        <div class="container-fluid ExploreTour py-5">
+        <div id="news" class="container-fluid ExploreTour py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
                     <h5 class="section-title px-3">活動資訊</h5>
@@ -850,7 +871,7 @@
         <!-- Explore Tour Start -->
 
         <!-- Packages Start -->
-        <div class="container-fluid packages py-5">
+        <div id="question" class="container-fluid packages py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
                     <h5 class="section-title px-3">常見問題</h5>
@@ -995,7 +1016,7 @@
         <!-- Packages End -->
 
         <!-- Gallery Start -->
-        <div class="container-fluid gallery py-5 my-5">
+        <div id="order" class="container-fluid gallery py-5 my-5">
             <div class="mx-auto text-center mb-5" style="max-width: 900px;">
                 <h5 class="section-title px-3">點燈</h5>
                 <h1 class="mb-4">網路點燈</h1>
@@ -1394,7 +1415,7 @@
         <!-- Tour Booking End -->
 
         <!-- Travel Guide Start -->
-        <div class="container-fluid guide py-5">
+        <div id="cooperate" class="container-fluid guide py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
                     <h5 class="section-title px-3">合作公廟</h5>
@@ -1491,7 +1512,7 @@
         <!-- Travel Guide End -->
 
         <!-- Blog Start -->
-        <div class="container-fluid blog py-5">
+        <div id="blog" class="container-fluid blog py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
                     <h5 class="section-title px-3">活動照片</h5>
@@ -1576,7 +1597,7 @@
         <!-- Blog End -->
 
         <!-- Testimonial Start -->
-        <div class="container-fluid testimonial py-5">
+        <div id="address" class="container-fluid testimonial py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
                     <h5 class="section-title px-3">聯絡地址</h5>
@@ -1669,7 +1690,7 @@
         <!-- Testimonial End -->
 
         <!-- Subscribe Start -->
-        <div class="container-fluid subscribe py-5">
+        <div id="subscribe" class="container-fluid subscribe py-5">
             <div class="container text-center py-5">
                 <div class="mx-auto text-center" style="max-width: 900px;">
                     <h5 class="subscribe-title px-3">訂閱</h5>
@@ -1774,7 +1795,7 @@
         <!-- Footer End -->
         
         <!-- Copyright Start -->
-        <div class="container-fluid copyright text-body py-4">
+        <div id="contact" class="container-fluid copyright text-body py-4">
             <div class="container">
                 <div class="row g-4 align-items-center">
                     <div class="col-md-6 text-center text-md-end mb-md-0">
