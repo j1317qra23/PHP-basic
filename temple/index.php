@@ -1061,7 +1061,7 @@
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">太歲燈</h5>
-                                            <a href="#" class="btn-hover text-white">流年平安、諸事順遂 <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./front.php" class="btn-hover text-white">流年平安、諸事順遂 <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
