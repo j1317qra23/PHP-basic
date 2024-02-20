@@ -208,7 +208,7 @@
             <div class="container py-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-5">
-                        <div class="h-100" style="border: 50px solid; border-color: transparent #13357B transparent #13357B;">
+                        <div class="h-100" style="border: 5px solid; ">
                             <img src="img/about-img.jpg" class="img-fluid w-100 h-100" alt="">
                         </div>
                     </div>
@@ -1331,7 +1331,7 @@
         <!-- Gallery End -->
 
         <!-- Tour Booking Start -->
-        <div class="container-fluid booking py-5">
+        <!-- <div class="container-fluid booking py-5">
             <div class="container py-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6">
@@ -1411,7 +1411,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Tour Booking End -->
 
         <!-- Travel Guide Start -->
