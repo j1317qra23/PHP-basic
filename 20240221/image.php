@@ -26,7 +26,7 @@
 <form action="?" method="post">
     <label for="">選擇檔案:</label>
     <input type="file" name="img" id="">
-    <input type="submit" name="img" id="">
+    <input type="submit" value="上傳">
 </form>
 
 
