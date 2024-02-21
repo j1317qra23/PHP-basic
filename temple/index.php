@@ -1057,7 +1057,7 @@
                         <div class="row g-2">
                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
                                 <div class="gallery-item h-100">
-                                    <img src="img/gallery-1.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <img src="img/01.gif" class="img-fluid w-100 h-100 rounded" alt="Image">
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">太歲燈</h5>
@@ -1071,7 +1071,7 @@
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                                 <div class="gallery-item h-100">
-                                    <img src="img/gallery-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <img src="img/01.gif" class="img-fluid w-100 h-100 rounded" alt="Image">
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">光明燈</h5>
@@ -1085,7 +1085,7 @@
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
                                 <div class="gallery-item h-100">
-                                    <img src="img/gallery-3.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <img src="img/01.gif" class="img-fluid w-100 h-100 rounded" alt="Image">
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">文昌燈</h5>
@@ -1099,7 +1099,7 @@
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                                 <div class="gallery-item h-100">
-                                    <img src="img/gallery-4.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <img src="img/01.gif" class="img-fluid w-100 h-100 rounded" alt="Image">
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">藥師燈</h5>
@@ -1113,7 +1113,7 @@
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
                                 <div class="gallery-item h-100">
-                                    <img src="img/gallery-5.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <img src="img/01.gif" class="img-fluid w-100 h-100 rounded" alt="Image">
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">財神燈</h5>
@@ -1127,7 +1127,7 @@
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
                                 <div class="gallery-item h-100">
-                                    <img src="img/gallery-6.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <img src="img/02.gif" class="img-fluid w-100 h-100 rounded" alt="Image">
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">五佛殿光明燈</h5>
@@ -1141,7 +1141,7 @@
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
                                 <div class="gallery-item h-100">
-                                    <img src="img/gallery-7.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <img src="img/02.gif" class="img-fluid w-100 h-100 rounded" alt="Image">
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">平安燈</h5>
@@ -1155,7 +1155,7 @@
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-3 col-xl-2">
                                 <div class="gallery-item h-100">
-                                    <img src="img/gallery-8.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <img src="img/02.gif" class="img-fluid w-100 h-100 rounded" alt="Image">
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">拜斗燈</h5>
@@ -1169,7 +1169,7 @@
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
                                 <div class="gallery-item h-100">
-                                    <img src="img/gallery-9.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <img src="img/02.gif" class="img-fluid w-100 h-100 rounded" alt="Image">
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">月老燈</h5>
@@ -1183,7 +1183,7 @@
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-3 col-xl-2">
                                 <div class="gallery-item h-100">
-                                    <img src="img/gallery-10.jpg" class="img-fluid w-100 h-100 rounded" alt="Image">
+                                    <img src="img/02.gif" class="img-fluid w-100 h-100 rounded" alt="Image">
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">World Tour</h5>

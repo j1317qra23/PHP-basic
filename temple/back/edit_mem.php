@@ -3,7 +3,7 @@
 <?php
 $row=$Mem->find($_GET['id']);
 ?>
-<form action="./api/reg.php" method="post">
+<form action="./api/save_mem.php" method="post">
 <table class="all">
     <tr>
         <td class="tt ct">帳號</td>
