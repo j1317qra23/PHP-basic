@@ -142,7 +142,7 @@ function to($url){
 }
 
 function code(...$length){
- 
+  
     //使用亂數來產生驗證碼長度，判斷是否帶有參數來決定長度變數的產生方式
     $length=$length[0]??rand(4,8);
 
@@ -201,7 +201,7 @@ function captcha($str){
         $text_info[$char]['angle']=rand(-25,25);
 
         //使用imagettfbbox()來取得單一字元在大小,角度和字型的影響下，字元圖形的四個角的坐標資訊陣列
-        $tmp=imagettfbbox($fontsize,$text_info[$char]['angle'],realpath('./fonts/arial.ttf'),$char);
+        $tmp=imagettfbbox($fontsize,$text_info[$char]['angle'],realpath('../fonts/arial.ttf'),$char);
 
         //利用字元的資訊，使用x坐標的最大值減最小值來計算出字元寬度，使用y坐標的最大值-最小值來計出字元高度
         //因坐標特性，需要加上1才能得到正確的寬度及高度
@@ -269,7 +269,7 @@ function captcha($str){
         $y=rand($info['height']+5,$info['height']+($border*2-5*2));
 
         //將字元依照大小，角度，坐標，顏色，字型等資訊畫在畫布上
-        imagettftext($dst_img,$fontsize,$info['angle'],$x_pointer,$y,$colors[rand(0,count($colors)-1)],realpath('./fonts/arial.ttf'),$char);
+        imagettftext($dst_img,$fontsize,$info['angle'],$x_pointer,$y,$colors[rand(0,count($colors)-1)],realpath('../fonts/arial.ttf'),$char);
 
         //依照字元的寬度及字元的x坐標來產生下一個字元的x坐標起點
         $x_pointer=$x_pointer+$info['width']+$info['x']+1;
@@ -315,7 +315,6 @@ function captcha($str){
     return "data:image/png;base64," . base64_encode($output);
 
 }
-
 
 $Bottom=new DB('bottom');
 $Mem=new DB('mem');
