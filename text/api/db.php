@@ -3,7 +3,7 @@ date_default_timezone_set("Asia/Taipei");
 session_start();
 class DB
 {
-    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db08";
+    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db15";
     protected $pdo;
     protected $table;
     public function __construct($table)
@@ -125,28 +125,10 @@ function to($url)
 {
     header("location:$url");
 }
-$Title = new DB('titles');
-$Total = new DB('total');
-$Bottom = new DB('bottom');
-$Image = new DB('image');
-$News = new DB('news');
-$Mvim = new DB('mvim');
-$Menu = new DB('menu');
-$Ad = new DB('ad');
-$Admin = new DB('admin');
 
-if (isset($_GET['do'])) {
-    if (isset(${ucfirst($_GET['do'])})) {
-        $DB = ${ucfirst($_GET['do'])};
-    }
-} else {
-    $DB = $Title;
-}
 
-if (!isset($_SESSION['visited'])) {
-    $Total->q("update `total` set `total` = `total`+1 where `id`=1");
-    $_SESSION['visited'] = 1;
-}
+
+
 ?>
 
 <?php
@@ -159,32 +141,6 @@ if (file_exists($file)) {
 }
 ?>
 
-<?php
-$total = $DB->count();
-$div = 3; //5
-$pages = ceil($total / $div);
-$now = $_GET['p'] ?? 1;
-$start = ($now - 1) * $div;
-$rows = $DB->all(" limit $start,$div");
-foreach ($rows as $row) {
-?>
-<?php
-}
-?>
-<?php
-if ($now > 1) {
-    $prev = $now - 1;
-    echo "<a href='?do=$do&p=$prev'><</a>";
-}
-for ($i = 1; $i <= $pages; $i++) {
-    $fontsize = ($now == $i) ? '24px' : '16px';
-    echo "<a href='?do=$do&p=$i'style='font-size:$fontsize'>$i</a>";
-}
-if ($now < $pages) {
-    $next = $now + 1;
-    echo "<a href='?do=$do&p=$next'>></a>";
-}
-?>
 
 <?php
 $Total = new DB('total');
@@ -194,13 +150,7 @@ $Que = new DB('que');
 $Log = new DB('log');
 
 if (!isset($_SESSION['visited'])) {
-    if ($Total->count(['date' => date('Y-m-d')]) > 0) {
-        $total = $Total->find(['date' => date('Y-m-d')]);
-        $total['total']++;
-        $Total->save($total);
-    } else {
-        $Total->save(['total' => 1, 'date' => date('Y-m-d')]);
-    }
+    $Total->q("update `total` set `total` = `total`+1 where `id`=1");
     $_SESSION['visited'] = 1;
 }
 ?>
