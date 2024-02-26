@@ -126,9 +126,6 @@ function to($url)
     header("location:$url");
 }
 
-
-
-
 ?>
 
 <?php
@@ -140,7 +137,6 @@ if (file_exists($file)) {
     include "./front/main.php";
 }
 ?>
-
 
 <?php
 $Total = new DB('total');
