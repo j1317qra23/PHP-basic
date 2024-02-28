@@ -69,7 +69,7 @@
 						?>
 					</span>
 					<div class="">
-						<?php
+					<?php
 						$do = $_GET['do'] ?? 'main';
 						$file = "./front/{$do}.php";
 						if (file_exists($file)) {

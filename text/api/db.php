@@ -128,15 +128,6 @@ function to($url)
 
 ?>
 
-<?php
-$do = $_GET['do'] ?? 'main'; //title
-$file = "./front/{$do}.php"; //back
-if (file_exists($file)) {
-    include $file;
-} else {
-    include "./front/main.php";
-}
-?>
 
 <?php
 $Total = new DB('total');
