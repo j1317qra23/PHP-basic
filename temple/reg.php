@@ -41,7 +41,7 @@
         <!-- Spinner End -->
 
         <!-- Topbar Start -->
-        <div class="container-fluid bg-primary px-5 d-none d-lg-block">
+        <div class="container-fluid bg-dark px-5 d-none d-lg-block">
             <div class="row gx-0">
                 <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                     <div class="d-inline-flex align-items-center" style="height: 45px;">
@@ -54,10 +54,10 @@
                 </div>
                 <div class="col-lg-4 text-center text-lg-end">
                     <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <a href="#"><small class="me-3 text-light"><i class="fa fa-user me-2"></i>Register</small></a>
-                        <a href="#"><small class="me-3 text-light"><i class="fa fa-sign-in-alt me-2"></i>Login</small></a>
+                        <a href="./reg.php"><small class="me-3 text-light"><i class="fa fa-user me-2"></i>註冊</small></a>
+                        <a href="./login.php"><small class="me-3 text-light"><i class="fa fa-sign-in-alt me-2"></i>會員登入</small></a>
                         <div class="dropdown">
-                            <a href="#" class="dropdown-toggle text-light" data-bs-toggle="dropdown"><small><i class="fa fa-home me-2"></i> My Dashboard</small></a>
+                            <a href="#" class="dropdown-toggle text-light" data-bs-toggle="dropdown"><small><i class="fa fa-home me-2"></i> 首頁</small></a>
                             <div class="dropdown-menu rounded">
                                 <a href="#" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> My Profile</a>
                                 <a href="#" class="dropdown-item"><i class="fas fa-comment-alt me-2"></i> Inbox</a>
@@ -76,7 +76,7 @@
         <div class="container-fluid position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <h1 class="m-0"><i class="fa fa-map-marker-alt me-3"></i>Travela</h1>
+                    <h1 class="m-0"><i class="fa-solid fa-gopuram fa-2xs" style="color: #ffffff;"></i>&nbsp;關渡宮</h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -84,29 +84,48 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="services.html" class="nav-item nav-link">Services</a>
-                        <a href="packages.html" class="nav-item nav-link">Packages</a>
-                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <a href="#" class="nav-item nav-link active">首頁</a>
+                        <a href="#about" class="nav-item nav-link">關於我們</a>
+                        <a href="#serve" class="nav-item nav-link">服務</a>
+                        <a href="#product" class="nav-item nav-link">產品</a>
+                        <a href="#order" class="nav-item nav-link">網路點燈</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">相關連結</a>
                             <div class="dropdown-menu m-0">
-                                <a href="destination.html" class="dropdown-item">Destination</a>
-                                <a href="tour.html" class="dropdown-item">Explore Tour</a>
-                                <a href="booking.html" class="dropdown-item active">Travel Booking</a>
-                                <a href="gallery.html" class="dropdown-item">Our Gallery</a>
-                                <a href="guides.html" class="dropdown-item">Travel Guides</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
+                                <a href="#news" class="dropdown-item">最新消息</a>
+                                <a href="#question" class="dropdown-item">常見問題</a>
+                                <a href="#cooperate" class="dropdown-item">導覽影片</a>
+                                <a href="#blog" class="dropdown-item">活動照片</a>
+                                <a href="#address" class="dropdown-item">聯絡地址</a>
+                                
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="#contact" class="nav-item nav-link">聯絡我們</a>
                     </div>
-                    <a href="" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Book Now</a>
+                    <?php
+                if(isset($_SESSION['mem'])){
+                ?>
+                    <a href="./api/logout.php">登出</a> |
+                <?php
+                }else{
+                ?>
+                     <a href="./login.php" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">會員登入</a>
+                <?php
+                }
+                ?>
+                <?php
+                if(isset($_SESSION['admin'])){
+                ?>
+                    <a href="back.php">返回管理</a>
+                <?php 
+                }else{
+                ?>
+                     <a href="./admin.php" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">管理員登入</a>
+                <?php    
+                }
+                ?>
                 </div>
             </nav>
-        </div>
         <!-- Navbar & Hero End -->
 
         <!-- Header Start -->

@@ -96,11 +96,10 @@
                             <div class="dropdown-menu m-0">
                                 <a href="#news" class="dropdown-item">最新消息</a>
                                 <a href="#question" class="dropdown-item">常見問題</a>
-                                <a href="#cooperate" class="dropdown-item">合作公廟</a>
+                                <a href="#cooperate" class="dropdown-item">導覽影片</a>
                                 <a href="#blog" class="dropdown-item">活動照片</a>
                                 <a href="#address" class="dropdown-item">聯絡地址</a>
-                                <a href="#subscribe" class="dropdown-item">訂閱我們的網站</a>
-                               
+                                
                             </div>
                         </div>
                         <a href="#contact" class="nav-item nav-link">聯絡我們</a>
@@ -195,10 +194,10 @@
         </div>
         <div class="container-fluid search-bar position-relative" style="top: -50%; transform: translateY(-50%);">
             <div class="container">
-                <div class="position-relative rounded-pill w-100 mx-auto p-5" style="background: rgba(19, 53, 123, 0.5);">
-                    <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="">
-                    <button type="button" class="btn btn-primary rounded-pill py-2 px-4 position-absolute me-2" style="top: 50%; right: 46px; transform: translateY(-50%);">尋找</button>
-                </div>
+                <!-- <div class="position-relative rounded-pill w-100 mx-auto p-5" style="background: rgba(19, 53, 123, 0.5);"> -->
+                    <!-- <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder=""> -->
+                    <!-- <button type="button" class="btn btn-primary rounded-pill py-2 px-4 position-absolute me-2" style="top: 50%; right: 46px; transform: translateY(-50%);">尋找</button> -->
+                <!-- </div> -->
             </div>
         </div>
         <!-- Navbar & Hero End -->
@@ -296,11 +295,13 @@
                                 <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
                                     <div class="service-content text-left">
                                         <h5 class="mb-4">抽籤解籤</h5>
+                                       
                                         <p class="mb-0">北港媽祖天上聖母所使用之六十甲子籤。月下老人是主管人世間男女婚姻之神，也就是媒神，又稱月老。
                                         </p>
                                     </div>
                                     <div class="service-icon p-4">
-                                        <i class="fa fa-cog fa-4x text-primary"></i>
+                                    <a href="https://iwnet.civil.taipei/SignedPoetry"> <i class="fa fa-cog fa-4x text-primary"></i></a>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -374,11 +375,11 @@
         <div id="product" class="container-fluid destination py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">產品</h5>
+                    <h5 class="section-title px-3">祈福商品</h5>
                     <h1 class="mb-0">熱銷產品</h1>
                 </div>
                 <div class="tab-class text-center">
-                    <ul class="nav nav-pills d-inline-flex justify-content-center mb-5">
+                    <!-- <ul class="nav nav-pills d-inline-flex justify-content-center mb-5">
                         <li class="nav-item">
                             <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill active" data-bs-toggle="pill" href="#tab-1">
                                 <span class="text-dark" style="width: 150px;">全部</span>
@@ -409,7 +410,7 @@
                                 <span class="text-dark" style="width: 150px;">御守</span>
                             </a>
                         </li>
-                    </ul>
+                    </ul> -->
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             <div class="row g-4">
@@ -419,9 +420,9 @@
                                             <div class="destination-img">
                                                 <img class="img-fluid rounded w-100" src="img/destination-1.jpg" alt="">
                                                 <div class="destination-overlay p-4">
-                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後20組</a>
-                                                    <h4 class="text-white mb-2 mt-3">獨家安太歲保平安組</h4>
-                                                    <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
+                                                    <h4 class="text-white mb-2 mt-3">龍山香火袋</h4>
+                                                    <a href="#" class="btn-hover text-white">售價$40 <i class="fa fa-arrow-right ms-2"></i></a>
                                                 </div>
                                                 <div class="search-icon">
                                                     <a href="img/destination-1.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -432,9 +433,9 @@
                                             <div class="destination-img">
                                                 <img class="img-fluid rounded w-100" src="img/destination-2.jpg" alt="">
                                                 <div class="destination-overlay p-4">
-                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後20組</a>
-                                                    <h4 class="text-white mb-2 mt-3">捐款贈太歲燈</h4>
-                                                    <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
+                                                    <h4 class="text-white mb-2 mt-3">寵物御守</h4>
+                                                    <a href="#" class="btn-hover text-white">售價$70 <i class="fa fa-arrow-right ms-2"></i></a>
                                                 </div>
                                                 <div class="search-icon">
                                                     <a href="img/destination-2.jpg" data-lightbox="destination-2"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -445,9 +446,9 @@
                                             <div class="destination-img">
                                                 <img class="img-fluid rounded w-100" src="img/destination-7.jpg" alt="">
                                                 <div class="destination-overlay p-4">
-                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後20組</a>
-                                                    <h4 class="text-white mb-2 mt-3">代點太歲燈</h4>
-                                                    <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
+                                                    <h4 class="text-white mb-2 mt-3">福粽</h4>
+                                                    <a href="#" class="btn-hover text-white">售價$60<i class="fa fa-arrow-right ms-2"></i></a>
                                                 </div>
                                                 <div class="search-icon">
                                                     <a href="img/destination-7.jpg" data-lightbox="destination-7"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -458,9 +459,9 @@
                                             <div class="destination-img">
                                                 <img class="img-fluid rounded w-100" src="img/destination-8.jpg" alt="">
                                                 <div class="destination-overlay p-4">
-                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後20組</a>
-                                                    <h4 class="text-white mb-2 mt-3">獨家代點太歲燈開運組</h4>
-                                                    <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
+                                                    <h4 class="text-white mb-2 mt-3">觀音吊飾</h4>
+                                                    <a href="#" class="btn-hover text-white">售價$100 <i class="fa fa-arrow-right ms-2"></i></a>
                                                 </div>
                                                 <div class="search-icon">
                                                     <a href="img/destination-8.jpg" data-lightbox="destination-8"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -473,9 +474,9 @@
                                     <div class="destination-img h-100">
                                         <img class="img-fluid rounded w-100 h-100" src="img/destination-9.jpg" style="object-fit: cover; min-height: 300px;" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後20組</a>
-                                            <h4 class="text-white mb-2 mt-3">靈鷲山財寶宮殿</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
+                                            <h4 class="text-white mb-2 mt-3">平安大鍊</h4>
+                                            <a href="#" class="btn-hover text-white">售價$70 <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                         <div class="search-icon">
                                             <a href="img/destination-9.jpg" data-lightbox="destination-4"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -486,9 +487,9 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="img/destination-4.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後20組</a>
-                                            <h4 class="text-white mb-2 mt-3">捐款贈太歲燈</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
+                                            <h4 class="text-white mb-2 mt-3">觀音八卦項鍊</h4>
+                                            <a href="#" class="btn-hover text-white">售價$100<i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                         <div class="search-icon">
                                             <a href="img/destination-4.jpg" data-lightbox="destination-4"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -499,9 +500,9 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="img/destination-5.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後20組</a>
-                                            <h4 class="text-white mb-2 mt-3">捐款贈太歲燈</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
+                                            <h4 class="text-white mb-2 mt-3">平安大鍊</h4>
+                                            <a href="#" class="btn-hover text-white">售價$70 <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                         <div class="search-icon">
                                             <a href="img/destination-5.jpg" data-lightbox="destination-5"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -512,9 +513,9 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="img/destination-6.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後20組</a>
-                                            <h4 class="text-white mb-2 mt-3">捐款贈寵物太歲燈</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
+                                            <h4 class="text-white mb-2 mt-3">龍山文昌袋</h4>
+                                            <a href="#" class="btn-hover text-white">售價$50 <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                         <div class="search-icon">
                                             <a href="img/destination-6.jpg" data-lightbox="destination-6"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -529,7 +530,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="img/destination-5.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後20組</a>
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
                                             <h4 class="text-white mb-2 mt-3">安奉值年太歲星君</h4>
                                             <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
@@ -542,7 +543,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="img/destination-6.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後20組</a>
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
                                             <h4 class="text-white mb-2 mt-3">捐款贈安太歲/制煞</h4>
                                             <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
@@ -559,7 +560,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="img/destination-5.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後20組</a>
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
                                             <h4 class="text-white mb-2 mt-3">San francisco</h4>
                                             <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
@@ -572,7 +573,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="img/destination-6.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後20組</a>
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
                                             <h4 class="text-white mb-2 mt-3">San francisco</h4>
                                             <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
@@ -589,7 +590,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="img/destination-5.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後20組</a>
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
                                             <h4 class="text-white mb-2 mt-3">San francisco</h4>
                                             <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
@@ -602,7 +603,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="img/destination-6.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後20組</a>
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
                                             <h4 class="text-white mb-2 mt-3">San francisco</h4>
                                             <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
@@ -619,7 +620,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="img/destination-5.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後20組</a>
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
                                             <h4 class="text-white mb-2 mt-3">San francisco</h4>
                                             <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
@@ -632,7 +633,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="img/destination-6.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後20組</a>
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
                                             <h4 class="text-white mb-2 mt-3">San francisco</h4>
                                             <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
@@ -649,7 +650,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="img/destination-5.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後20組</a>
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
                                             <h4 class="text-white mb-2 mt-3">San francisco</h4>
                                             <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
@@ -662,7 +663,7 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="img/destination-6.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後20組</a>
+                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
                                             <h4 class="text-white mb-2 mt-3">San francisco</h4>
                                             <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
@@ -704,13 +705,13 @@
                     <div class="tab-content">
                         <div id="NationalTab-1" class="tab-pane fade show p-0 active">
                             <div class="row g-4">
-                                <div class="col-md-6 col-lg-4">
+                                <div class="col-md-6 col-lg-6">
                                     <div class="national-item">
                                         <img src="img/explore-tour-1.jpg" class="img-fluid w-100 rounded" alt="Image">
                                         <div class="national-content">
                                             <div class="national-info">
-                                                <h5 class="text-white text-uppercase mb-2">文化講座系列</h5>
-                                                <a href="#" class="btn-hover text-white">舉辦有關當地傳統文化、歷史或藝術的講座。<i class="fa fa-arrow-right ms-2"></i></a>
+                                                <h5 class="text-white text-uppercase mb-2">春季禮斗法會</h5>
+                                                <a href="#" class="btn-hover text-white">祈安禮斗植福法會，斗灯為最主要的祈福消災之物，斗灯其含意具有微妙之靈應神物，可驅凶避邪消災解厄；「安斗」以祈求驅邪壓煞，可保身體健康延命益壽、財源廣進、萬事如意、闔家平安。。<i class="fa fa-arrow-right ms-2"></i></a>
                                             </div>
                                         </div>
                                         <div class="national-plus-icon">
@@ -718,13 +719,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-lg-4">
+                                <div class="col-md-6 col-lg-6">
                                     <div class="national-item">
                                         <img src="img/explore-tour-2.jpg" class="img-fluid w-100 rounded" alt="Image">
                                         <div class="national-content">
                                             <div class="national-info">
-                                                <h5 class="text-white text-uppercase mb-2">節慶慶典</h5>
-                                                <a href="#" class="btn-hover text-white">提供手作工作坊，促進社區文化交流。 <i class="fa fa-arrow-right ms-2"></i></a>
+                                                <h5 class="text-white text-uppercase mb-2">梁皇寶懺法會</h5>
+                                                <a href="#" class="btn-hover text-white">在唱誦《梁皇寶懺》、跪拜禮讚之間，可洗滌罪障、化解災厄、增添福慧，讓人身心祥和安定，亦可迴向給現世親人，消除業障，增福增慧，並致身心清淨，平安吉祥。 <i class="fa fa-arrow-right ms-2"></i></a>
                                             </div>
                                         </div>
                                         <div class="national-plus-icon">
@@ -732,28 +733,28 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-lg-4">
+                                <div class="col-md-6 col-lg-6">
                                     <div class="national-item">
                                         <img src="img/explore-tour-3.jpg" class="img-fluid w-100 rounded" alt="Image">
                                         <div class="national-content">
                                             <div class="national-info">
-                                                <h5 class="text-white text-uppercase mb-2">社區清潔運動</h5>
-                                                <a href="#" class="btn-hover text-white">舉辦公廟周邊的社區清潔運動，凝聚社區居民共同參與 <i class="fa fa-arrow-right ms-2"></i></a>
+                                                <h5 class="text-white text-uppercase mb-2">盂蘭盆法會(超渡法會)</h5>
+                                                <a href="#" class="btn-hover text-white">法會於農曆六月最後一天下午兩點引魂，次日開始連續三天誦經，超渡累劫先祖冤親，以及十方法界一切亡靈往生善處。(盂蘭盆)即是(解倒懸)的意思，意指解救所有飢餓虛弱宛如身體被倒吊般痛苦的眾生。 <i class="fa fa-arrow-right ms-2"></i></a>
                                             </div>
                                         </div>
-                                        <div class="tour-offer bg-info">點擊</div>
+                                        <!-- <div class="tour-offer bg-info"></div> -->
                                         <div class="national-plus-icon">
                                             <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-lg-4">
+                                <div class="col-md-6 col-lg-6">
                                     <div class="national-item">
                                         <img src="img/explore-tour-4.jpg" class="img-fluid w-100 rounded" alt="Image">
                                         <div class="national-content">
                                             <div class="national-info">
-                                                <h5 class="text-white text-uppercase mb-2">跳陣頭</h5>
-                                                <a href="#" class="btn-hover text-white">陣頭文化 <i class="fa fa-arrow-right ms-2"></i></a>
+                                                <h5 class="text-white text-uppercase mb-2">秋季禮斗法會</h5>
+                                                <a href="#" class="btn-hover text-white">祈安禮斗植福法會，斗灯為最主要的祈福消災之物，斗灯其含意具有微妙之靈應神物，可驅凶避邪消災解厄；「安斗」以祈求驅邪壓煞，可保身體健康延命益壽、財源廣進、萬事如意、闔家平安。 <i class="fa fa-arrow-right ms-2"></i></a>
                                             </div>
                                         </div>
                                         <div class="national-plus-icon">
@@ -761,7 +762,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-lg-4">
+                                <!-- <div class="col-md-6 col-lg-4">
                                     <div class="national-item">
                                         <img src="img/explore-tour-5.jpg" class="img-fluid w-100 rounded" alt="Image">
                                         <div class="national-content">
@@ -775,8 +776,8 @@
                                             <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4">
+                                </div> -->
+                                <!-- <div class="col-md-6 col-lg-4">
                                     <div class="national-item">
                                         <img src="img/explore-tour-6.jpg" class="img-fluid w-100 rounded" alt="Image">
                                         <div class="national-content">
@@ -789,7 +790,7 @@
                                             <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div id="InternationalTab-2" class="tab-pane fade show p-0">
@@ -798,12 +799,11 @@
                                     <img src="img/explore-tour-1.jpg" class="img-fluid w-100 rounded" alt="Image">
                                     <div class="international-content">
                                         <div class="international-info">
-                                            <h5 class="text-white text-uppercase mb-2">Australia</h5>
-                                            <a href="#" class="btn-hover text-white me-4"><i class="fas fa-map-marker-alt me-1"></i> 8 Cities</a>
-                                            <a href="#" class="btn-hover text-white"><i class="fa fa-eye ms-2"></i> <span>143+ Tour Places</span></a>
+                                        <h5 class="text-white text-uppercase mb-2">天上聖母聖誕佳節</h5>
+                                                <a href="#" class="btn-hover text-white">人們會舉行各種以天上聖母聖誕為主題的活動，以表達對她的崇敬之情。 <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
-                                    <div class="tour-offer bg-success">30% Off</div>
+                                    <!-- <div class="tour-offer bg-success"></div> -->
                                     <div class="international-plus-icon">
                                         <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
                                     </div>
@@ -812,50 +812,24 @@
                                     <img src="img/explore-tour-2.jpg" class="img-fluid w-100 rounded" alt="Image">
                                     <div class="international-content">
                                         <div class="international-info">
-                                            <h5 class="text-white text-uppercase mb-2">Germany</h5>
-                                            <a href="#" class="btn-hover text-white me-4"><i class="fas fa-map-marker-alt me-1"></i> 12 Cities</a>
-                                            <a href="#" class="btn-hover text-white"><i class="fa fa-eye ms-2"></i> <span>21+ Tour Places</span></a>
+                                        <h5 class="text-white text-uppercase mb-2">	廣渡寺舉辦盂蘭盆法會</h5>
+                                                <a href="#" class="btn-hover text-white">每年7月1日至3日還會有盂蘭盆法會，為期三天，在廣渡寺舉辦進主護靈超渡法會，為奉祀及報名參加超渡的亡靈誦經超渡。 <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
                                     <div class="international-plus-icon">
                                         <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
                                     </div>
                                 </div>
-                                <div class="international-item">
-                                    <img src="img/explore-tour-3.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                    <div class="international-content">
-                                        <div class="tour-offer bg-warning">45% Off</div>
-                                        <div class="international-info">
-                                            <h5 class="text-white text-uppercase mb-2">Spain</h5>
-                                            <a href="#" class="btn-hover text-white me-4"><i class="fas fa-map-marker-alt me-1"></i> 9 Cities</a>
-                                            <a href="#" class="btn-hover text-white"><i class="fa fa-eye ms-2"></i> <span>133+ Tour Places</span></a>
-                                        </div>
-                                    </div>
-                                    <div class="international-plus-icon">
-                                        <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
-                                <div class="international-item">
-                                    <img src="img/explore-tour-4.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                    <div class="international-content">
-                                        <div class="international-info">
-                                            <h5 class="text-white text-uppercase mb-2">Japan</h5>
-                                            <a href="#" class="btn-hover text-white me-4"><i class="fas fa-map-marker-alt me-1"></i> 8 Cities</a>
-                                            <a href="#" class="btn-hover text-white"><i class="fa fa-eye ms-2"></i> <span>137+ Tour Places</span></a>
-                                        </div>
-                                    </div>
-                                    <div class="international-plus-icon">
-                                        <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
-                                    </div>
-                                </div>
+                               
+                               
                                 <div class="international-item">
                                     <img src="img/explore-tour-5.jpg" class="img-fluid w-100 rounded" alt="Image">
                                     <div class="international-content">
-                                        <div class="tour-offer bg-info">70% Off</div>
+                                        <!-- <div class="tour-offer bg-info"></div> -->
                                         <div class="international-info">
-                                            <h5 class="text-white text-uppercase mb-2">London</h5>
-                                            <a href="#" class="btn-hover text-white me-4"><i class="fas fa-map-marker-alt me-1"></i> 17 Cities</a>
-                                            <a href="#" class="btn-hover text-white"><i class="fa fa-eye ms-2"></i> <span>26+ Tour Places</span></a>
+                                        
+                                            <h5 class="text-white text-uppercase mb-2">中元普渡</h5>
+                                                <a href="#" class="btn-hover text-white">　中元普渡之用意是要安靖地方無祀孤魂，將陽世的善心普施眾生。 <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
                                     <div class="international-plus-icon">
@@ -881,11 +855,11 @@
                     <div class="packages-item">
                         <div class="packages-img">
                             <img src="img/packages-4.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                            <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                            <!-- <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
                                 <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt me-2"></i>Venice - Italy</small>
                                 <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>3 days</small>
                                 <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 Person</small>
-                            </div>
+                            </div> -->
                             <div class="packages-price py-2 px-4"></div>
                         </div>
                         <div class="packages-content bg-light">
@@ -914,11 +888,11 @@
                     <div class="packages-item">
                         <div class="packages-img">
                             <img src="img/packages-2.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                            <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                            <!-- <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
                                 <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt me-2"></i>Venice - Italy</small>
                                 <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>3 days</small>
                                 <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 Person</small>
-                            </div>
+                            </div> -->
                             <div class="packages-price py-2 px-4"></div>
                         </div>
                         <div class="packages-content bg-light">
@@ -947,11 +921,11 @@
                     <div class="packages-item">
                         <div class="packages-img">
                             <img src="img/packages-3.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                            <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                            <!-- <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
                                 <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt me-2"></i>Venice - Italy</small>
                                 <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>3 days</small>
                                 <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 Person</small>
-                            </div>
+                            </div> -->
                             <div class="packages-price py-2 px-4"></div>
                         </div>
                         <div class="packages-content bg-light">
@@ -980,11 +954,11 @@
                     <div class="packages-item">
                         <div class="packages-img">
                             <img src="img/packages-1.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                            <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                            <!-- <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute" style="width: 100%; bottom: 0; left: 0; z-index: 5;">
                                 <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt me-2"></i>Thayland</small>
                                 <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>3 days</small>
                                 <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 Person</small>
-                            </div>
+                            </div> -->
                             <div class="packages-price py-2 px-4"></div>
                         </div>
                         <div class="packages-content bg-light">
@@ -1025,7 +999,7 @@
                 </p>
             </div>
             <div class="tab-class text-center">
-                <ul class="nav nav-pills d-inline-flex justify-content-center mb-5">
+                <!-- <ul class="nav nav-pills d-inline-flex justify-content-center mb-5">
                     <li class="nav-item">
                         <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill active" data-bs-toggle="pill" href="#GalleryTab-1">
                             <span class="text-dark" style="width: 150px;">全部</span>
@@ -1051,7 +1025,7 @@
                             <span class="text-dark" style="width: 150px;">姻緣</span>
                         </a>
                     </li>
-                </ul>
+                </ul> -->
                 <div class="tab-content">
                     <div id="GalleryTab-1" class="tab-pane fade show p-0 active">
                         <div class="row g-2">
@@ -1418,27 +1392,24 @@
         <div id="cooperate" class="container-fluid guide py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">合作公廟</h5>
-                    <h1 class="mb-0">合作公廟</h1>
+                    <h5 class="section-title px-3">關渡宮</h5>
+                    <h1 class="mb-0">導覽影片</h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-md-6 col-lg-3">
                         <div class="guide-item">
                             <div class="guide-img">
                                 <div class="guide-img-efects">
-                                    <img src="img/guide-1.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/IsVKfYeV80g?si=qFkx9Avi2xJe-S5f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                 </div>
                                 <div class="guide-icon rounded-pill p-2">
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://www.youtube.com/watch?v=IsVKfYeV80g&ab_channel=Dr.IkeChen"><i class="fab fa-youtube"></i></a>    
                                 </div>
                             </div>
                             <div class="guide-title text-center rounded-bottom p-4">
                                 <div class="guide-title-inner">
-                                    <h4 class="mt-3">宏德宮</h4>
-                                    <p class="mb-0">台中縣大甲鎮安和一街4巷4-3號4F</p>
+                                    <h4 class="mt-3">凌霄寶殿</h4>
+                                    <p class="mb-0">台北市關渡宮導覽</p>
                                 </div>
                             </div>
                         </div>
@@ -1447,19 +1418,16 @@
                         <div class="guide-item">
                             <div class="guide-img">
                                 <div class="guide-img-efects">
-                                    <img src="img/guide-2.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/zzsUr7KFZg0?si=6vgf3d2uOM7kjQQr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                 </div>
                                 <div class="guide-icon rounded-pill p-2">
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://www.youtube.com/watch?v=zzsUr7KFZg0&ab_channel=Dr.IkeChen"><i class="fab fa-youtube"></i></a>    
                                 </div>
                             </div>
                             <div class="guide-title text-center rounded-bottom p-4">
                                 <div class="guide-title-inner">
-                                    <h4 class="mt-3">祥和廟</h4>
-                                    <p class="mb-0">台中縣大安鄉源遠路292巷1-5號1F</p>
+                                    <h4 class="mt-3">觀音佛祖殿</h4>
+                                    <p class="mb-0">台北市關渡宮導覽</p>
                                 </div>
                             </div>
                         </div>
@@ -1468,19 +1436,16 @@
                         <div class="guide-item">
                             <div class="guide-img">
                                 <div class="guide-img-efects">
-                                    <img src="img/guide-3.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/nqMwjXLBsSw?si=5rukgi1pHhb9m_Xe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                 </div>
                                 <div class="guide-icon rounded-pill p-2">
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://www.youtube.com/watch?v=nqMwjXLBsSw&ab_channel=Dr.IkeChen"><i class="fab fa-youtube"></i></a>    
                                 </div>
                             </div>
                             <div class="guide-title text-center rounded-bottom p-4">
                                 <div class="guide-title-inner">
-                                    <h4 class="mt-3">福德宮</h4>
-                                    <p class="mb-0">台中縣大里市百六街53號3F</p>
+                                    <h4 class="mt-3">財神洞</h4>
+                                    <p class="mb-0">台北市關渡宮導覽</p>
                                 </div>
                             </div>
                         </div>
@@ -1489,19 +1454,16 @@
                         <div class="guide-item">
                             <div class="guide-img">
                                 <div class="guide-img-efects">
-                                    <img src="img/guide-4.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/q1kKy8VFp8E?si=I5_DzMYVTm8KxfGZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                 </div>
                                 <div class="guide-icon rounded-pill p-2">
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://www.youtube.com/watch?v=q1kKy8VFp8E&ab_channel=Dr.IkeChen"><i class="fab fa-youtube"></i></a>    
                                 </div>
                             </div>
                             <div class="guide-title text-center rounded-bottom p-4">
                                 <div class="guide-title-inner">
-                                    <h4 class="mt-3">靈靜廟</h4>
-                                    <p class="mb-0">台中縣大雅鄉111巷39號2F</p>
+                                    <h4 class="mt-3">媽祖殿</h4>
+                                    <p class="mb-0">台北市關渡宮導覽</p>
                                 </div>
                             </div>
                         </div>
@@ -1532,9 +1494,9 @@
                                     </div>
                                 </div>
                                 <div class="blog-info d-flex align-items-center border border-start-0 border-end-0">
-                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>28 Jan 2050</small>
+                                    <!-- <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>28 Jan 2050</small>
                                     <a href="#" class="btn-hover flex-fill text-center text-white border-end py-2"><i class="fa fa-thumbs-up text-primary me-2"></i>1.7K</a>
-                                    <a href="#" class="btn-hover flex-fill text-center text-white py-2"><i class="fa fa-comments text-primary me-2"></i>1K</a>
+                                    <a href="#" class="btn-hover flex-fill text-center text-white py-2"><i class="fa fa-comments text-primary me-2"></i>1K</a> -->
                                 </div>
                             </div>
                             <div class="blog-content border border-top-0 rounded-bottom p-4">
@@ -1555,9 +1517,9 @@
                                     </div>
                                 </div>
                                 <div class="blog-info d-flex align-items-center border border-start-0 border-end-0">
-                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>28 Jan 2050</small>
+                                    <!-- <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>28 Jan 2050</small>
                                     <a href="#" class="btn-hover flex-fill text-center text-white border-end py-2"><i class="fa fa-thumbs-up text-primary me-2"></i>1.7K</a>
-                                    <a href="#" class="btn-hover flex-fill text-center text-white py-2"><i class="fa fa-comments text-primary me-2"></i>1K</a>
+                                    <a href="#" class="btn-hover flex-fill text-center text-white py-2"><i class="fa fa-comments text-primary me-2"></i>1K</a> -->
                                 </div>
                             </div>
                             <div class="blog-content border border-top-0 rounded-bottom p-4">
@@ -1578,15 +1540,15 @@
                                     </div>
                                 </div>
                                 <div class="blog-info d-flex align-items-center border border-start-0 border-end-0">
-                                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>28 Jan 2050</small>
+                                    <!-- <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>28 Jan 2050</small>
                                     <a href="#" class="btn-hover flex-fill text-center text-white border-end py-2"><i class="fa fa-thumbs-up text-primary me-2"></i>1.7K</a>
-                                    <a href="#" class="btn-hover flex-fill text-center text-white py-2"><i class="fa fa-comments text-primary me-2"></i>1K</a>
+                                    <a href="#" class="btn-hover flex-fill text-center text-white py-2"><i class="fa fa-comments text-primary me-2"></i>1K</a> -->
                                 </div>
                             </div>
                             <div class="blog-content border border-top-0 rounded-bottom p-4">
                                 <p class="mb-3">Posted By: Royal Hamblin </p>
                                 <a href="#" class="h4">藝術展覽</a>
-                                <p class="my-3">舉辦宮廟藝術展，展示當地藝術家作品。照片中呈現藝術家及參觀者共同欣賞、交流的場景，展現文化藝術的豐富內涵</p>
+                                <p class="my-3">舉辦宮廟藝術展，展示當地藝術家作品。照片中呈現藝術家及參觀者共同欣賞、交流的場景，展現文化的豐富內涵</p>
                                 <a href="#" class="btn btn-primary rounded-pill py-2 px-4">看更多</a>
                             </div>
                         </div>
@@ -1597,7 +1559,7 @@
         <!-- Blog End -->
 
         <!-- Testimonial Start -->
-        <div id="address" class="container-fluid testimonial py-5">
+        <!-- <div id="address" class="container-fluid testimonial py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
                     <h5 class="section-title px-3">聯絡地址</h5>
@@ -1686,25 +1648,25 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Testimonial End -->
 
-        <!-- Subscribe Start -->
-        <div id="subscribe" class="container-fluid subscribe py-5">
+        <!-- google map Start -->
+        <div id="address" class="container-fluid subscribe py-5">
             <div class="container text-center py-5">
                 <div class="mx-auto text-center" style="max-width: 900px;">
-                    <h5 class="subscribe-title px-3">訂閱</h5>
-                    <h1 class="text-white mb-4">我們的網站</h1>
-                    <p class="text-white mb-5">絕對不要錯過！現在就訂閱我們，每月將直接送至您的郵箱，獲取最新的精彩活動資訊。不僅能第一時間獲知獨家優惠和新品上市，還有機會參與獨特活動。我們將為您提供專屬內容，確保您不僅時刻保持連線，還能享受到特別的會員福利。快來加入我們的訂閱行列！
+                    <h5 class="subscribe-title px-3">聯絡地址</h5>
+                    <h1 class="text-white mb-4">112台北市北投區知行路360號</h1>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14450.130335857259!2d121.4639554!3d25.1176791!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x140dc547f891a379%3A0x973dbe7b461c105e!2z6Zec5rih5a6u!5e0!3m2!1szh-TW!2stw!4v1709122499203!5m2!1szh-TW!2stw" width="900" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </p>
                     <div class="position-relative mx-auto">
-                        <input class="form-control border-primary rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">訂閱</button>
+                        <!-- <input class="form-control border-primary rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"> -->
+                        <!-- <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">訂閱</button> -->
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Subscribe End -->
+        <!-- google map End -->
 
         <!-- Footer Start -->
         <div class="container-fluid footer py-5">
@@ -1752,7 +1714,7 @@
                         <div class="footer-item">
                             <div class="row gy-3 gx-2 mb-4">
                                 <div class="col-xl-6">
-                                    <form>
+                                    <!-- <form>
                                         <div class="form-floating">
                                             <select class="form-select bg-dark border" id="select1">
                                                 <option value="1">繁體中文</option>
@@ -1762,10 +1724,10 @@
                                             </select>
                                             <label for="select1">語言</label>
                                         </div>
-                                    </form>
+                                    </form> -->
                                 </div>
                                 <div class="col-xl-6">
-                                    <form>
+                                    <!-- <form>
                                         <div class="form-floating">
                                             <select class="form-select bg-dark border" id="select1">
                                                 <option value="1">台幣</option>
@@ -1775,10 +1737,10 @@
                                             </select>
                                             <label for="select1">$</label>
                                         </div>
-                                    </form>
+                                    </form> -->
                                 </div>
                             </div>
-                            <h4 class="text-white mb-3">支付方式</h4>
+                            <!-- <h4 class="text-white mb-3">支付方式</h4>
                             <div class="footer-bank-card">
                                 <a href="#" class="text-white me-2"><i class="fab fa-cc-amex fa-2x"></i></a>
                                 <a href="#" class="text-white me-2"><i class="fab fa-cc-visa fa-2x"></i></a>
@@ -1786,7 +1748,7 @@
                                 <a href="#" class="text-white me-2"><i class="fab fa-cc-mastercard fa-2x"></i></a>
                                 <a href="#" class="text-white me-2"><i class="fab fa-cc-paypal fa-2x"></i></a>
                                 <a href="#" class="text-white"><i class="fab fa-cc-discover fa-2x"></i></a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -1805,7 +1767,7 @@
                         <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
                         <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
                         <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        xxx公司 <a class="text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a href="https://themewagon.com">xxx製作</a>
+                        <a class="text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a href="https://themewagon.com">Jason Tsai</a>
                     </div>
                     </div>
                 </div>
