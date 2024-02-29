@@ -18,7 +18,7 @@ $goods=$Goods->find($_GET['id']);
 <style>
 .item{
     width:80%;
-    background-color: #f4c591;
+    background-color: ;
     margin:5px auto;
     display:flex;
 
@@ -64,7 +64,7 @@ $goods=$Goods->find($_GET['id']);
     <div>庫存量：<?=$goods['stock'];?></div>
  </div>   
 </div>
-<div class="tt ct">
+<div class="ct">
     購買數量:
     <input type="number" id="qt" value="1" style="width:50px;">
     <img src="./icon/0402.jpg" onclick="buy()">

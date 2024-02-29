@@ -18,7 +18,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 
         <!-- Libraries Stylesheet -->
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -420,9 +420,9 @@
                                             <div class="destination-img">
                                                 <img class="img-fluid rounded w-100" src="img/destination-1.jpg" alt="">
                                                 <div class="destination-overlay p-4">
-                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
+                                                    <a href="./login.php" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
                                                     <h4 class="text-white mb-2 mt-3">龍山香火袋</h4>
-                                                    <a href="#" class="btn-hover text-white">售價$40 <i class="fa fa-arrow-right ms-2"></i></a>
+                                                    <a href="./login.php" class="btn-hover text-white">售價$40 <i class="fa fa-arrow-right ms-2"></i></a>
                                                 </div>
                                                 <div class="search-icon">
                                                     <a href="img/destination-1.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -433,9 +433,9 @@
                                             <div class="destination-img">
                                                 <img class="img-fluid rounded w-100" src="img/destination-2.jpg" alt="">
                                                 <div class="destination-overlay p-4">
-                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
+                                                    <a href="./login.php" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
                                                     <h4 class="text-white mb-2 mt-3">寵物御守</h4>
-                                                    <a href="#" class="btn-hover text-white">售價$70 <i class="fa fa-arrow-right ms-2"></i></a>
+                                                    <a href="./login.php" class="btn-hover text-white">售價$70 <i class="fa fa-arrow-right ms-2"></i></a>
                                                 </div>
                                                 <div class="search-icon">
                                                     <a href="img/destination-2.jpg" data-lightbox="destination-2"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -446,9 +446,9 @@
                                             <div class="destination-img">
                                                 <img class="img-fluid rounded w-100" src="img/destination-7.jpg" alt="">
                                                 <div class="destination-overlay p-4">
-                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
+                                                    <a href="./login.php" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
                                                     <h4 class="text-white mb-2 mt-3">福粽</h4>
-                                                    <a href="#" class="btn-hover text-white">售價$60<i class="fa fa-arrow-right ms-2"></i></a>
+                                                    <a href="./login.php" class="btn-hover text-white">售價$60<i class="fa fa-arrow-right ms-2"></i></a>
                                                 </div>
                                                 <div class="search-icon">
                                                     <a href="img/destination-7.jpg" data-lightbox="destination-7"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -459,9 +459,9 @@
                                             <div class="destination-img">
                                                 <img class="img-fluid rounded w-100" src="img/destination-8.jpg" alt="">
                                                 <div class="destination-overlay p-4">
-                                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
+                                                    <a href="./login.php" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
                                                     <h4 class="text-white mb-2 mt-3">觀音吊飾</h4>
-                                                    <a href="#" class="btn-hover text-white">售價$100 <i class="fa fa-arrow-right ms-2"></i></a>
+                                                    <a href="./login.php" class="btn-hover text-white">售價$100 <i class="fa fa-arrow-right ms-2"></i></a>
                                                 </div>
                                                 <div class="search-icon">
                                                     <a href="img/destination-8.jpg" data-lightbox="destination-8"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -474,9 +474,9 @@
                                     <div class="destination-img h-100">
                                         <img class="img-fluid rounded w-100 h-100" src="img/destination-9.jpg" style="object-fit: cover; min-height: 300px;" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
+                                            <a href="./login.php" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
                                             <h4 class="text-white mb-2 mt-3">平安大鍊</h4>
-                                            <a href="#" class="btn-hover text-white">售價$70 <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white">售價$70 <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                         <div class="search-icon">
                                             <a href="img/destination-9.jpg" data-lightbox="destination-4"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -487,9 +487,9 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="img/destination-4.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
+                                            <a href="./login.php" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
                                             <h4 class="text-white mb-2 mt-3">觀音八卦項鍊</h4>
-                                            <a href="#" class="btn-hover text-white">售價$100<i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white">售價$100<i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                         <div class="search-icon">
                                             <a href="img/destination-4.jpg" data-lightbox="destination-4"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -500,9 +500,9 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="img/destination-5.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
+                                            <a href="./login.php" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
                                             <h4 class="text-white mb-2 mt-3">平安大鍊</h4>
-                                            <a href="#" class="btn-hover text-white">售價$70 <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white">售價$70 <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                         <div class="search-icon">
                                             <a href="img/destination-5.jpg" data-lightbox="destination-5"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -513,9 +513,9 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="img/destination-6.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
+                                            <a href="./login.php" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
                                             <h4 class="text-white mb-2 mt-3">龍山文昌袋</h4>
-                                            <a href="#" class="btn-hover text-white">售價$50 <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white">售價$50 <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                         <div class="search-icon">
                                             <a href="img/destination-6.jpg" data-lightbox="destination-6"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -530,9 +530,9 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="img/destination-5.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
+                                            <a href="./login.php" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
                                             <h4 class="text-white mb-2 mt-3">安奉值年太歲星君</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                         <div class="search-icon">
                                             <a href="img/destination-5.jpg" data-lightbox="destination-5"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -543,9 +543,9 @@
                                     <div class="destination-img">
                                         <img class="img-fluid rounded w-100" src="img/destination-6.jpg" alt="">
                                         <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
+                                            <a href="./login.php" class="btn btn-primary text-white rounded-pill border py-2 px-3">最後99組</a>
                                             <h4 class="text-white mb-2 mt-3">捐款贈安太歲/制煞</h4>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                         <div class="search-icon">
                                             <a href="img/destination-6.jpg" data-lightbox="destination-6"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
@@ -829,7 +829,7 @@
                                         <div class="international-info">
                                         
                                             <h5 class="text-white text-uppercase mb-2">中元普渡</h5>
-                                                <a href="#" class="btn-hover text-white">　中元普渡之用意是要安靖地方無祀孤魂，將陽世的善心普施眾生。 <i class="fa fa-arrow-right ms-2"></i></a>
+                                                <a href="#" class="btn-hover text-white">中元普渡之用意是要安靖地方無祀孤魂，將陽世的善心普施眾生。 <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
                                     <div class="international-plus-icon">
@@ -1035,7 +1035,8 @@
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">太歲燈</h5>
-                                            <a href="./front.php" class="btn-hover text-white">流年平安、諸事順遂 <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white">購買<i class="fa fa-arrow-right ms-2"></i></a>
+                                            <p class="text-white text-uppercase mb-2">流年平安、諸事順遂</p>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
@@ -1049,7 +1050,8 @@
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">光明燈</h5>
-                                            <a href="#" class="btn-hover text-white">祈求元辰光彩、平安順遂 <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white"><i class="fa fa-arrow-right ms-2"></i></a>
+                                            <p class="text-white text-uppercase mb-2">祈求元辰光彩、平安順遂 </p>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
@@ -1063,7 +1065,8 @@
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">文昌燈</h5>
-                                            <a href="#" class="btn-hover text-white">祈求金榜題名、仕途升遷 <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white"><i class="fa fa-arrow-right ms-2"></i></a>
+                                            <p class="text-white text-uppercase mb-2">祈求元辰光彩、平安順遂 </p>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
@@ -1077,7 +1080,8 @@
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">藥師燈</h5>
-                                            <a href="#" class="btn-hover text-white">祈求身體健康、病體康健 <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white"><i class="fa fa-arrow-right ms-2"></i></a>
+                                            <p class="text-white text-uppercase mb-2">祈求身體健康、病體康健 </p>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
@@ -1091,7 +1095,8 @@
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">財神燈</h5>
-                                            <a href="#" class="btn-hover text-white">祈求事業營運順利、財運亨通 <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white"><i class="fa fa-arrow-right ms-2"></i></a>
+                                            <p class="text-white text-uppercase mb-2">祈求事業營運順利、財運亨通 </p>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
@@ -1105,7 +1110,8 @@
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">五佛殿光明燈</h5>
-                                            <a href="#" class="btn-hover text-white">增添福壽、以祈光明 <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white"><i class="fa fa-arrow-right ms-2"></i></a>
+                                            <p class="text-white text-uppercase mb-2">增添福壽、以祈光明 </p>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
@@ -1119,7 +1125,8 @@
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">平安燈</h5>
-                                            <a href="#" class="btn-hover text-white">主保鎮宅光明，闔家保康寧<i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white"><i class="fa fa-arrow-right ms-2"></i></a>
+                                            <p class="text-white text-uppercase mb-2">主保鎮宅光明，闔家保康寧</p>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
@@ -1133,7 +1140,8 @@
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">拜斗燈</h5>
-                                            <a href="#" class="btn-hover text-white">主保鎮宅光明，闔家保康寧 <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white"><i class="fa fa-arrow-right ms-2"></i></a>
+                                            <p class="text-white text-uppercase mb-2">主保鎮宅光明，闔家保康寧 </p>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
@@ -1147,7 +1155,8 @@
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">月老燈</h5>
-                                            <a href="#" class="btn-hover text-white">祈求姻緣 <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white"><i class="fa fa-arrow-right ms-2"></i></a>
+                                            <p class="text-white text-uppercase mb-2">祈求姻緣</p>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
@@ -1161,7 +1170,8 @@
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <p class="text-white text-uppercase mb-2">祈求身體健康、病體康健 </p>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
@@ -1179,7 +1189,8 @@
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <p class="text-white text-uppercase mb-2">祈求身體健康、病體康健 </p>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
@@ -1193,7 +1204,8 @@
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <p class="text-white text-uppercase mb-2">祈求身體健康、病體康健 </p>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
@@ -1211,7 +1223,8 @@
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <p class="text-white text-uppercase mb-2">祈求身體健康、病體康健 </p>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
@@ -1225,7 +1238,8 @@
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <p class="text-white text-uppercase mb-2">祈求身體健康、病體康健 </p>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
@@ -1243,7 +1257,8 @@
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <p class="text-white text-uppercase mb-2">祈求身體健康、病體康健 </p>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
@@ -1257,7 +1272,8 @@
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <p class="text-white text-uppercase mb-2">祈求身體健康、病體康健 </p>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
@@ -1275,7 +1291,8 @@
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <p class="text-white text-uppercase mb-2">祈求身體健康、病體康健 </p>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">
@@ -1289,7 +1306,8 @@
                                     <div class="gallery-content">
                                         <div class="gallery-info">
                                             <h5 class="text-white text-uppercase mb-2">World Tour</h5>
-                                            <a href="#" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="./login.php" class="btn-hover text-white">View All Place <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <p class="text-white text-uppercase mb-2">祈求身體健康、病體康健 </p>
                                         </div>
                                     </div>
                                     <div class="gallery-plus-icon">

@@ -15,7 +15,7 @@
 $bigs=$Type->all(['big_id'=>0]);
 foreach($bigs as $big){
 ?>
-    <tr class="tt">
+    <tr class="ct tt">
         <td><?=$big['name'];?></td>
         <td class="ct">
             <button onclick="edit(this,<?=$big['id'];?>)">修改</button>

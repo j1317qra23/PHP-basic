@@ -6,7 +6,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-	<title>┌精品電子商務網站」</title>
+	<title>後臺管理</title>
 	<link href="./css/css.css" rel="stylesheet" type="text/css">
 	<script src="./js/jquery-3.4.1.min.js"></script>
 	<script src="./js/js.js"></script>
@@ -16,10 +16,9 @@
 	<iframe name="back" style="display:none;"></iframe>
 	<div id="main">
 		<div id="top">
-			<a href="index.php">
-				<img src="./icon/0416.jpg">
-			</a>
-			<img src="./icon/0417.jpg">
+			<h2 class="ct">後臺管理頁面</h2>
+			<a style="text-align:center" href="index.php">回首頁</a>
+		
 		</div>
 		<div id="left" class="ct">
 	<div style="min-height:400px;">
@@ -30,7 +29,7 @@
         echo in_array(1,$pr)?"<a href='?do=th'>商品分類與管理</a>":"";
         echo in_array(2,$pr)?"<a href='?do=order'>訂單管理</a>":"";
         echo in_array(3,$pr)?"<a href='?do=mem'>會員管理</a>":"";
-        echo in_array(4,$pr)?"<a href='?do=bot'>頁尾版權管理</a>":"";
+        // echo in_array(4,$pr)?"<a href='?do=bot'>頁尾版權管理</a>":"";
         echo in_array(5,$pr)?"<a href='?do=news'>最新消息管理</a>":"";
     	?>
     	<a href="./api/logout.php?do=admin" style="color:#f00;">登出</a>
@@ -47,8 +46,9 @@
                 }
             ?>			
 		</div>
-		<div id="bottom" style="line-height:70px; color:#FFF; background:url(icon/bot.png);" class="ct">
-		<?=$Bottom->find(1)['bottom'];?></div>
+		<!-- <div id="bottom" style="line-height:70px; color:#FFF; background:url(icon/bot.png);" class="ct">
+		<?=$Bottom->find(1)['bottom'];?>
+	</div> -->
 	</div>
 
 </body>
