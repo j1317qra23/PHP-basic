@@ -175,8 +175,8 @@
                                         <label for="text">驗證碼
                                         <?php
                                             //使用亂數取得兩個變數
-                                            $a=rand(10,99);
-                                            $b=rand(10,99);
+                                            $a=rand(10,30);
+                                            $b=rand(10,30);
                                             //將答案存入session
                                             $_SESSION['ans']=$a+$b;
                                             //顯示驗證碼字串在頁面上
@@ -248,6 +248,7 @@ function login(table){
                     alert("帳號或密碼錯誤，請重新輸入")
                 }else{
                     //回傳值不為0，導向後台管理頁面
+                    alert("登入成功")
                     location.href='back.php';
                 }
             })

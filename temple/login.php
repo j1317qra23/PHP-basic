@@ -84,13 +84,13 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
-                        <a href="#" class="nav-item nav-link active">首頁</a>
-                        <a href="#about" class="nav-item nav-link">關於我們</a>
-                        <a href="#serve" class="nav-item nav-link">服務</a>
-                        <a href="#product" class="nav-item nav-link">產品</a>
-                        <a href="#order" class="nav-item nav-link">網路點燈</a>
+                        <a href="index.php" class="nav-item nav-link active">首頁</a>
+                        <a href="index.php" class="nav-item nav-link">關於我們</a>
+                        <a href="index.php" class="nav-item nav-link">服務</a>
+                        <a href="index.php" class="nav-item nav-link">產品</a>
+                        <a href="index.php" class="nav-item nav-link">網路點燈</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">相關連結</a>
+                            <a href="index.php" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">相關連結</a>
                             <div class="dropdown-menu m-0">
                                 <a href="#news" class="dropdown-item">最新消息</a>
                                 <a href="#question" class="dropdown-item">常見問題</a>
@@ -100,7 +100,7 @@
                                 
                             </div>
                         </div>
-                        <a href="#contact" class="nav-item nav-link">聯絡我們</a>
+                        <a href="index.php" class="nav-item nav-link">聯絡我們</a>
                     </div>
                     <?php
                 if(isset($_SESSION['mem'])){
@@ -173,7 +173,7 @@
                                 <div class="form-floating">
                                     <input type="text" class="form-control bg-white border-0" name="ans" id="ans" placeholder="" >     
                                     <label for="text">驗證碼 </label> <br>
-                                        <img src="" id="captcha"><button onclick="captcha()">重新產生</button>
+                                       &nbsp; <img src="" id="captcha">&nbsp;&nbsp;<button onclick="captcha()">重新產生</button>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -242,6 +242,7 @@
                             if (parseInt(res) == 0) {
                                 alert("帳號或密碼錯誤，請重新輸入")
                             } else {
+                                alert("登入成功")
                                 location.href = 'front.php';
                             }
                         })

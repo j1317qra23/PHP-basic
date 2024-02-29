@@ -247,6 +247,7 @@
                         alert(`此帳號${user.acc}已被使用`)
                     }else{
                         $.post("./api/reg.php",user,()=>{
+                            alert("註冊成功，歡迎加入")
                             location.href='?do=login'
                         })
             
