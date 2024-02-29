@@ -10,6 +10,8 @@
     <link href="./css/css.css" rel="stylesheet" type="text/css">
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="./js/js.js"></script>
+
+    
 </head>
 <?php
 $type=$_GET['type']??0;
@@ -33,10 +35,13 @@ if($type==0){
 ?>
 <h2><?=$nav;?></h2>
 <style>
+    body{
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 .item{
     width:80%;
     height:160px;
-    background-color: #f4c591;
+    background-color: ;
     margin:5px auto;
     display:flex;
 
@@ -73,7 +78,7 @@ foreach($goods as $good){
     </a>
  </div>
  <div class="info">
-    <div class='ct tt'><?=$good['name'];?></div>
+    <div class='ct'><?=$good['name'];?></div>
     <div>
         價錢：<?=$good['price'];?>
         <img src="./icon/0402.jpg" style="float:right" onclick="location.href='?do=buycart&id=<?=$good['id'];?>&qt=1'">

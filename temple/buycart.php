@@ -29,7 +29,7 @@ if(empty($_SESSION['cart'])){
 
 ?>
 <table class="all">
-    <tr class="tt ct">
+    <tr class=" ct">
         <td>編號</td>
         <td>商品名稱</td>
         <td>數量</td>
@@ -42,7 +42,7 @@ if(empty($_SESSION['cart'])){
 foreach($_SESSION['cart'] as $id => $qt){
     $goods=$Goods->find($id);
 ?>
-    <tr class="pp ct">
+    <tr class=" ct">
         <td><?=$goods['no'];?></td>
         <td><?=$goods['name'];?></td>
         <td><?=$qt;?></td>

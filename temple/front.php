@@ -34,6 +34,8 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+  
+ 
 </head>
 
 <body>
@@ -176,8 +178,8 @@
         </nav>
 
     </div>
-    <div id="main">
-        <div class="container">
+    <div class="main" style="background-color: rgba(0, 0, 0, 0.2);"id="main">
+        <div class="container" style="">
             <div>
                 <div>
                 <div>
@@ -237,9 +239,10 @@
                         ?>
                     </div>
                     <span>
-                        <div>進站總人數</div>
+                        <!-- <div>進站總人數</div>
                         <div style="color:#f00; font-size:28px;">
-                            00005 </div>
+                            00005 
+                        </div> -->
                     </span>
                 </div>
                 <div id="right">
