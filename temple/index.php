@@ -160,7 +160,7 @@
                                     <h1 class="display-2 text-capitalize text-white mb-4"></h1>
                                     <p class="mb-5 fs-5">廟宇建築融合中國傳統元素，精湛雕刻展現藝術之美。神龕供奉眾多神祇，構建完整的道教信仰體系，吸引信徒和遊客。
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">Discover Now</a>
+                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">開始</a>
                                     </div>
                                 </div>
                             </div>
@@ -174,7 +174,7 @@
                                     <p class="mb-5 fs-5">關渡宮每年舉辦豐富多彩的文化活動，包括傳統祭祀儀式、遶境和文藝表演，凝聚社區共體精神，保護並傳承台灣豐富多元的宗教文化。
                                     </p>
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">Discover Now</a>
+                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">開始</a>
                                     </div>
                                 </div>
                             </div>
@@ -259,7 +259,7 @@
                                         <h5 class="mb-4">宗教服務</h5>
                                         <p class="mb-0">捐款贈實體點燈、祈福法會、補運、招財、等各大宗教線上報名實體宗教服務。
                                             本平台與各宗教團體合作進行線上捐款點燈報名服務，信眾捐款報名後，系統直接於各宗教團體進行報名，不但簡省排隊時間，也可以於人潮較少的時間再前去廟宇祭拜，可專心和神明說說話。                                           
-                                            一站式報名服務：信眾報名->多元支付->廟宇點燈->進度通知->訂單查詢
+                                            一站式報名服務
                                         </p>
                                     </div>
                                     <div class="service-icon p-4">
@@ -318,7 +318,7 @@
                                         <h5 class="mb-4">西洋運勢</h5>
                                         <p class="mb-0">本平台與各宗教團體合作進行線上捐款點燈報名服務，
                                         信眾捐款報名後，系統直接於各宗教團體進行報名，不但簡省排隊時間，也可以於人潮較少的時間再前去廟宇祭拜，可專心和神明說說話。                                           
-                                            一站式報名服務：信眾報名->多元支付->廟宇點燈->進度通知->訂單查詢
+                                           
                                         </p>
                                     </div>
                                 </div>
@@ -330,7 +330,7 @@
                                     </div>
                                     <div class="service-content">
                                         <h5 class="mb-4">姓名玄機</h5>
-                                        <p class="mb-0">「姓名玄機」是一個神秘而準確的姓名解析App。透過先進的姓名學算法，深入分析您的名字中蘊含的玄機，揭示命運軌跡、性格特質、事業傾向等。提供獨特的姓名配對服務，助您找到合適的伴侶或合作夥伴。每日運勢預測，引領您走向幸福命運。
+                                        <p class="mb-0">「姓名玄機」是一個神秘而準確的姓名解析App。透過先進的姓名學算法，深入分析您的名字中蘊含的玄機，揭示命運軌跡、性格特質、事業傾向等。提供獨特的姓名配對服務，助您找到合適的伴侶或合作夥伴。
                                         </p>
                                     </div>
                                 </div>
@@ -342,7 +342,7 @@
                                     </div>
                                     <div class="service-content">
                                         <h5 class="mb-4">天命運算</h5>
-                                        <p class="mb-0">「天命運算」為超越語言的無字神秘工具，透過宇宙能量連結，無需文字即可深度解讀個人天命。憑藉無聲的算法，揭示生命脈動、未來趨勢，瞭解愛情、事業、財運。無須文字溝通，直接感應宇宙訊息，指引您踏上命運之路。
+                                        <p class="mb-0">「天命運算」為超越語言的無字神秘工具，透過宇宙能量連結，無需文字即可深度解讀個人天命，指引您踏上命運之路。
                                         </p>
                                     </div>
                                 </div>
@@ -354,7 +354,7 @@
                                     </div>
                                     <div class="service-content">
                                         <h5 class="mb-4">企業專區</h5>
-                                        <p class="mb-0">「企業專區」是一個專為企業打造的綜合平台，提供全面的管理工具，包括員工資訊、項目進度、財務報表等。高效的協作功能、智能分析工具，助力企業提升生產力並做出明智決策。打造智能化管理新標準，讓企業蓬勃發展。
+                                        <p class="mb-0">「企業專區」是一個專為企業打造的綜合平台，提供全面的管理工具，包括員工資訊、項目進度、財務報表等。
                                         </p>
                                     </div>
                                 </div>
@@ -1677,11 +1677,11 @@
                     <h1 class="text-white mb-4">112台北市北投區知行路360號</h1>
                     <div class="col-md-12 col-lg-6 col-xl-6">
                         <p class="text-white mb-2">關渡宮</p>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14450.130335857259!2d121.4639554!3d25.1176791!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x140dc547f891a379%3A0x973dbe7b461c105e!2z6Zec5rih5a6u!5e0!3m2!1szh-TW!2stw!4v1709122499203!5m2!1szh-TW!2stw" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14450.130335857259!2d121.4639554!3d25.1176791!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x140dc547f891a379%3A0x973dbe7b461c105e!2z6Zec5rih5a6u!5e0!3m2!1szh-TW!2stw!4v1709122499203!5m2!1szh-TW!2stw" width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="col-md-12 col-lg-6 col-xl-6">
                     <p class="text-white mb-2">關渡宮停車場</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2554.454348515993!2d121.46361449850149!3d25.117293419282674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af6c86b38aa3%3A0x5f9a2dbb162c4bb3!2z6Zec5rih5rC05bK46Ieq54S25YWs5ZyS5qmf6LuK5bmz6Z2i5YGc6LuK5aC0!5e0!3m2!1szh-TW!2stw!4v1709172903908!5m2!1szh-TW!2stw" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2554.454348515993!2d121.46361449850149!3d25.117293419282674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af6c86b38aa3%3A0x5f9a2dbb162c4bb3!2z6Zec5rih5rC05bK46Ieq54S25YWs5ZyS5qmf6LuK5bmz6Z2i5YGc6LuK5aC0!5e0!3m2!1szh-TW!2stw!4v1709172903908!5m2!1szh-TW!2stw" width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="position-relative mx-auto">
                         <!-- <input class="form-control border-primary rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"> -->
@@ -1764,15 +1764,10 @@
                                     </form> -->
                                 </div>
                             </div>
-                            <!-- <h4 class="text-white mb-3">支付方式</h4>
+                            <!-- <h4 class="text-white mb-3">支付方式</h4> -->
                             <div class="footer-bank-card">
-                                <a href="#" class="text-white me-2"><i class="fab fa-cc-amex fa-2x"></i></a>
-                                <a href="#" class="text-white me-2"><i class="fab fa-cc-visa fa-2x"></i></a>
-                                <a href="#" class="text-white me-2"><i class="fas fa-credit-card fa-2x"></i></a>
-                                <a href="#" class="text-white me-2"><i class="fab fa-cc-mastercard fa-2x"></i></a>
-                                <a href="#" class="text-white me-2"><i class="fab fa-cc-paypal fa-2x"></i></a>
-                                <a href="#" class="text-white"><i class="fab fa-cc-discover fa-2x"></i></a>
-                            </div> -->
+                                <img style="width:400px;height:250px" src="./img/footer.jpg" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>

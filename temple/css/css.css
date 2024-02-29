@@ -71,19 +71,19 @@ body
 }
 .tt
 {
-	background:rgb(243, 235, 235);
+	background-color: rgba(255, 255, 255, 0.4); 
 }
 .tt td
 {
-	background:rgb(243, 235, 235);
+	background-color: rgba(255, 255, 255, 0.4); 
 }
 .pp
 {
-	background:rgb(222, 230, 241);
+	background-color: rgba(255, 255, 255, 0.4); 
 }
 .pp td
 {
-	background:rgb(222, 230, 241);
+	background-color: rgba(255, 255, 255, 0.4); 
 }
 input[type=text],input[type=password],input[type=submit],button,.button,input[type=reset],input[type=button],select，textarea,input[type=number]
 {

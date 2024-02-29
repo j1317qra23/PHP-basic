@@ -10,6 +10,14 @@
 	<link href="./css/css.css" rel="stylesheet" type="text/css">
 	<script src="./js/jquery-3.4.1.min.js"></script>
 	<script src="./js/js.js"></script>
+
+	
+	<style>
+         body {
+  background-image: url('./img/background.jpg');
+  
+}
+        </style>
 </head>
 
 <body>

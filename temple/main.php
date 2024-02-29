@@ -10,31 +10,7 @@
     <link href="./css/css.css" rel="stylesheet" type="text/css">
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="./js/js.js"></script>
-
-    
-</head>
-<?php
-$type=$_GET['type']??0;
-$nav='';
-$goods=null;
-if($type==0){
-    $nav="全部商品";
-    $goods=$Goods->all(['sh'=>1]);
-}else{
-    $t=$Type->find($type);
-    if($t['big_id']==0){
-        $nav=$t['name'];
-        $goods=$Goods->all(['sh'=>1,'big'=>$t['id']]);
-    }else{
-        $b=$Type->find($t['big_id']);
-        $nav=$b['name'] ." > ". $t['name'];
-        $goods=$Goods->all(['sh'=>1,'mid'=>$t['id']]);
-    }
-}
-
-?>
-<h2><?=$nav;?></h2>
-<style>
+    <style>
     body{
         background-color: rgba(0, 0, 0, 0.1);
     }
@@ -68,13 +44,38 @@ if($type==0){
     border-top:1px solid #999;
 }
 </style>
+    
+</head>
+<?php
+$type=$_GET['type']??0;
+$nav='';
+$goods=null;
+if($type==0){
+    $nav="全部商品";
+    $goods=$Goods->all(['sh'=>1]);
+}else{
+    $t=$Type->find($type);
+    if($t['big_id']==0){
+        $nav=$t['name'];
+        $goods=$Goods->all(['sh'=>1,'big'=>$t['id']]);
+    }else{
+        $b=$Type->find($t['big_id']);
+        $nav=$b['name'] ." > ". $t['name'];
+        $goods=$Goods->all(['sh'=>1,'mid'=>$t['id']]);
+    }
+}
+
+?>
+<h2><?=$nav;?></h2>
+
 <?php
 foreach($goods as $good){
 ?>
+
 <div class='item'>
  <div class="img">
     <a href="?do=detail&id=<?=$good['id'];?>">
-        <img src="./img/<?=$good['img'];?>" style="width:80%;height:110px">
+        <img src="./img/<?=$good['img'];?>" style="width:100%;height:110px">
     </a>
  </div>
  <div class="info">
