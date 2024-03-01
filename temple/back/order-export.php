@@ -3,46 +3,74 @@ if (!empty($_POST)) {
     // 進行金額的篩選
     $whereClause = ""; // 預設的 WHERE 條件
 
-    // ...（原有的篩選邏輯）
+    // 篩選日期
+    if (!empty($_POST['start_date']) && !empty($_POST['end_date'])) {
+        $start_date = $_POST['start_date'];
+        $end_date = $_POST['end_date'];
+        $whereClause .= " AND orderdate BETWEEN '{$start_date}' AND '{$end_date}'";
+    }
+
+    // 篩選金額
+    if (!empty($_POST['min_amount']) && !empty($_POST['max_amount'])) {
+        $min_amount = $_POST['min_amount'];
+        $max_amount = $_POST['max_amount'];
+        $whereClause .= " AND total BETWEEN {$min_amount} AND {$max_amount}";
+    }
+
+    // 移除 WHERE 子句的多餘空白和 AND
+    $whereClause = trim($whereClause, " AND");
+
+    if (!empty($whereClause)) {
+        // 只有在 $whereClause 不為空時才添加 WHERE 子句
+        $whereClause = " WHERE " . $whereClause;
+    }
 
     // 如果有勾選 checkbox
     if (!empty($_POST['select'])) {
-        $rows = $Order->all("orders", "where  `no` in ('" . join("','", $_POST['select']) . "')");
-    } else {
-        // SQL 查詢
-        $rows = $Order->all("orders", $whereClause);
+        $rows=$Order->all("orders"," where  no in ('".join("','",$_POST['select'])."')");
     }
 
-    if (!empty($_POST['export_type']) && $_POST['export_type'] === 'json') {
-        // 轉換成 JSON 格式
-        $jsonRows = json_encode($rows, JSON_UNESCAPED_UNICODE);
+    // SQL 查詢
+    $rows = $Order->all("orders", $whereClause);
 
-        // 寫入 JSON 檔案
-        $filename = date("Ymd") . rand(100000000, 999999999) . '.json';
-        file_put_contents("./doc/{$filename}", $jsonRows);
 
-        // 顯示下載連結
-        echo "<a href='./doc/{$filename}' download>檔案已匯出，請點此連結下載</a>";
-    } else {
-        // 創建 CSV 檔案
-        $filename = date("Ymd") . rand(100000000, 999999999);
-        $file = fopen("./doc/{$filename}.csv", 'w+');
-        fwrite($file, "\xEF\xBB\xBF");
-        $chk = false;
-        foreach ($rows as $row) {
-            if (!$chk) {
-                $cols = array_keys($row);
-                fwrite($file, join(",", $cols) . "\r\n");
-                $chk = true;
-            }
-            fwrite($file, join(",", $row) . "\r\n");
+
+    if (!empty($_POST)) {
+        // ... (your existing code for CSV export)
+     // 創建 CSV 檔案
+     $filename = date("Ymd") . rand(100000000, 999999999);
+     $file = fopen("./doc/{$filename}.csv", 'w+');
+     fwrite($file, "\xEF\xBB\xBF");
+     $chk = false;
+     foreach ($rows as $row) {
+         if (!$chk) {
+             $cols = array_keys($row);
+             fwrite($file, join(",", $cols) . "\r\n");
+             $chk = true;
+         }
+         fwrite($file, join(",", $row) . "\r\n");
+     }
+     fclose($file);
+ 
+     // 顯示下載連結
+     echo "<a href='./doc/{$filename}.csv' download>檔案已匯出，請點此連結下載</a>";
+ }
+        // If the selected export type is JSON
+        if ($_POST['export_type'] === 'json') {
+            // Perform JSON export logic here
+            $jsonContent = json_encode($rows);
+    
+            // Create JSON file
+            $jsonFilename = date("Ymd") . rand(100000000, 999999999) . '.json';
+            file_put_contents("./doc/{$jsonFilename}", $jsonContent);
+    
+            // Display download link for JSON file
+            echo "<a href='./doc/{$jsonFilename}' download>JSON 檔案已匯出，請點此連結下載</a>";
+            exit; // Stop further execution
         }
-        fclose($file);
-
-        // 顯示下載連結
-        echo "<a href='./doc/{$filename}.csv' download>檔案已匯出，請點此連結下載</a>";
     }
-}
+
+   
 ?>
 
 
@@ -76,10 +104,11 @@ if (!empty($_POST)) {
     <label for="max_amount">最大金額：</label>
     <input type="number" name="max_amount" id="max_amount">
     <label for="export_type">匯出格式：</label>
-<select name="export_type" id="export_type">
+    <select name="export_type" id="export_type" onchange="updateExportType()">
     <option value="csv">CSV</option>
     <option value="json">JSON</option>
 </select>
+
     <input type="submit" value="匯出選擇的資料">
 
     <br>
@@ -150,11 +179,13 @@ $(document).ready(function () {
         }).show();
     });
 });
-$("form").submit(function () {
-        // 取得下拉選單的值
-        var exportFormat = $("#export_format").val();
-        // 將值賦給 export_type input
-        $("#export_type").val(exportFormat);
-    });
+function updateExportType() {
+    var selectedFormat = $("#export_type").val();
+    if (selectedFormat === "json") {
+        $("form").attr("action", "export_json.php"); // Replace "export_json.php" with your actual JSON export script
+    } else {
+        $("form").attr("action", ""); // Set the default action or leave it empty
+    }
+}
 
 </script> 
