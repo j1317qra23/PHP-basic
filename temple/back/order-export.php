@@ -17,12 +17,6 @@ if (!empty($_POST)) {
         $whereClause .= " AND `total` BETWEEN {$min_amount} AND {$max_amount}";
     }
 
-     // 篩選訂單編號
-     if (!empty($_POST['no'])) {
-        $order_number = $_POST['no'];
-        $whereClause .= " AND `no` = '{$order_number}'";
-    }
-    
     // 移除 WHERE 子句的多餘空白和 AND
     $whereClause = trim($whereClause, " AND");
 
@@ -71,6 +65,7 @@ if (!empty($_POST)) {
     }
 </style>
 <script src="./js/jquery-3.4.1.min.js"></script>
+
 <form action="" method="post" id="">
     <label for="start_date">開始日期：</label>
     <input type="date" name="start_date" id="start_date">
@@ -85,9 +80,13 @@ if (!empty($_POST)) {
     <input type="number" name="max_amount" id="max_amount">
     <input type="submit" value="匯出選擇的資料">
 
-    <br><label for="no">訂單編號：</label>
-    <input type="text" name="no" id="no">
-    <input type="button" value="訂單編號搜索">
+    <br>
+    <label for="keyword">關鍵字：</label>
+<input type="text" name="keyword" id="keyword">
+<button type="button" id="searchBtn">搜尋</button>
+    
+
+
 
 
 <table>
@@ -135,5 +134,20 @@ $("#select").on("change",function(){
         $("input[name='select[]']").prop('checked',false);
     }
 })
+$(document).ready(function () {
+    // 當按下搜尋按鈕時
+    $("#searchBtn").click(function () {
+        var keyword = $("#keyword").val().toUpperCase();
+
+        // 隱藏所有的行
+        $("tr").hide();
+
+        // 顯示匹配關鍵字的行
+        $("tr").filter(function() {
+            return $(this).text().toUpperCase().includes(keyword);
+        }).show();
+    });
+});
+
 
 </script> 
