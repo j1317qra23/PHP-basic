@@ -1,6 +1,5 @@
 <?php
 
-
 if(!empty($_POST)){
 $rows=$Order->all("orders"," where  `no` in ('".join("','",$_POST['select'])."')");
 
@@ -87,4 +86,4 @@ $("#select").on("change",function(){
         $("input[name='select[]']").prop('checked',false);
     }
 })
-</script>
+</script> 
