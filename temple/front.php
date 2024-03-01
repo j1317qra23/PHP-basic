@@ -184,7 +184,7 @@
 
     </div>
     <div class="main" style="background-color: rgba(0, 0, 0, 0.2);"id="main">
-        <div class="container" style="">
+        <div class="container">
             <div>
                 <div>
                 <div>
