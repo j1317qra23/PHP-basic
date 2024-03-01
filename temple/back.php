@@ -35,9 +35,9 @@
 		$admin=$Admin->find(['acc'=>$_SESSION['admin']]);
 		$pr=unserialize($admin['pr']);
         echo in_array(1,$pr)?"<a href='?do=th'>商品分類與管理</a>":"";
-        echo in_array(2,$pr)?"<a href='?do=order'>訂單管理</a>":"";
         echo in_array(3,$pr)?"<a href='?do=mem'>會員管理</a>":"";
-        // echo in_array(4,$pr)?"<a href='?do=bot'>頁尾版權管理</a>":"";
+        echo in_array(2,$pr)?"<a href='?do=order'>訂單管理</a>":"";
+        echo in_array(4,$pr)?"<a href='?do=order-export'>訂單匯出</a>":"";
         echo in_array(5,$pr)?"<a href='?do=news'>最新消息管理</a>":"";
     	?>
     	<a href="./api/logout.php?do=admin" style="color:#f00;">登出</a>

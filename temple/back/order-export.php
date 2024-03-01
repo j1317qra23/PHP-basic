@@ -1,8 +1,8 @@
 <?php
-include "db_export.php";
+
 
 if(!empty($_POST)){
-$rows=all("20200706"," where  `投票所編號` in ('".join("','",$_POST['select'])."')");
+$rows=$Order->all("orders"," where  `no` in ('".join("','",$_POST['select'])."')");
 
 $filename=date("Ymd").rand(100000000,999999999);
 $file=fopen("./doc/{$filename}.csv",'w+');
@@ -39,7 +39,7 @@ echo "<a href='./doc/{$filename}.csv'  download>檔案已匯出，請點此連�
         color:white;
     }
 </style>
-<script src="./jquery-3.4.1.min.js"></script>
+<script src="./js/jquery-3.4.1.min.js"></script>
 <form action="" method="post">
     <input type="submit" value="匯出選擇的資料">
 <table>
@@ -47,29 +47,23 @@ echo "<a href='./doc/{$filename}.csv'  download>檔案已匯出，請點此連�
         <th>
             <input type="checkbox" name="" id="select">
             勾選</th>
-        <th>投票所編號</th>
-        <th>投票所</th>
-        <th>候選人1</th>
-        <th>候選人1票數</th>
-        <th>候選人2</th>
-        <th>候選人2票數</th>
-        <th>候選人3</th>
-        <th>候選人3票數</th>
-        <th>有效票數</th>
-        <th>無效票數</th>
-        <th>投票數</th>
-        <th>已領未投票數</th>
-        <th>發出票數</th>
-        <th>用餘票數</th>
-        <th>選舉人數</th>
-        <th>投票率</th>
+        <th>id</th>    
+        <th>訂單編號</th>
+        <th>金額</th>
+        <th>會員帳號</th>
+        <th>姓名</th>
+        <th>下單日期</th>
+        <th>信箱</th>
+        <th>地址</th>
+        <th>電話</th>
+        <th>cart</th>
     </tr>
 <?php
-$rows=all('20200706');
+$rows=$Order->all('orders');
 foreach($rows as $row){
     echo "<tr>";
     echo "<td>";
-    echo "<input type='checkbox' name='select[]' value='{$row['投票所編號']}'>";
+    echo "<input type='checkbox' name='select[]' value='{$row['no']}'>";
     echo "</td>";
     foreach($row as $value){
         echo "<td>";
