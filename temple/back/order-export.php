@@ -17,6 +17,12 @@ if (!empty($_POST)) {
         $whereClause .= " AND `total` BETWEEN {$min_amount} AND {$max_amount}";
     }
 
+     // 篩選訂單編號
+     if (!empty($_POST['no'])) {
+        $order_number = $_POST['no'];
+        $whereClause .= " AND `no` = '{$order_number}'";
+    }
+    
     // 移除 WHERE 子句的多餘空白和 AND
     $whereClause = trim($whereClause, " AND");
 
@@ -77,9 +83,13 @@ if (!empty($_POST)) {
 
     <label for="max_amount">最大金額：</label>
     <input type="number" name="max_amount" id="max_amount">
-
-   
     <input type="submit" value="匯出選擇的資料">
+
+    <br><label for="no">訂單編號：</label>
+    <input type="text" name="no" id="no">
+    <input type="button" value="訂單編號搜索">
+
+
 <table>
     <tr>
         <th>
