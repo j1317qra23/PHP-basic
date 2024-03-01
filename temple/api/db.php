@@ -7,6 +7,7 @@ class DB{
     protected $pdo;
     protected $table;
     
+   
     public function __construct($table)
     {
         $this->table=$table;
@@ -130,6 +131,8 @@ class DB{
     }
 
 }
+
+
 
 function dd($array)
 {
