@@ -1,27 +1,53 @@
 <?php
+if (!empty($_POST)) {
+    // 進行金額的篩選
+    $whereClause = ""; // 預設的 WHERE 條件
 
-if(!empty($_POST)){
-$rows=$Order->all("orders"," where  `no` in ('".join("','",$_POST['select'])."')");
-
-$filename=date("Ymd").rand(100000000,999999999);
-$file=fopen("./doc/{$filename}.csv",'w+');
-fwrite($file, "\xEF\xBB\xBF");
-$chk=false;
-foreach($rows as $row){
-    if(!$chk){
-        $cols=array_keys($row);
-        fwrite($file,join(",",$cols)."\r\n");
-        $chk=true;
+    // 篩選日期
+    if (!empty($_POST['start_date']) && !empty($_POST['end_date'])) {
+        $start_date = $_POST['start_date'];
+        $end_date = $_POST['end_date'];
+        $whereClause .= " AND `orderdate` BETWEEN '{$start_date}' AND '{$end_date}'";
     }
-    fwrite($file,join(",",$row)."\r\n");
+
+    // 篩選金額
+    if (!empty($_POST['min_amount']) && !empty($_POST['max_amount'])) {
+        $min_amount = $_POST['min_amount'];
+        $max_amount = $_POST['max_amount'];
+        $whereClause .= " AND `total` BETWEEN {$min_amount} AND {$max_amount}";
+    }
+
+    // 移除 WHERE 子句的多餘空白和 AND
+    $whereClause = trim($whereClause, " AND");
+
+    if (!empty($whereClause)) {
+        // 只有在 $whereClause 不為空時才添加 WHERE 子句
+        $whereClause = " WHERE " . $whereClause;
+    }
+
+    // SQL 查詢
+    $rows = $Order->all("orders", $whereClause);
+
+    // 創建 CSV 檔案
+    $filename = date("Ymd") . rand(100000000, 999999999);
+    $file = fopen("./doc/{$filename}.csv", 'w+');
+    fwrite($file, "\xEF\xBB\xBF");
+    $chk = false;
+    foreach ($rows as $row) {
+        if (!$chk) {
+            $cols = array_keys($row);
+            fwrite($file, join(",", $cols) . "\r\n");
+            $chk = true;
+        }
+        fwrite($file, join(",", $row) . "\r\n");
+    }
+    fclose($file);
+
+    // 顯示下載連結
+    echo "<a href='./doc/{$filename}.csv' download>檔案已匯出，請點此連結下載</a>";
 }
-fclose($file);
-
-echo "<a href='./doc/{$filename}.csv'  download>檔案已匯出，請點此連結下載</a>";
-}
-
-
 ?>
+
 
 <style>
     table{
@@ -39,7 +65,20 @@ echo "<a href='./doc/{$filename}.csv'  download>檔案已匯出，請點此連�
     }
 </style>
 <script src="./js/jquery-3.4.1.min.js"></script>
-<form action="" method="post">
+<form action="" method="post" id="">
+    <label for="start_date">開始日期：</label>
+    <input type="date" name="start_date" id="start_date">
+
+    <label for="end_date">結束日期：</label>
+    <input type="date" name="end_date" id="end_date">
+
+   <br> <label for="min_amount">最小金額：</label>
+    <input type="number" name="min_amount" id="min_amount">
+
+    <label for="max_amount">最大金額：</label>
+    <input type="number" name="max_amount" id="max_amount">
+
+   
     <input type="submit" value="匯出選擇的資料">
 <table>
     <tr>
@@ -86,4 +125,5 @@ $("#select").on("change",function(){
         $("input[name='select[]']").prop('checked',false);
     }
 })
+
 </script> 
