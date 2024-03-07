@@ -3,10 +3,10 @@
    
     <table class="all">
     
-    <button onclick="location.href='?do=add_news'">新增新聞</button>
+    <button onclick="location.href='?do=add_news'">新增公告</button>
 
     <tr class="tt ct">
-        <td>新聞標題</td>
+        <td>公告標題</td>
         <td>文章內容</td>
         <td>圖片</td>
         <td>發布日期</td>
